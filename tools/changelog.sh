@@ -52,6 +52,7 @@ echo ${bldppl}"Generating changelog..."${txtrst}
 
 for i in $(seq $days_to_log);
 do
+echo "Generating changelog for Day $i"
 export After_Date=`date --date="$i days ago" +%F`
 k=$(expr $i - 1)
 export Until_Date=`date --date="$k days ago" +%F`
@@ -64,3 +65,4 @@ done
 
 sed -i 's/project/ */g' $Changelog
 sed -i 's/[/]$//' $Changelog
+

@@ -45,6 +45,8 @@ DEVICE_PACKAGE_OVERLAYS += \
     vendor/stag/overlay/themes \
     vendor/stag/overlay/
 
+PRODUCT_PACKAGE_OVERLAYS += vendor/stag/overlay/dictionaries
+
 # Charging sounds
 PRODUCT_COPY_FILES += \
     vendor/stag/sounds/BatteryPlugged.ogg:system/media/audio/ui/BatteryPlugged.ogg \
@@ -69,15 +71,9 @@ PRODUCT_PACKAGES += \
     ViaBrowser
 
 # Proprietary latinime libs needed for Keyboard swyping
-ifeq ($(TARGET_ARCH),arm64)
 PRODUCT_COPY_FILES += \
     vendor/stag/prebuilt/common/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so \
     vendor/stag/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
-else
-PRODUCT_COPY_FILES += \
-    vendor/stag/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
-    vendor/stag/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
-endif
 
 # Cutout control overlays
 PRODUCT_PACKAGES += \
