@@ -16,3 +16,7 @@ PRODUCT_COPY_FILES += \
     vendor/stag/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
     vendor/stag/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
 endif
+
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    vendor/stag/overlay/common
