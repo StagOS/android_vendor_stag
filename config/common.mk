@@ -105,6 +105,10 @@ PRODUCT_COPY_FILES += \
     vendor/stag/prebuilt/common/etc/permissions/lawnchair-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
 endif
 
+# Clean up packages cache to avoid wrong strings and resources
+PRODUCT_COPY_FILES += \
+    vendor/stag/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
+
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
