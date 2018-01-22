@@ -1,3 +1,4 @@
+
 # Copyright (C) 2018 The StagOS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,7 +23,11 @@ PRODUCT_PACKAGES += \
     messaging \
     Stk
 
- # Extra tools
+# Themes
+PRODUCT_PACKAGES += \
+    SystemDarkTheme
+
+# Extra tools
 PRODUCT_PACKAGES += \
     7z \
     bash \
