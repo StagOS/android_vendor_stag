@@ -113,6 +113,10 @@ PRODUCT_SOONG_NAMESPACES += \
     frameworks/av/services/camera/libcameraservice
 endif
 
+# Dex preopt
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUIGoogle
+
 ifeq ($(EXTRA_FOD_ANIMATIONS),true)
 DEVICE_PACKAGE_OVERLAYS += vendor/stag/overlay/fod
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/stag/overlay/fod
