@@ -28,8 +28,11 @@
     ro.setupwizard.rotation_locked=true \
     ro.opa.eligible_device=true \
     persist.sys.disable_rescue=true \
-    ro.config.calibration_cad=/system/etc/calibration_cad.xml
- PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
+    ro.config.calibration_cad=/system/etc/calibration_cad.xml \
+    persist.debug.wfd.enable=1 \
+    persist.sys.wfd.virtual=0
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
     ro.adb.secure=0 \
     ro.secure=0 \
     persist.service.adb.enable=1
