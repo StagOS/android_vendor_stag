@@ -158,3 +158,7 @@ PRODUCT_PACKAGES += \
     GoogleServicesFramework \
     Calculator \
     SubstratumSignature
+
+#Font package
+PRODUCT_PACKAGES += \
+    Custom-Fonts
