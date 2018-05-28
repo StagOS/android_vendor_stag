@@ -23,12 +23,17 @@ PRODUCT_PACKAGES += \
     messaging \
     Stk
 
-# Themes
+# Themes Dark
 PRODUCT_PACKAGES += \
     DuiDarkTheme \
     GBoardDarkTheme \
     SettingsDarkTheme \
     SystemDarkTheme
+
+# Themes Black
+PRODUCT_PACKAGES += \
+    SettingsBlackTheme \
+    SystemBlackTheme
 
 # Overlays
 PRODUCT_PACKAGES += \
