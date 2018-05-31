@@ -7,3 +7,4 @@ PRODUCT_COPY_FILES += \
     vendor/stag/prebuilt/fonts/gobold/GoboldThinLight.ttf:system/fonts/GoboldThinLight.ttf \
     vendor/stag/prebuilt/fonts/gobold/GoboldThinLight-Italic.ttf:system/fonts/GoboldThinLight-Italic.ttf \
     vendor/stag/prebuilt/fonts/Shamshung/Shamshung.ttf:system/fonts/Shamshung.ttf
+    vendor/stag/prebuilt/fonts/neoneon/neoneon.ttf:system/fonts/Neoneon-Regular.ttf \
