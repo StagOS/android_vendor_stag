@@ -11,6 +11,9 @@ include vendor/stag/config/props.mk
 # Packages
 include vendor/stag/config/packages.mk
 
+# Fonts
+include vendor/stag/config/fonts.mk
+
 #overrides
 include vendor/stag/config/overrides.mk
 
