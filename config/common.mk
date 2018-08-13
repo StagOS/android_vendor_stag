@@ -28,3 +28,17 @@ PRODUCT_COPY_FILES += \
 
 #IgnoreNeverallows
 SELINUX_IGNORE_NEVERALLOWS := true
+
+# Backup Tool
+PRODUCT_COPY_FILES += \
+    vendor/stag/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/stag/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/stag/prebuilt/common/bin/50-stag.sh:system/addon.d/50-stag.sh \
+    vendor/stag/prebuilt/common/bin/blacklist:system/addon.d/blacklist
+
+ifeq ($(AB_OTA_UPDATER),true)
+PRODUCT_COPY_FILES += \
+    vendor/stag/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/stag/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/stag/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+endif
