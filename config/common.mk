@@ -19,4 +19,10 @@ endif
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    vendor/stag/overlay/common
+    vendor/stag/overlay/common \
+    vendor/stag/overlay/themes
+
+# Charging sounds
+PRODUCT_COPY_FILES += \
+    vendor/stag/sounds/BatteryPlugged.ogg:system/media/audio/ui/BatteryPlugged.ogg \
+    vendor/stag/sounds/BatteryPlugged_48k.ogg:system/media/audio/ui/BatteryPlugged_48k.ogg
