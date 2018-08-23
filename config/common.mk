@@ -19,4 +19,5 @@ endif
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    vendor/stag/overlay/common
+    vendor/stag/overlay/common \
+    vendor/stag/overlay/themes
