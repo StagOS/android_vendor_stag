@@ -8,6 +8,30 @@ EXCLUDE_SYSTEMUI_TESTS := true
 PRODUCT_COPY_FILES += vendor/stag/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
 
+# Accents
+PRODUCT_PACKAGES += \
+    AmberAccent \
+    BlackAccent \
+    BlueAccent \
+    BlueGreyAccent \
+    BrownAccent \
+    CyanAccent \
+    DeepOrangeAccent \
+    DeepPurpleAccent \
+    GreenAccent \
+    GreyAccent \
+    IndigoAccent \
+    LightBlueAccent \
+    LightGreenAccent \
+    LimeAccent \
+    OrangeAccent \
+    PinkAccent \
+    PurpleAccent \
+    RedAccent \
+    TealAccent \
+    YellowAccent \
+    WhiteAccent
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/stag/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
