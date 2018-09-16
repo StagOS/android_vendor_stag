@@ -8,6 +8,15 @@ EXCLUDE_SYSTEMUI_TESTS := true
 PRODUCT_COPY_FILES += vendor/stag/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
 
+# Themes
+PRODUCT_PACKAGES += \
+    SettingsDarkTheme \
+    SystemDarkTheme \
+    SystemUIDarkTheme \
+    SettingsBlackTheme \
+    SystemBlackTheme \
+    SystemUIBlackTheme
+
 # Accents
 PRODUCT_PACKAGES += \
     AmberAccent \
