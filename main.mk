@@ -16,3 +16,7 @@ include vendor/stag/config/overrides.mk
 
 # Ringtones
 include frameworks/base/data/sounds/StagAudio.mk
+
+# Sounds
+include vendor/stag/config/sounds.mk
+
