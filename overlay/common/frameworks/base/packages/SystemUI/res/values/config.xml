@@ -24,14 +24,11 @@
     <bool name="config_hspa_data_distinguishable">true</bool>
 
     <bool name="quick_settings_show_full_alarm">true</bool>
-<<<<<<< HEAD
-=======
 
     <!-- Should "4G" be shown instead of "LTE" when the network is NETWORK_TYPE_LTE? -->
     <bool name="config_show4GForLTE">false</bool>
 
     <!-- Smart replies in notifications: Whether we disable the feature unless the app targets P -->
     <bool name="config_smart_replies_in_notifications_requires_targeting_p">false</bool>
->>>>>>> 952d126... overlay: Allow all apps to use smart replies
 </resources>
 
