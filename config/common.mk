@@ -48,6 +48,13 @@ PRODUCT_PACKAGES += \
     UserSix \
     UserSeven
 
+# QS tile styles
+PRODUCT_PACKAGES += \
+    QStilesDefault \
+    QStilesCircleTrim \
+    QStilesSquircleTrim \
+    QStilesTwoToneCircle
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/stag/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
