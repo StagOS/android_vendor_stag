@@ -240,5 +240,12 @@ PRODUCT_PACKAGES += \
     SystemNightOverlay \
     SystemUINightOverlay
 
+# QS tile styles
+PRODUCT_PACKAGES += \
+    QStileCircleTrim \
+    QStileDefault \
+    QStileDualToneCircle \
+    QStileSquircleTrim
+
 # Icon Shapes
 include vendor/stag/config/iconshapes.mk
