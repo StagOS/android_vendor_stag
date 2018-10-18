@@ -99,6 +99,16 @@ PRODUCT_PACKAGES += \
     NewHouseOrangeAccent \
     IllusionsPurpleAccent
 
+#QS Styles
+PRODUCT_PACKAGES += \
+	QSTileCircleDual \
+	QSTileCircleGradient \
+	QSTileInkdrop \
+	QSTileIconAccent \
+	QSTileShishuNights \
+	QSTileMemedoSquare \
+	QSTileWavey
+
 # Extra tools
 PRODUCT_PACKAGES += \
     7z \
