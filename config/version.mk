@@ -25,7 +25,7 @@ ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
 else
    STAG_BUILD_TYPE := UNOFFICIAL
 endif
-STAG_VERSION := StagOS-$(CURRENT_DEVICE)-$(StagOS_VERSION)-$(STAG_BUILD_TYPE)-$(shell date -u +%Y%m%d)
+STAG_VERSION := StagOS-$(CURRENT_DEVICE)-$(StagOS_VERSION)-$(STAG_BUILD_TYPE)-$(shell date -u +%Y%m%d-%H%M)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
  ro.stag.version=$(StagOS_VERSION) \
  ro.stag.releasetype=$(STAG_BUILD_TYPE) \
