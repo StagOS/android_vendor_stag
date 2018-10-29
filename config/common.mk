@@ -53,3 +53,5 @@ PRODUCT_COPY_FILES += \
     vendor/stag/prebuilt/common/etc/permissions/com.google.android.dialer.support.xml:system/etc/permissions/com.google.android.dialer.support.xml \
     vendor/stag/prebuilt/common/framework/com.google.android.dialer.support.jar:system/framework/com.google.android.dialer.support.jar
 
+# Weather
+include vendor/stag/config/weather.mk

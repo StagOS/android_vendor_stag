@@ -206,3 +206,7 @@ PRODUCT_PACKAGES += \
 #Font package
 PRODUCT_PACKAGES += \
     Custom-Fonts
+
+#Weather package
+PRODUCT_PACKAGES += \
+    WeatherClient
