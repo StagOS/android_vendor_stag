@@ -4,6 +4,10 @@ PRODUCT_BRAND := stag
 PRODUCT_DEVICE := generic
 EXCLUDE_SYSTEMUI_TESTS := true
 
+# Bootanimation
+PRODUCT_COPY_FILES += vendor/stag/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/stag/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
