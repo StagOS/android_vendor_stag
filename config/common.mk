@@ -71,3 +71,7 @@ PRODUCT_PACKAGES += \
 #Default Browser
 PRODUCT_PACKAGES += \
     ViaBrowser
+
+# WellBeing
+PRODUCT_PACKAGES += \
+    WellbeingPrebuilt
