@@ -250,7 +250,8 @@ PRODUCT_PACKAGES += \
     QStileDottedCircle \
     QStileNinja \
     QStilePokesign \
-    QStileWavey
+    QStileWavey \
+    QStileSquaremedo
 
 # Icon Shapes
 include vendor/stag/config/iconshapes.mk
