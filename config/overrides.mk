@@ -14,4 +14,5 @@
 
 # Default ringtones/notification/alarm sounds
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.ringtone=stag.ogg
+    ro.config.ringtone=stag.ogg \
+    ro.config.notification=Alya.ogg
