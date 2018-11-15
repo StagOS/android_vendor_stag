@@ -43,18 +43,23 @@ PRODUCT_PACKAGES += \
     BlueAccent \
     BlueGreyAccent \
     BrownAccent \
+    CandyRedAccent \
     CyanAccent \
     DeepOrangeAccent \
     DeepPurpleAccent \
+    ExtendedGreenAccent \
     DuiDark \
     GBoardDark \
     GreenAccent \
     GreyAccent \
     IndigoAccent \
+    JadeGreenAccent \
     LightBlueAccent \
     LightGreenAccent \
     LimeAccent \
     OrangeAccent \
+    PaleBlueAccent \
+    PaleRed \
     PinkAccent \
     PurpleAccent \
     RedAccent \
@@ -69,7 +74,30 @@ PRODUCT_PACKAGES += \
     UserFour \
     UserFive \
     UserSix \
-    UserSeven
+    UserSeven \
+    ObfusBleuAccent \
+    NotImpPurpleAccent \
+    HolillusionAccent \
+    MoveMintAccent \
+    FootprintPurpleAccent \
+    BubblegumPinkAccent \
+    FrenchBleuAccent \
+    StockAccent \
+    ManiaAmberAccent \
+    SeasideMintAccent \
+    DreamyPurpleAccent \
+    SpookedPurpleAccent \
+    HeirloomBleuAccent \
+    TruFilPinkAccent \
+    WarmthOrangeAccent \
+    ColdBleuAccent \
+    DiffDayGreenAccent \
+    DuskPurpleAccent \
+    BurningRedAccent \
+    HazedPinkAccent \
+    ColdYellowAccent \
+    NewHouseOrangeAccent \
+    IllusionsPurpleAccent
 
 # Extra tools
 PRODUCT_PACKAGES += \
