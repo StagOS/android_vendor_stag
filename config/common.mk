@@ -24,16 +24,21 @@ PRODUCT_PACKAGES += \
     Blue \
     BlueGrey \
     Brown \
+    CandyRed \
     Cyan \
     DeepOrange \
     DeepPurple \
+    ExtendedGreen \
     Green \
     Grey \
     Indigo \
+    JadeGreen \
     LightBlue \
     LightGreen \
     Lime \
     Orange \
+    PaleBlue \
+    PaleRed \
     Pink \
     Purple \
     Red \
@@ -46,7 +51,30 @@ PRODUCT_PACKAGES += \
     UserFour \
     UserFive \
     UserSix \
-    UserSeven
+    UserSeven \
+    ObfusBleu \
+    NotImpPurple \
+    Holillusion \
+    MoveMint \
+    FootprintPurple \
+    BubblegumPink \
+    FrenchBleu \
+    Stock \
+    ManiaAmber \
+    SeasideMint \
+    DreamyPurple \
+    SpookedPurple \
+    HeirloomBleu \
+    TruFilPink \
+    WarmthOrange \
+    ColdBleu \
+    DiffDayGreen \
+    DuskPurple \
+    BurningRed \
+    HazedPink \
+    ColdYellow \
+    NewHouseOrange \
+    IllusionsPurple
 
 # QS tile styles
 PRODUCT_PACKAGES += \
