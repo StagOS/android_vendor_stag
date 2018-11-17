@@ -75,3 +75,7 @@ PRODUCT_PACKAGES += \
 # WellBeing
 PRODUCT_PACKAGES += \
     WellbeingPrebuilt
+
+# Phonograph
+PRODUCT_PACKAGES += \
+    Phonograph
