@@ -7,6 +7,18 @@ EXCLUDE_SYSTEMUI_TESTS := true
 # Bootanimation
 PRODUCT_COPY_FILES += vendor/stag/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
+# Ambient Play
+PRODUCT_PACKAGES += \
+    AmbientPlayHistoryProvider
+
+# Fonts
+PRODUCT_PACKAGES += \
+    Stag-Fonts
+
+# Subs OMS
+PRODUCT_PACKAGES += \
+    SubstratumSignature \
+>>>>>>> ffac4197... vendor: Add back fonts
 
 # Themes
 PRODUCT_PACKAGES += \
