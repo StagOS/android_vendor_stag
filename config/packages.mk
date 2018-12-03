@@ -11,7 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
- # Required packages
+
+# Required packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
     Calendar \
@@ -20,6 +21,7 @@ PRODUCT_PACKAGES += \
     Launcher3QuickStep \
     messaging \
     Stk
+
  # Extra tools
 PRODUCT_PACKAGES += \
     7z \
@@ -49,14 +51,17 @@ PRODUCT_PACKAGES += \
     vim \
     wget \
     zip
- # Exchange support
+
+# Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
- # exFAT tools
- PRODUCT_PACKAGES += \
+
+# exFAT tools
+PRODUCT_PACKAGES += \
     fsck.exfat \
     mkfs.exfat
- # Openssh
+
+# Openssh
 PRODUCT_PACKAGES += \
     scp \
     sftp \
@@ -65,28 +70,39 @@ PRODUCT_PACKAGES += \
     sshd_config \
     ssh-keygen \
     start-ssh
- # rsync
+
+# rsync
 PRODUCT_PACKAGES += \
     rsync
- # Include explicitly to work around GMS issues
+
+# Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     librsjni
- # These packages are excluded from user builds
+
+# These packages are excluded from user builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
     procmem \
     procrank
 endif
- # Charger images
-PRODUCT_PACKAGES += \
-    charger_res_images
 
-# Ambient Play
+# Default PACKAGES
 PRODUCT_PACKAGES += \
-    AmbientPlayHistoryProvider
+    charger_res_images \
+    Stag-Fonts \
+    Launcher3 \
+    ViaBrowser \
+    Phonograph
 
-# Pixel Launcher
+# Google
 PRODUCT_PACKAGES += \
-    NexusLauncherPrebuilt
+    AmbientPlayHistoryProvider \
+    PrebuiltBugle \
+    GoogleDialer \
+    WellbeingPrebuilt \
+    GoogleContacts \
+    PrebuiltDeskClockGoogle \
+    GoogleServicesFramework \
+    Calculator
 
