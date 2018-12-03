@@ -85,3 +85,8 @@ PRODUCT_PACKAGES += \
 # Ambient Play
 PRODUCT_PACKAGES += \
     AmbientPlayHistoryProvider
+
+# Pixel Launcher
+PRODUCT_PACKAGES += \
+    NexusLauncherPrebuilt
+
