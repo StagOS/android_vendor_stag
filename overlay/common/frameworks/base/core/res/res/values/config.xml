@@ -127,5 +127,8 @@
     <!-- The duration in which a recent task is considered in session and should be visible. -->
     <integer name="config_activeTaskDurationHours">12</integer>
 
+    <!-- Component name for default assistant on this device -->
+    <string name="config_defaultAssistantComponentName">com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService</string>
+
 </resources>
 
