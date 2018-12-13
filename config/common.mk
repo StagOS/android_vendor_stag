@@ -4,10 +4,6 @@ PRODUCT_BRAND := stag
 PRODUCT_DEVICE := generic
 EXCLUDE_SYSTEMUI_TESTS := true
 
-# Overlays
-PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/stag/overlay/
-
 # Bootanimation
 PRODUCT_COPY_FILES += vendor/stag/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
@@ -28,7 +24,8 @@ endif
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/stag/overlay/common \
-    vendor/stag/overlay/themes
+    vendor/stag/overlay/themes \
+    vendor/stag/overlay/
 
 # Charging sounds
 PRODUCT_COPY_FILES += \
@@ -50,3 +47,10 @@ PRODUCT_PACKAGES += \
 # Phonograph
 PRODUCT_PACKAGES += \
     Phonograph
+
+# Fix Google dialer
+PRODUCT_COPY_FILES += \
+    vendor/stag/prebuilt/common/etc/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml \
+    vendor/stag/prebuilt/common/etc/permissions/com.google.android.dialer.support.xml:system/etc/permissions/com.google.android.dialer.support.xml \
+    vendor/stag/prebuilt/common/framework/com.google.android.dialer.support.jar:system/framework/com.google.android.dialer.support.jar
+

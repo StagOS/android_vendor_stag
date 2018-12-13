@@ -1,7 +1,8 @@
+
 # Copyright (C) 2018-2019 STAG OS
 #
-# Licensed under the Apache License, Version 2.0 (the "License"); 
-#you may not use this file except in compliance with the License. 
+# Licensed under the Apache License, Version 2.0 (the "License");
+#you may not use this file except in compliance with the License.
 #You may obtain a copy of the License at
 #
 #      http://www.apache.org/licenses/LICENSE-2.0
@@ -15,4 +16,4 @@
 # Default ringtones/notification/alarm sounds
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=stag.ogg \
-    ro.config.notification=Alya.ogg
+    ro.config.notification_sound=Alya.ogg
