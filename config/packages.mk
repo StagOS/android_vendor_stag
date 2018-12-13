@@ -81,3 +81,7 @@ endif
  # Charger images
 PRODUCT_PACKAGES += \
     charger_res_images
+
+# Pixel Launcher
+PRODUCT_PACKAGES += \
+    NexusLauncherPrebuilt

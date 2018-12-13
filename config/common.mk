@@ -4,6 +4,10 @@ PRODUCT_BRAND := stag
 PRODUCT_DEVICE := generic
 EXCLUDE_SYSTEMUI_TESTS := true
 
+# Overlays
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/stag/overlay/
+
 # Bootanimation
 PRODUCT_COPY_FILES += vendor/stag/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
