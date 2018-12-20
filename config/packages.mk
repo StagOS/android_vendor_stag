@@ -156,5 +156,5 @@ PRODUCT_PACKAGES += \
     GoogleContacts \
     PrebuiltDeskClockGoogle \
     GoogleServicesFramework \
-    Calculator
-
+    Calculator \
+    SubstratumSignature
