@@ -153,7 +153,6 @@ PRODUCT_PACKAGES += \
     PrebuiltBugle \
     GoogleDialer \
     WellbeingPrebuilt \
-    GoogleContacts \
     PrebuiltDeskClockGoogle \
     GoogleServicesFramework \
     Calculator \
