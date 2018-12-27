@@ -210,3 +210,8 @@ PRODUCT_PACKAGES += \
 #Weather package
 PRODUCT_PACKAGES += \
     WeatherClient
+
+# QS accents
+PRODUCT_PACKAGES += \
+    QSAccentBlack \
+    QSAccentWhite
