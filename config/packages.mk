@@ -236,3 +236,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     QSAccentBlack \
     QSAccentWhite
+
+# Switch Styles
+PRODUCT_PACKAGES += \
+    MD2Switch \
+    OnePlusSwitch \
+    StockSwitch
