@@ -35,6 +35,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     Launcher3
 
+# Weather client
+PRODUCT_COPY_FILES += \
+    vendor/stag/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml \
+    vendor/stag/etc/default-permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
+
 #Default Browser
 PRODUCT_PACKAGES += \
     ViaBrowser
@@ -52,6 +57,3 @@ PRODUCT_COPY_FILES += \
     vendor/stag/prebuilt/common/etc/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml \
     vendor/stag/prebuilt/common/etc/permissions/com.google.android.dialer.support.xml:system/etc/permissions/com.google.android.dialer.support.xml \
     vendor/stag/prebuilt/common/framework/com.google.android.dialer.support.jar:system/framework/com.google.android.dialer.support.jar
-
-# Weather
-include vendor/stag/config/weather.mk
