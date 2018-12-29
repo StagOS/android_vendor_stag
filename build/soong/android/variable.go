@@ -6,6 +6,9 @@ type Product_variables struct {
 	Target_process_sdk_version_override struct {
 		Cppflags []string
 	}
+	Apply_msm8974_1440p_egl_workaround struct {
+		Cflags []string
+	}
 	Device_support_hwfde struct {
 		Cflags []string
 		Header_libs []string
@@ -41,6 +44,7 @@ type ProductVariables struct {
 	Device_support_hwfde_perf  *bool `json:",omitempty"`
 	Device_support_legacy_hwfde  *bool `json:",omitempty"`
 	Device_support_wait_for_qsee  *bool `json:",omitempty"`
+	Apply_msm8974_1440p_egl_workaround  *bool `json:",omitempty"`
 	Java_Source_Overlays *string `json:",omitempty"`
 	Needs_text_relocations  *bool `json:",omitempty"`
 	Specific_camera_parameter_library  *string `json:",omitempty"`
