@@ -101,13 +101,20 @@ PRODUCT_PACKAGES += \
 
 #QS Styles
 PRODUCT_PACKAGES += \
+	QSTileSquircle \
+	QSTileTearDrop \
 	QSTileCircleDual \
 	QSTileCircleGradient \
 	QSTileInkdrop \
 	QSTileIconAccent \
 	QSTileShishuNights \
 	QSTileMemedoSquare \
-	QSTileWavey
+	QSTileWavey \
+	QSTileAttemptMountain \
+	QSTileDottedCircle \
+	QSTileNinja \
+	QSTilePokesign \
+	QSTileShishuInk
 
 # Extra tools
 PRODUCT_PACKAGES += \
