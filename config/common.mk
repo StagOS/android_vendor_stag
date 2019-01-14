@@ -59,6 +59,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ViaBrowser
 
+# Cutout control overlays
+PRODUCT_PACKAGES += \
+    HideCutout \
+    StatusBarStock
+
 # WellBeing
 PRODUCT_PACKAGES += \
     WellbeingPrebuilt
