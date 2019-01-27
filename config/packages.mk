@@ -270,3 +270,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Updater \
     updater.xml
+
+#Doze
+PRODUCT_PACKAGES += \
+    CustomDoze \
