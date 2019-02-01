@@ -19,7 +19,7 @@ endif
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 LIST = $(shell curl -s https://raw.githubusercontent.com/StagOS/android_vendor_stag/p9/stag.devices)
 FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
-ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
+ifeq ($(BUILD_TYPE),OFFICIAL)
    IS_OFFICIAL=true
    STAG_BUILD_TYPE := OFFICIAL
 else
