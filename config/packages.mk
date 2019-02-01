@@ -28,7 +28,8 @@ PRODUCT_PACKAGES += \
     DuiDarkTheme \
     GBoardDarkTheme \
     SettingsDarkTheme \
-    SystemDarkTheme
+    SystemDarkTheme \
+    WellbeingDark
 
 # Themes Black
 PRODUCT_PACKAGES += \
