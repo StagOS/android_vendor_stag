@@ -73,3 +73,5 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     apns-conf.xml
 
+#IgnoreNeverallows
+SELINUX_IGNORE_NEVERALLOWS := true
