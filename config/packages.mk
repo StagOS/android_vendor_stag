@@ -253,7 +253,8 @@ PRODUCT_PACKAGES += \
     QStileWavey \
     QStileCookie \
     QStileInkDrop \
-    QStileSquaremedo
+    QStileSquaremedo \
+    QStileCircleOutline
 
 # Icon Shapes
 include vendor/stag/config/iconshapes.mk
