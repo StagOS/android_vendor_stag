@@ -23,18 +23,23 @@ PRODUCT_PACKAGES += \
     messaging \
     Stk
 
-# Themes Dark
-PRODUCT_PACKAGES += \
-    DuiDarkTheme \
-    GBoardDarkTheme \
-    SettingsDarkTheme \
-    SystemDarkTheme
+
 
 # Themes Black
 PRODUCT_PACKAGES += \
     SettingsBlackTheme \
     SystemBlackTheme \
     SystemUIBlackTheme
+
+# Themes Dark
+PRODUCT_PACKAGES += \
+    GBoardDark \
+    GoogleIntelligenceSenseDark \
+    SettingsDark \
+    SettingsIntelligenceDark \
+    SystemDark \
+    SystemUiDark \
+    WellbeingDark
 
 # Overlays
 PRODUCT_PACKAGES += \
