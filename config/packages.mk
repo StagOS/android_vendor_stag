@@ -19,7 +19,7 @@ PRODUCT_PACKAGES += \
     Calendar \
     ExactCalculator \
     LatinIME \
-    Launcher3QuickStep \
+    Lawnchair \
     messaging \
     Stk
 

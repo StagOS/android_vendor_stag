@@ -39,7 +39,12 @@ PRODUCT_COPY_FILES += \
 
 #Default Launcher
 PRODUCT_PACKAGES += \
-    Launcher3
+    Lawnchair
+
+# Lawnchair
+PRODUCT_COPY_FILES += \
+    vendor/stag/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
+    vendor/stag/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
 
 # Weather client
 PRODUCT_COPY_FILES += \
