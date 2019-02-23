@@ -196,7 +196,8 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     Launcher3 \
     ViaBrowser \
-    Phonograph
+    Phonograph \
+    OmniStyle
 
 # Google
 PRODUCT_PACKAGES += \
