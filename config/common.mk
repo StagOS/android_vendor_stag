@@ -5,7 +5,13 @@ PRODUCT_DEVICE := generic
 EXCLUDE_SYSTEMUI_TESTS := true
 
 # Bootanimation
-PRODUCT_COPY_FILES += vendor/stag/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+ifeq ($(TARGET_SCREEN_RES), 720)
+	PRODUCT_COPY_FILES += vendor/stag/prebuilt/common/bootanimation/720p.zip:system/media/bootanimation.zip
+else ifeq ($(TARGET_SCREEN_RES), 1080)
+	PRODUCT_COPY_FILES += vendor/stag/prebuilt/common/bootanimation/1080p.zip:system/media/bootanimation.zip
+else
+	PRODUCT_COPY_FILES += vendor/stag/prebuilt/common/bootanimation/1080p.zip:system/media/bootanimation.zip
+endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
