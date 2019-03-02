@@ -25,10 +25,10 @@ PRODUCT_PACKAGES += \
 
 # Themes Dark
 PRODUCT_PACKAGES += \
-    DuiDarkTheme \
     GBoardDarkTheme \
     SettingsDarkTheme \
     SystemDarkTheme \
+    systemui \
     WellbeingDark
 
 # Themes Black
