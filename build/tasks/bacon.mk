@@ -29,8 +29,24 @@ endif
 
 STAG_TARGET_PACKAGE := $(PRODUCT_OUT)/$(STAG_VERSION).zip
 
-.PHONY: bacon
+.PHONY: bacon stag
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(STAG_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(STAG_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(STAG_TARGET_PACKAGE).md5sum
 	@echo "Package Complete: $(STAG_TARGET_PACKAGE)" >&2
+
+stag: $(INTERNAL_OTA_PACKAGE_TARGET)
+	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(STAG_TARGET_PACKAGE)
+	$(hide) $(MD5SUM) $(STAG_TARGET_PACKAGE) > $(STAG_TARGET_PACKAGE).md5sum
+
+	echo -e ${CL_RED}"    ______________   ______      ____  _____"${CL_RST}
+	echo -e ${CL_GRN}"   / ___/_  __/   | / ____/     / __ \/ ___/"${CL_RST}
+	echo -e ${CL_CYN}"   \__ \ / / / /| |/ / ________/ / / /\__ \ "${CL_RST}
+	echo -e ${CL_BLU}"  ___/ // / / ___ / /_/ /_____/ /_/ /___/ / "${CL_RST}
+	echo -e ${CL_MAG}" /____//_/ /_/  |_\____/      \____//____/  "${CL_RST}
+	echo -e ${CL_BLD}${CL_CYN}"=================-Sic Parvis Magna-================="${CL_RST}
+	echo -e ${CL_BLD}${CL_YLW}"Zip: "${CL_YLW} $(STAG_TARGET_PACKAGE)${CL_RST}
+	echo -e ${CL_BLD}${CL_YLW}"MD5: "${CL_YLW}" `cat $(STAG_TARGET_PACKAGE).md5sum | awk '{print $$1}' `"${CL_RST}
+	echo -e ${CL_BLD}${CL_YLW}"Size:"${CL_YLW}" `du -sh $(STAG_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
+	echo -e ${CL_BLD}${CL_CYN}"====================================================="${CL_RST}
+
