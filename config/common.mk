@@ -32,6 +32,10 @@ DEVICE_PACKAGE_OVERLAYS += \
     vendor/stag/overlay
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/stag/overlay/common
 
+# Copy all custom init rc files
+$(foreach f,$(wildcard vendor/stag/prebuilt/common/etc/init/*.rc),\
+    $(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
+
 # Changelog
 #PRODUCT_COPY_FILES += \
 #    out/../Changelog.mkdn:system/etc/Changelog.txt
