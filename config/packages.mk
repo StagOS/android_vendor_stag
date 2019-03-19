@@ -120,6 +120,22 @@ PRODUCT_PACKAGES += \
 	QSTilePokesign \
 	QSTileShishuInk
 
+# Gradients
+PRODUCT_PACKAGES += \
+    FireTheme \
+    FlareTheme \
+    HyakkimaruTheme \
+    KyeMehTheme \
+    OrangeCoralTheme \
+    PureLustTheme \
+    QuepalTheme \
+    ReaTheme \
+    SkylineTheme \
+    SublimeTheme \
+    TimberTheme \
+    WitchingHourTheme \
+    YodaTheme
+
 # Extra tools
 PRODUCT_PACKAGES += \
     7z \
