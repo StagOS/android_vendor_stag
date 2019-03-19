@@ -47,3 +47,7 @@ endif
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 
+# APN
+PRODUCT_PACKAGES += \
+    apns-conf.xml
+
