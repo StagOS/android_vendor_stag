@@ -25,11 +25,14 @@ PRODUCT_PACKAGES += \
 
 # Themes Dark
 PRODUCT_PACKAGES += \
-    GBoardDarkTheme \
-    SettingsDarkTheme \
     SystemDarkTheme \
-    systemui \
-    WellbeingDark
+    SettingsDarkTheme \
+    SystemUIDarkTheme \
+    WellbeingDarkTheme \
+    GBoardDarkTheme
+
+
+
 
 # Themes Black
 PRODUCT_PACKAGES += \
