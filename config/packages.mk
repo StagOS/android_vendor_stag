@@ -47,22 +47,22 @@ PRODUCT_PACKAGES += \
     BlueAccent \
     BlueGreyAccent \
     BrownAccent \
-    CandyRedAccent \
+    CandyRed \
     CyanAccent \
     DeepOrangeAccent \
     DeepPurpleAccent \
-    ExtendedGreenAccent \
+    ExtendedGreen \
     DuiDark \
     GBoardDark \
     GreenAccent \
     GreyAccent \
     IndigoAccent \
-    JadeGreenAccent \
+    JadeGreen \
     LightBlueAccent \
     LightGreenAccent \
     LimeAccent \
     OrangeAccent \
-    PaleBlueAccent \
+    PaleBlue \
     PaleRed \
     PinkAccent \
     PurpleAccent \
@@ -79,29 +79,29 @@ PRODUCT_PACKAGES += \
     UserFive \
     UserSix \
     UserSeven \
-    ObfusBleuAccent \
-    NotImpPurpleAccent \
-    HolillusionAccent \
-    MoveMintAccent \
-    FootprintPurpleAccent \
-    BubblegumPinkAccent \
-    FrenchBleuAccent \
-    StockAccent \
-    ManiaAmberAccent \
-    SeasideMintAccent \
-    DreamyPurpleAccent \
-    SpookedPurpleAccent \
-    HeirloomBleuAccent \
-    TruFilPinkAccent \
-    WarmthOrangeAccent \
-    ColdBleuAccent \
-    DiffDayGreenAccent \
-    DuskPurpleAccent \
-    BurningRedAccent \
-    HazedPinkAccent \
-    ColdYellowAccent \
-    NewHouseOrangeAccent \
-    IllusionsPurpleAccent
+    ObfusBleu \
+    NotImpPurple \
+    Holillusion \
+    MoveMint \
+    FootprintPurple \
+    BubblegumPink \
+    FrenchBleu \
+    Stock \
+    ManiaAmber \
+    SeasideMint \
+    DreamyPurple \
+    SpookedPurple \
+    HeirloomBleu \
+    TruFilPink \
+    WarmthOrange \
+    ColdBleut \
+    DiffDayGreen \
+    DuskPurple \
+    BurningRed \
+    HazedPink \
+    ColdYellow \
+    NewHouseOrange \
+    IllusionsPurple
 
 #QS Styles
 PRODUCT_PACKAGES += \
