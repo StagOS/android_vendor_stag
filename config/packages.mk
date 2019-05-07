@@ -19,7 +19,7 @@ PRODUCT_PACKAGES += \
     Calendar \
     ExactCalculator \
     LatinIME \
-    Lawnchair \
+    Launcher3QuickStep \
     messaging \
     Stk
 
@@ -95,7 +95,7 @@ PRODUCT_PACKAGES += \
     HeirloomBleu \
     TruFilPink \
     WarmthOrange \
-    ColdBleut \
+    ColdBleu \
     DiffDayGreen \
     DuskPurple \
     BurningRed \
