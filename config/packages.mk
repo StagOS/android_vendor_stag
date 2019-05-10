@@ -1,4 +1,4 @@
-
+#
 # Copyright (C) 2018 The StagOS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -213,12 +213,13 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     ViaBrowser \
     Phonograph \
-    OmniStyle
+    OmniStyle \
+    Koler
 
 # Google
 PRODUCT_PACKAGES += \
     PrebuiltBugle \
-    GoogleDialer \
+#    GoogleDialer \
     WellbeingPrebuilt \
     PrebuiltDeskClockGoogle \
     GoogleServicesFramework \

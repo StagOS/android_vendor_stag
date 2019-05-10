@@ -55,10 +55,10 @@ PRODUCT_PACKAGES += \
     Phonograph
 
 # Fix Google dialer
-PRODUCT_COPY_FILES += \
-    vendor/stag/prebuilt/common/etc/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml \
-    vendor/stag/prebuilt/common/etc/permissions/com.google.android.dialer.support.xml:system/etc/permissions/com.google.android.dialer.support.xml \
-    vendor/stag/prebuilt/common/framework/com.google.android.dialer.support.jar:system/framework/com.google.android.dialer.support.jar
+#PRODUCT_COPY_FILES += \
+#    vendor/stag/prebuilt/common/etc/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml \
+#    vendor/stag/prebuilt/common/etc/permissions/com.google.android.dialer.support.xml:system/etc/permissions/com.google.android.dialer.support.xml \
+#    vendor/stag/prebuilt/common/framework/com.google.android.dialer.support.jar:system/framework/com.google.android.dialer.support.jar
 
 # APN
 PRODUCT_PACKAGES += \
