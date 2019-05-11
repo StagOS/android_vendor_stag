@@ -16,10 +16,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Package name for the default in-call UI and dialer [DO NOT TRANSLATE] -->
-    <string name="ui_default_package" translatable="false">com.chooloo.www.callmanager</string>
+    <string name="ui_default_package" translatable="false">com.google.android.dialer</string>
 
-    <!-- Class name for the default main dialer activity [DO NOT TRANSLATE] 
-    <string name="dialer_default_class" translatable="false">com.google.android.dialer.extensions.GoogleDialtactsActivity</string> -->
+    <!-- Class name for the default main dialer activity [DO NOT TRANSLATE] -->
+    <string name="dialer_default_class" translatable="false">com.google.android.dialer.extensions.GoogleDialtactsActivity</string>
 
 </resources>
 
