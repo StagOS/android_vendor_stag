@@ -63,6 +63,17 @@ $(foreach f,$(wildcard vendor/stag/prebuilt/common/etc/init/*.rc),\
 PRODUCT_PACKAGES += \
     ViaBrowser
 
+# Proprietary latinime libs needed for Keyboard swyping
+ifeq ($(TARGET_ARCH),arm64)
+PRODUCT_COPY_FILES += \
+    vendor/stag/prebuilt/common/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so \
+    vendor/stag/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
+else
+PRODUCT_COPY_FILES += \
+    vendor/stag/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
+    vendor/stag/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+endif
+
 # Cutout control overlays
 PRODUCT_PACKAGES += \
     HideCutout \
@@ -79,15 +90,6 @@ PRODUCT_PACKAGES += \
 # APN
 PRODUCT_PACKAGES += \
     apns-conf.xml
-
-# Proprietary latinime libs needed for Keyboard swyping
-ifneq ($(filter arm64,$(TARGET_ARCH)),)
-PRODUCT_COPY_FILES += \
-    vendor/stag/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so
-else
-PRODUCT_COPY_FILES += \
-    vendor/stag/prebuilt/common/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
-endif
 
 #IgnoreNeverallows
 SELINUX_IGNORE_NEVERALLOWS := true
