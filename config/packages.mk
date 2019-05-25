@@ -218,7 +218,6 @@ PRODUCT_PACKAGES += \
 # Google
 PRODUCT_PACKAGES += \
     PrebuiltBugle \
-    GoogleDialer \
     WellbeingPrebuilt \
     PrebuiltDeskClockGoogle \
     GoogleServicesFramework \
