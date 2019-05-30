@@ -212,7 +212,8 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     ViaBrowser \
     Phonograph \
-    OmniStyle
+    OmniStyle \
+    StagWalls
 
 # Google
 PRODUCT_PACKAGES += \
