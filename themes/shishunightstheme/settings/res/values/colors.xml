@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="condition_card_background">@*android:color/black</color>
+    <color name="suggestion_condition_background">#c016161c</color>
+    <color name="suggestion_tile_background">@*android:color/transparent</color>
+    <!--<color name="material_grey_300">@*android:color/black</color> -->
+    <color name="search_bar_background_color">#c016161c</color>
+
+    <!-- Color for the background of the shortcut icons.-->
+    <color name="shortcut_background">@*android:color/black</color>
+
+    <!-- Expanded desktop -->
+    <drawable name="expanded_item_bg_activated">@*android:color/black</drawable>
+    <drawable name="expanded_item_bg">@*android:color/black</drawable>
+</resources>
