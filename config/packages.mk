@@ -28,11 +28,12 @@ PRODUCT_PACKAGES += \
     SystemDarkTheme \
     SettingsDarkTheme \
     SystemUIDarkTheme \
+    SystemShishuNightsTheme \
+    SettingsShishuNightsTheme \
+    SystemUIShishuNightsTheme \
+    WellbeingThemeShishuNights \
     WellbeingDarkTheme \
     GBoardDarkTheme
-
-
-
 
 # Themes Black
 PRODUCT_PACKAGES += \
