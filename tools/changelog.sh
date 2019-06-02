@@ -2,7 +2,7 @@
 
 # Exports
 dir=$ANDROID_BUILD_TOP
-out=$dir/out/target/product
+out=$dir/out/target/product/*
 
 export Changelog=Changelog.txt
 
@@ -39,6 +39,6 @@ if [ -e $out/*/system/etc/$Changelog ]
 then
 rm $out/*/system/etc/$Changelog
 fi
-cp $Changelog $OUT/system/etc/
-cp $Changelog $OUT/
+cp $Changelog $out/system/etc/
+cp $Changelog $out/
 rm $Changelog
