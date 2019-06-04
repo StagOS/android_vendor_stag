@@ -39,6 +39,10 @@ PRODUCT_PACKAGES += \
     SettingsIntelligenceDark \
     SystemDark \
     SystemUiDark \
+    SystemShishuNightsTheme \
+    SettingsShishuNightsTheme \
+    SystemUIShishuNightsTheme \
+    WellbeingThemeShishuNights \
     WellbeingDark
 
 # Overlays
