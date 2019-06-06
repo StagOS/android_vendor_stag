@@ -26,6 +26,11 @@ PRODUCT_COPY_FILES += \
     vendor/stag/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
 endif
 
+# Copy all Lineage-specific init rc files
+$(foreach f,$(wildcard vendor/stag/prebuilt/common/etc/init/*.rc),\
+	$(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
+
+
 # Permissions
 PRODUCT_COPY_FILES += \
     vendor/stag/prebuilt/common/etc/permissions/privapp-permissions-stag.xml:system/etc/permissions/privapp-permissions-stag.xml
