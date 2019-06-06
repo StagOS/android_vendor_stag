@@ -26,6 +26,10 @@ PRODUCT_COPY_FILES += \
     vendor/stag/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
 endif
 
+# Permissions
+PRODUCT_COPY_FILES += \
+    vendor/stag/prebuilt/common/etc/permissions/privapp-permissions-stag.xml:system/etc/permissions/privapp-permissions-stag.xml
+
 # Changelog
 PRODUCT_COPY_FILES += \
     out/Changelog.mkdn:system/etc/Changelog.txt
