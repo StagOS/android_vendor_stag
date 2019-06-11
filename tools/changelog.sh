@@ -3,7 +3,6 @@
 # Exports
 dir=$ANDROID_BUILD_TOP
 out=$dir/out
-
 export Changelog=Changelog.mkdn
 
 if [ -f $Changelog ];
@@ -30,9 +29,3 @@ done
 
 sed -i 's/project/ */g' $Changelog
 sed -i 's/[/]$//' $Changelog
-
-if [ -e $out/$Changelog ]
-then
-rm $out/$Changelog
-fi
-cp $Changelog $out/
