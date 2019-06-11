@@ -37,7 +37,7 @@ PRODUCT_COPY_FILES += \
 
 # Changelog
 PRODUCT_COPY_FILES += \
-    out/Changelog.mkdn:system/etc/Changelog.txt
+    out/../Changelog.mkdn:system/etc/Changelog.txt
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
