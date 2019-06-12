@@ -123,22 +123,40 @@ PRODUCT_PACKAGES += \
 	QSTileDottedCircle \
 	QSTileNinja \
 	QSTilePokesign \
-	QSTileShishuInk
+	QSTileShishuInk \
+        QSTileCookie \
+        QSTileCosmos \
+        QSTileDividedCircle \
+        QSTileNeonLight \
+        QSTileOxygen \
+        QSTileTriangles
 
 # Gradients
 PRODUCT_PACKAGES += \
+    BlueSkyTheme \
+    CherryTheme \
+    DeepSkylineTheme \
+    DeepSunsetTheme \
     FireTheme \
     FlareTheme \
+    GrapeVineTheme \
     HyakkimaruTheme \
     KyeMehTheme \
+    LavenderTheme \
+    LightSeaStormTheme \
     OrangeCoralTheme \
+    PeachyTheme \
+    PolarGreenTheme \
     PureLustTheme \
     QuepalTheme \
     ReaTheme \
+    SeaStormTheme \
+    ShadesofGreyTheme \
+    SinCityRedTheme \
     SkylineTheme \
     SublimeTheme \
     TimberTheme \
-    WitchingHourTheme \
+    WitchingHourTheme  \
     YodaTheme
 
 # Extra tools
