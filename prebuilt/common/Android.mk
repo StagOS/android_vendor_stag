@@ -125,6 +125,14 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/sysconfig
 LOCAL_SRC_FILES := etc/sysconfig/turbo.xml
 include $(BUILD_PREBUILT)
 
+# Sysconfig for Updater
+include $(CLEAR_VARS)
+LOCAL_MODULE := updater.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/sysconfig
+LOCAL_SRC_FILES := etc/sysconfig/updater.xml
+include $(BUILD_PREBUILT)
+
 ################################
 # Copies the APN list file into system/etc for the product as apns-conf.xml.
 # In the case where $(CUSTOM_APNS_FILE) is defined, the content of $(CUSTOM_APNS_FILE)

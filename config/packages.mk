@@ -261,3 +261,8 @@ PRODUCT_PACKAGES += \
     MD2Switch \
     OnePlusSwitch \
     StockSwitch
+
+# Updater
+PRODUCT_PACKAGES += \
+    Updater \
+    updater.xml
