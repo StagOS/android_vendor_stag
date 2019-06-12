@@ -55,6 +55,10 @@ PRODUCT_COPY_FILES += \
     vendor/stag/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml \
     vendor/stag/etc/default-permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
 
+# Copy all Stag-specific init rc files
+$(foreach f,$(wildcard vendor/stag/prebuilt/common/etc/init/*.rc),\
+	$(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
+
 #Default Browser
 PRODUCT_PACKAGES += \
     ViaBrowser
