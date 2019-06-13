@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "{ \"response\": [ { \"datetime\": $(grep ro\.build\.date\.utc $OUT/system/build.prop | cut -d= -f2), \"filename\": \"$(basename $(ls $OUT/StagOS*.zip))\", \"id\": \"$((sha256sum $OUT/StagOS*.zip) | cut -d ' ' -f1)\", \"romtype\": \"official\", \"size\": $(stat -c%s $OUT/StagOS*.zip), \"url\": \"https://sourceforge.net/projects/stag-os/files/<devicename>/$(basename $(ls $OUT/StagOS*.zip))\", \"version\": \"9.0\"  }]}" | tee $OUT/update
