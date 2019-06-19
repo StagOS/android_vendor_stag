@@ -199,7 +199,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     MD2Switch \
     OnePlusSwitch \
-    StockSwitch
+    StockSwitch \
+    Contained \
+    Retro \
+    Stockish \
+    Narrow
 
 # Updater
 PRODUCT_PACKAGES += \
