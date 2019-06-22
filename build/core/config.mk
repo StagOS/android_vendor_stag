@@ -22,8 +22,5 @@ FRAMEWORK_STAG_API_NEEDS_UPDATE_TEXT := $(TOPDIR)vendor/stag/build/core/apicheck
 
 BUILD_RRO_SYSTEM_PACKAGE := $(TOPDIR)vendor/stag/build/core/system_rro.mk
 
-# Rules for MTK targets
-include $(TOPDIR)vendor/stag/build/core/mtk_target.mk
-
 # Rules for QCOM targets
 include $(TOPDIR)vendor/stag/build/core/qcom_target.mk
