@@ -39,11 +39,11 @@ stag: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(STAG_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(STAG_TARGET_PACKAGE) > $(STAG_TARGET_PACKAGE).md5sum
 
-	echo -e ${CL_CYN}"		   ______________   ______      ____  _____"${CL_RST}
-	echo -e ${CL_CYN}"		  / ___/_  __/   | / ____/     / __ \/ ___/"${CL_RST}
-	echo -e ${CL_CYN}"		  \__ \ / / / /| |/ / ________/ / / /\__ \ "${CL_RST}
-	echo -e ${CL_CYN}"		 ___/ // / / ___ / /_/ /_____/ /_/ /___/ / "${CL_RST}
-	echo -e ${CL_CYN}"		/____//_/ /_/  |_\____/      \____//____/  "${CL_RST}
+	echo -e ${CL_CYN}"   ______________   ______      ____  _____"${CL_RST}
+	echo -e ${CL_CYN}"  / ___/_  __/   | / ____/     / __ \/ ___/"${CL_RST}
+	echo -e ${CL_CYN}"  \__ \ / / / /| |/ / ________/ / / /\__ \ "${CL_RST}
+	echo -e ${CL_CYN}" ___/ // / / ___ / /_/ /_____/ /_/ /___/ / "${CL_RST}
+	echo -e ${CL_CYN}"/____//_/ /_/  |_\____/      \____//____/  "${CL_RST}
 	echo -e ${CL_BLD}${CL_CYN}"=================-Sic Parvis Magna-================="${CL_RST}
 	echo -e ${CL_BLD}${CL_YLW}"Zip: "${CL_YLW} $(STAG_TARGET_PACKAGE)${CL_RST}
 	echo -e ${CL_BLD}${CL_YLW}"MD5: "${CL_YLW}" `cat $(STAG_TARGET_PACKAGE).md5sum | awk '{print $$1}' `"${CL_RST}
