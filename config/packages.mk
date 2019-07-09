@@ -47,69 +47,6 @@ PRODUCT_PACKAGES += \
     WellbeingThemeShishuNights \
     WellbeingDark
 
-# Overlays
-PRODUCT_PACKAGES += \
-    AmberAccent \
-    BlackAccent \
-    BlueAccent \
-    BlueGreyAccent \
-    BrownAccent \
-    CandyRed \
-    CyanAccent \
-    DeepOrangeAccent \
-    DeepPurpleAccent \
-    ExtendedGreen \
-    DuiDark \
-    GBoardDark \
-    GreenAccent \
-    GreyAccent \
-    IndigoAccent \
-    JadeGreen \
-    LightBlueAccent \
-    LightGreenAccent \
-    LimeAccent \
-    OrangeAccent \
-    PaleBlue \
-    PaleRed \
-    PinkAccent \
-    PurpleAccent \
-    RedAccent \
-    SettingsDark \
-    SystemDark \
-    TealAccent \
-    YellowAccent \
-    WhiteAccent \
-    UserOne \
-    UserTwo \
-    UserThree \
-    UserFour \
-    UserFive \
-    UserSix \
-    UserSeven \
-    ObfusBleu \
-    NotImpPurple \
-    Holillusion \
-    MoveMint \
-    FootprintPurple \
-    BubblegumPink \
-    FrenchBleu \
-    Stock \
-    ManiaAmber \
-    SeasideMint \
-    DreamyPurple \
-    SpookedPurple \
-    HeirloomBleu \
-    TruFilPink \
-    WarmthOrange \
-    ColdBleu \
-    DiffDayGreen \
-    DuskPurple \
-    BurningRed \
-    HazedPink \
-    ColdYellow \
-    NewHouseOrange \
-    IllusionsPurple
-
 #QS Styles
 PRODUCT_PACKAGES += \
 	QSTileSquircle \
@@ -275,4 +212,4 @@ PRODUCT_PACKAGES += \
 
 #Doze
 PRODUCT_PACKAGES += \
-    CustomDoze \
+    CustomDoze
