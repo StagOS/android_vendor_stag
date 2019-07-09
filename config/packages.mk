@@ -21,7 +21,9 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Launcher3QuickStep \
     messaging \
-    Stk
+    Stk \
+    LiveWallpapers \
+    LiveWallpapersPicker
 
 
 
