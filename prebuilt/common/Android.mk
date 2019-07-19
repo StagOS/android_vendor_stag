@@ -21,7 +21,7 @@ LOCAL_SRC_FILES := priv-app/Lawnchair.apk
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_MODULE_CLASS := APPS
 LOCAL_PRIVILEGED_MODULE := true
-LOCAL_OVERRIDES_PACKAGES := Launcher2 Launcher3 Launcher3QuickStep NexusLauncherPrebuilt
+LOCAL_OVERRIDES_PACKAGES := Home Launcher2 Launcher3 Launcher3QuickStep NexusLauncherPrebuilt
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)

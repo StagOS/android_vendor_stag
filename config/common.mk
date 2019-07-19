@@ -98,3 +98,6 @@ PRODUCT_PACKAGES += \
 
 #IgnoreNeverallows
 SELINUX_IGNORE_NEVERALLOWS := true
+
+#Sepolicy
+include device/stag/sepolicy/qcom/sepolicy.mk
