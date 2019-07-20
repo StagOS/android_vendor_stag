@@ -101,3 +101,6 @@ SELINUX_IGNORE_NEVERALLOWS := true
 
 #Sepolicy
 include device/stag/sepolicy/qcom/sepolicy.mk
+
+#StagOs Version
+$(call inherit-product, vendor/stag/config/version.mk)
