@@ -195,11 +195,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     WeatherClient
 
-# QS accents
-PRODUCT_PACKAGES += \
-    QSAccentBlack \
-    QSAccentWhite
-
 # Switch Styles
 PRODUCT_PACKAGES += \
     MD2Switch \
