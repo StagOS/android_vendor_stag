@@ -1,4 +1,3 @@
-
 # Common
 include vendor/stag/config/common.mk
 
