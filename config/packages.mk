@@ -25,6 +25,7 @@ PRODUCT_PACKAGES += \
     Jelly \
     LatinIME \
     Launcher3QuickStep \
+    Longshot \
     messaging \
     PixelLiveWallpaperPrebuilt \
     OPScreenRecorder \

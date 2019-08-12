@@ -87,10 +87,13 @@ PRODUCT_COPY_FILES += \
    vendor/stag/prebuilt/common/etc/permissions/privapp-permissions-snap.xml:system/etc/permissions/privapp-permissions-snap.xml \
    vendor/stag/prebuilt/common/etc/permissions/privapp-permissions-camera2.xml:system/etc/permissions/privapp-permissions-camera2.xml
 
+# Stag Perms
+PRODUCT_COPY_FILES += \
+   vendor/stag/prebuilt/common/etc/permissions/privapp-permissions-stag.xml:system/etc/permissions/privapp-permissions-stag.xml \
+
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # APN
 PRODUCT_PACKAGES += \
     apns-conf.xml
-
