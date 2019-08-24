@@ -217,6 +217,9 @@
         <item name="android:colorSecondary">@*android:color/black</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_dark</item>
         <item name="android:colorBackground">@*android:color/black</item>
+       <!-- volume background -->
+        <item name="android:panelColorBackground">@*android:color/black</item>
+<!-- Here -->
     </style>
     <style name="Theme.DeviceDefault.Resolver" parent="@*android:style/Theme.Material">
         <item name="android:backgroundTint">@*android:color/black</item>

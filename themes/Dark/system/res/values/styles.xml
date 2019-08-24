@@ -24,7 +24,7 @@
         <item name="android:toolbarStyle">@*android:style/Widget.DeviceDefault.Toolbar</item>
 
         <!-- volume background -->
-        <item name="android:panelColorBackground">@*android:color/primary_material_light</item>
+        <item name="android:panelColorBackground">@*android:color/primary_material_dark</item>
     </style>
     <style name="Theme.DeviceDefault.Settings" parent="@*android:style/Theme.Material">
         <item name="android:actionBarTheme">@*android:style/ThemeOverlay.DeviceDefault.ActionBar.Accent</item>
