@@ -137,5 +137,8 @@
 
     <!-- Lawnstep -->
     <string name="config_recentsComponentName" translatable="false">ch.deletescape.lawnchair.ci/com.android.quickstep.RecentsActivity</string>
+
+    <!-- AoD default value -->
+    <bool name="config_dozeAlwaysOnEnabled">true</bool>
 </resources>
 
