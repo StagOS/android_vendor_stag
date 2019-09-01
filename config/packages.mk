@@ -122,3 +122,7 @@ PRODUCT_PACKAGES += \
     TimberTheme \
     WitchingHourTheme \
     YodaTheme
+
+# Recorder
+PRODUCT_PACKAGES += \
+    Recorder
