@@ -213,3 +213,7 @@ PRODUCT_PACKAGES += \
 #Doze
 PRODUCT_PACKAGES += \
     CustomDoze
+
+# Recorder
+PRODUCT_PACKAGES += \
+    Recorder
