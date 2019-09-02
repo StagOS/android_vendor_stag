@@ -217,3 +217,7 @@ PRODUCT_PACKAGES += \
 # Recorder
 PRODUCT_PACKAGES += \
     Recorder
+
+# Long screenshot
+PRODUCT_PACKAGES += \
+    Longshot
