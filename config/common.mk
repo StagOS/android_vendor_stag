@@ -129,6 +129,9 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 PRODUCT_PACKAGES += \
     apns-conf.xml
 
+PRODUCT_PACKAGES += \
+    sensitive_pn.xml
+
 #ifneq ($(TARGET_USES_PREBUILT_CAMERA_SERVICE), true)
 #PRODUCT_SOONG_NAMESPACES += \
 #    frameworks/av/camera/cameraserver \
