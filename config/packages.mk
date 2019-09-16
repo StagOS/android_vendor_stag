@@ -127,3 +127,13 @@ PRODUCT_PACKAGES += \
 # Recorder
 PRODUCT_PACKAGES += \
     Recorder
+
+#Custom Overlays
+PRODUCT_PACKAGES += \
+    SystemPitchBlackOverlay \
+    SystemDarkGrayOverlay \
+    SystemUIDarkGrayOverlay \
+    SystemStyleOverlay \
+    SystemUIStyleOverlay \
+    SystemNightOverlay \
+    SystemUINightOverlay
