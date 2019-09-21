@@ -12,7 +12,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-StagOS_VERSION = 9.0
+StagOS_VERSION = 10.0
+StagOS_BUILD = 0
 ifeq ($(StagOS_BETA),true)
    STAG_BUILD_TYPE := BETA
 endif
@@ -25,7 +26,7 @@ ifeq ($(BUILD_TYPE),OFFICIAL)
 else
    STAG_BUILD_TYPE := UNOFFICIAL
 endif
-STAG_VERSION := StagOS-$(CURRENT_DEVICE)-$(StagOS_VERSION)-$(STAG_BUILD_TYPE)-$(shell date -u +%Y%m%d-%H%M)
+STAG_VERSION := StagOS-$(CURRENT_DEVICE)-$(StagOS_VERSION).$(StagOS_BUILD)-$(STAG_BUILD_TYPE)-$(shell date -u +%Y%m%d-%H%M)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
  ro.stag.version=$(StagOS_VERSION) \
  ro.stag.releasetype=$(STAG_BUILD_TYPE) \
