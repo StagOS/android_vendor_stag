@@ -23,8 +23,8 @@ else
 endif
 
 # Changelog
-PRODUCT_COPY_FILES += \
-    out/../Changelog.mkdn:system/etc/Changelog.txt
+#PRODUCT_COPY_FILES += \
+#    out/../Changelog.mkdn:system/etc/Changelog.txt
 
 #IgnoreNeverallows
 SELINUX_IGNORE_NEVERALLOWS := true

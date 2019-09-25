@@ -14,17 +14,18 @@
 # limitations under the License.
 StagOS_VERSION = 10.0
 StagOS_BUILD = 0
-ifeq ($(StagOS_BETA),true)
-   STAG_BUILD_TYPE := BETA
-endif
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 LIST = $(shell curl -s https://raw.githubusercontent.com/StagOS/android_vendor_stag/p9/stag.devices)
 FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
-ifeq ($(BUILD_TYPE),OFFICIAL)
-   IS_OFFICIAL=true
-   STAG_BUILD_TYPE := OFFICIAL
+ifeq ($(StagOS_BETA),true)
+   STAG_BUILD_TYPE := BETA
 else
-   STAG_BUILD_TYPE := UNOFFICIAL
+   ifeq ($(BUILD_TYPE),OFFICIAL)
+      IS_OFFICIAL=true
+      STAG_BUILD_TYPE := OFFICIAL
+   else
+       STAG_BUILD_TYPE := UNOFFICIAL
+   endif
 endif
 STAG_VERSION := StagOS-$(CURRENT_DEVICE)-$(StagOS_VERSION).$(StagOS_BUILD)-$(STAG_BUILD_TYPE)-$(shell date -u +%Y%m%d-%H%M)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
