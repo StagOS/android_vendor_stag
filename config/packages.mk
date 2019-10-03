@@ -17,6 +17,7 @@
 PRODUCT_PACKAGES += \
     BluetoothExt \
     Calendar \
+    Dialer \
     ExactCalculator \
     LatinIME \
     Launcher3QuickStep \
