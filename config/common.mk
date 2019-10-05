@@ -22,6 +22,11 @@ else
 	PRODUCT_COPY_FILES += vendor/stag/prebuilt/common/bootanimation/1080p.zip:system/media/bootanimation.zip
 endif
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    vendor/stag/overlay/common \
+    vendor/stag/overlay
+
 # Changelog
 #PRODUCT_COPY_FILES += \
 #    out/../Changelog.mkdn:system/etc/Changelog.txt
