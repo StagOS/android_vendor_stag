@@ -17,6 +17,7 @@
 PRODUCT_PACKAGES += \
     BluetoothExt \
     Calendar \
+    DeskClock \
     Dialer \
     ExactCalculator \
     LatinIME \
