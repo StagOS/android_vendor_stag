@@ -23,7 +23,8 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Launcher3QuickStep \
     messaging \
-    Stk
+    Stk \
+    ThemePicker
 
 # Extra tools
 PRODUCT_PACKAGES += \

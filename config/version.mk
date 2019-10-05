@@ -15,8 +15,7 @@
 StagOS_VERSION = 10.0
 StagOS_BUILD = 0
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
-LIST = $(shell curl -s https://raw.githubusercontent.com/StagOS/android_vendor_stag/p9/stag.devices)
-FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
+TARGET_PRODUCT_SHORT := $(subst aosp_,,$(CUSTOM_BUILD))
 ifeq ($(StagOS_BETA),true)
    STAG_BUILD_TYPE := BETA
 else
@@ -32,6 +31,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
  ro.stag.version=$(StagOS_VERSION) \
  ro.stag.releasetype=$(STAG_BUILD_TYPE) \
  ro.mod.version=$(StagOS_VERSION)
-STAG_DISPLAY_VERSION := StagOS-$(StagOS_VERSION)-$(STAG_BUILD_TYPE)
+STAG_DISPLAY_VERSION := StagOS-$(StagOS_VERSION).$(StagOS_BUILD)-$(STAG_BUILD_TYPE)
+ROM_FINGERPRINT := StagOS/$(STAG_VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date -u +%Y%m%d-%H%M)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
  ro.stag.display.version=$(STAG_DISPLAY_VERSION)
+ ro.stag.fingerprint=$(ROM_FINGERPRINT)
