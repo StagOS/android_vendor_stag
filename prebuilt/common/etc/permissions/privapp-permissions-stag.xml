@@ -30,4 +30,9 @@
         <permission name="android.permission.CAPTURE_SECURE_VIDEO_OUTPUT"/>
         <permission name="android.permission.CAPTURE_VIDEO_OUTPUT"/>
     </privapp-permissions>
+
+    <privapp-permissions package="com.android.gallery3d">
+        <permission name="android.permission.MODIFY_AUDIO_ROUTING"/>
+    </privapp-permissions>
+
 </permissions>
