@@ -59,7 +59,6 @@ PRODUCT_COPY_FILES += \
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
-
 # APN
 PRODUCT_PACKAGES += \
     apns-conf.xml

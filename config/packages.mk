@@ -27,6 +27,7 @@ PRODUCT_PACKAGES += \
     messaging \
     Stk \
     ThemePicker \
+    PixelThemes
 
 # Extra tools
 PRODUCT_PACKAGES += \
