@@ -52,7 +52,7 @@ PRODUCT_COPY_FILES += \
     vendor/stag/sounds/BatteryPlugged.ogg:system/media/audio/ui/BatteryPlugged.ogg \
     vendor/stag/sounds/BatteryPlugged_48k.ogg:system/media/audio/ui/BatteryPlugged_48k.ogg
 
-#Lawnchair permissions and sysconfig
+# Lawnchair permissions and sysconfig
 PRODUCT_COPY_FILES += \
     vendor/stag/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
     vendor/stag/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
@@ -66,7 +66,7 @@ PRODUCT_COPY_FILES += \
 $(foreach f,$(wildcard vendor/stag/prebuilt/common/etc/init/*.rc),\
 	$(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
 
-#Default Browser
+# Default Browser
 PRODUCT_PACKAGES += \
     ViaBrowser
 
@@ -92,8 +92,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     apns-conf.xml
 
-#IgnoreNeverallows
+# IgnoreNeverallows
 SELINUX_IGNORE_NEVERALLOWS := true
 
-#Sepolicy
+# Sepolicy
+ifeq ($(BOARD_USES_QCOM_HARDWARE), true)
 include device/stag/sepolicy/qcom/sepolicy.mk
+endif
