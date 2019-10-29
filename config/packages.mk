@@ -20,6 +20,7 @@ PRODUCT_PACKAGES += \
     DeskClock \
     Dialer \
     ExactCalculator \
+    Gallery2 \
     LatinIME \
     Launcher3QuickStep \
     messaging \
