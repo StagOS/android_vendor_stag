@@ -32,6 +32,7 @@ PRODUCT_PACKAGES += \
     Phonograph \
     PixelThemesStub \
     StagWalls \
+    StagThemesStub \
     StitchImage \
     Stk \
     ThemePicker
