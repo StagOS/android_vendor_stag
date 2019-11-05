@@ -17,15 +17,15 @@
 PRODUCT_PACKAGES += \
     BluetoothExt \
     Calendar \
+    Contacts \
     DeskClock \
     Dialer \
     ExactCalculator \
-    Gallery2 \
+    Gallery \
     LatinIME \
     Launcher3QuickStep \
     messaging \
     Stk \
-    ThemePicker
 
 # Extra tools
 PRODUCT_PACKAGES += \
