@@ -52,6 +52,10 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/stag/prebuilt/common/etc/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.nfc.beam.xml
 
+# Power whitelist
+PRODUCT_COPY_FILES += \
+    vendor/stag/prebuilt/common/etc/permissions/stag-power-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/stag-power-whitelist.xml
+
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
