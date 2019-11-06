@@ -21,11 +21,12 @@ PRODUCT_PACKAGES += \
     DeskClock \
     Dialer \
     ExactCalculator \
-    Gallery \
+    Gallery2 \
     LatinIME \
     Launcher3QuickStep \
     messaging \
     Stk \
+    ThemePicker \
 
 # Extra tools
 PRODUCT_PACKAGES += \
