@@ -26,6 +26,7 @@ PRODUCT_PACKAGES += \
     Launcher3QuickStep \
     messaging \
     Stk \
+    OPScreenRecorder \
     ThemePicker \
     PixelThemes
 

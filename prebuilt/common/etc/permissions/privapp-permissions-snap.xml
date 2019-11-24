@@ -19,5 +19,5 @@
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
         <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
     </privapp-permissions>
-
+	                                                
 </permissions>
