@@ -115,7 +115,7 @@ endif
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUIGoogle
+    SystemUI
 
 ifeq ($(EXTRA_FOD_ANIMATIONS),true)
 DEVICE_PACKAGE_OVERLAYS += vendor/stag/overlay/fod
