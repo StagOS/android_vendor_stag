@@ -68,6 +68,3 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 PRODUCT_PACKAGES += \
     apns-conf.xml
 
-#Prebuilt Packages
-PRODUCT PACKAGES += \
-	OPScreenRecorder
