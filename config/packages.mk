@@ -57,6 +57,10 @@ PRODUCT_PACKAGES += \
 #    AccentColorCyanOverlay \
 #    AccentColorBlueGrayOverlay
 
+# Gradient
+PRODUCT_PACKAGES += \
+    AccentColorGradientIndianOverlay
+
 # Custom Overlays
 # Settings
 PRODUCT_PACKAGES += \
