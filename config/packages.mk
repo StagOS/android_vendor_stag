@@ -22,9 +22,11 @@ PRODUCT_PACKAGES += \
     Dialer \
     ExactCalculator \
     Gallery2 \
+    Jelly \
     LatinIME \
     Launcher3QuickStep \
     messaging \
+    Phonograph \
     Stk \
     ThemePicker \
     PixelThemes
