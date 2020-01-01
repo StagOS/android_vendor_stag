@@ -132,6 +132,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Recorder
 
+# OmniStyle
+PRODUCT_PACKAGES += \
+    OmniStyle
+
 #Custom Overlays
 PRODUCT_PACKAGES += \
     SystemPitchBlackOverlay \
