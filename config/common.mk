@@ -32,7 +32,11 @@ DEVICE_PACKAGE_OVERLAYS += \
 #    out/../Changelog.mkdn:system/etc/Changelog.txt
 
 #IgnoreNeverallows
-SELINUX_IGNORE_NEVERALLOWS := true
+ifeq ($(TARGET_BUILD_VARIANT),user)
+	SELINUX_IGNORE_NEVERALLOWS := false
+else
+        SELINUX_IGNORE_NEVERALLOWS := true
+endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
