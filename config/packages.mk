@@ -145,3 +145,6 @@ PRODUCT_PACKAGES += \
     SystemUIStyleOverlay \
     SystemNightOverlay \
     SystemUINightOverlay
+
+# Icon Shapes
+include vendor/stag/config/iconshapes.mk
