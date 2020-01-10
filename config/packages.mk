@@ -26,11 +26,12 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Launcher3QuickStep \
     messaging \
+    PixelLiveWallpaperPrebuilt \
     OPScreenRecorder \
     Phonograph \
+    PixelThemesStub2019 \
     Stk \
     ThemePicker \
-    PixelThemes
 
 # Extra tools
 PRODUCT_PACKAGES += \
