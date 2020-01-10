@@ -26,6 +26,7 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Launcher3QuickStep \
     messaging \
+    OPScreenRecorder \
     Phonograph \
     Stk \
     ThemePicker \
@@ -129,8 +130,8 @@ PRODUCT_PACKAGES += \
     YodaTheme
 
 # Recorder
-PRODUCT_PACKAGES += \
-    Recorder
+#PRODUCT_PACKAGES += \
+#    Recorder
 
 # OmniStyle
 PRODUCT_PACKAGES += \
