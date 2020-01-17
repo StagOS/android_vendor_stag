@@ -31,7 +31,35 @@ PRODUCT_PACKAGES += \
     Phonograph \
     PixelThemesStub2019 \
     Stk \
-    ThemePicker \
+    ThemePicker
+
+# Accents
+PRODUCT_PACKAGES += \
+    AccentColorYellowOverlay \
+    AccentColorVioletOverlay \
+    AccentColorTealOverlay \
+    AccentColorRedOverlay \
+    AccentColorQGreenOverlay \
+    AccentColorPinkOverlay \
+    AccentColorPixelBlueOverlay \
+    AccentColorLightPurpleOverlay \
+    AccentColorIndigoOverlay \
+    AccentColorFlatPinkOverlay \
+    AccentColorCyanOverlay \
+    AccentColorBlueGrayOverlay
+
+# Custom Overlays
+# Settings
+PRODUCT_PACKAGES += \
+    SystemPitchBlackOverlay \
+    SystemDarkGrayOverlay \
+    SystemUIDarkGrayOverlay \
+    SystemStyleOverlay \
+    SystemUIStyleOverlay \
+    SystemNightOverlay \
+    SystemUINightOverlay \
+    SystemSolarizedDarkOverlay \
+    SystemUISolarizedDarkOverlay
 
 # Extra tools
 PRODUCT_PACKAGES += \
