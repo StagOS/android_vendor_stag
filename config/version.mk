@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 StagOS_VERSION = 10.0
-StagOS_BUILD = 0
+StagOS_BUILD = 1
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 TARGET_PRODUCT_SHORT := $(subst aosp_,,$(CUSTOM_BUILD))
 ifeq ($(StagOS_BETA),true)
