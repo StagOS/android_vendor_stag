@@ -30,6 +30,7 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/stag/overlay/common \
     vendor/stag/overlay
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/stag/overlay/common
 
 # Changelog
 #PRODUCT_COPY_FILES += \
