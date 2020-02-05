@@ -57,7 +57,6 @@ PRODUCT_COPY_FILES += \
     vendor/stag/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/stag/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/stag/prebuilt/common/bin/50-stag.sh:system/addon.d/50-stag.sh \
-    vendor/stag/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
 ifneq ($(AB_OTA_PARTITIONS),)
 PRODUCT_COPY_FILES += \
