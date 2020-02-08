@@ -137,6 +137,7 @@ PRODUCT_PACKAGES += \
     CherryTheme \
     DeepSkylineTheme \
     DeepSunsetTheme \
+    DefaultTheme \
     FireTheme \
     FlareTheme \
     GrapeVineTheme \
