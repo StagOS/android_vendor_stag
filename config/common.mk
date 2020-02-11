@@ -149,3 +149,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 ifeq ($(WITH_GAPPS),true)
 include vendor/gapps/common/common-vendor.mk
 endif
+
+ifeq ($(TARGET_USES_CARRIERSETTINGS),true)
+# CarrierSettings
+$(call inherit-product, vendor/stag/CarrierSettings/config.mk)
+endif
