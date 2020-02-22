@@ -12,3 +12,6 @@ include frameworks/base/data/sounds/StagAudio.mk
 
 # Fonts
 include vendor/stag/config/fonts.mk
+
+# OTA
+include vendor/stag/config/ota.mk
