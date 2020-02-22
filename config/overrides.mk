@@ -13,5 +13,7 @@
 # limitations under the License.
 
 # Default ringtones/notification/alarm sounds
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.ringtone=stag.ogg
+STAG_PRODUCT_PROPERTIES += \
+    ro.config.ringtone=stag.ogg \
+    ro.config.alarm_alert=Bright_morning.ogg \
+    ro.config.notification_sound=Altair.ogg
