@@ -19,15 +19,13 @@ StagOS_BUILD = 1
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 TARGET_PRODUCT_SHORT := $(subst aosp_,,$(CUSTOM_BUILD))
 
-ifeq ($(StagOS_BETA),true)
-   STAG_BUILD_TYPE := BETA
-else
-   ifeq ($(BUILD_TYPE),OFFICIAL)
+ifeq ($(STAG_WEEKLY),true)
+      STAG_BUILD_TYPE := WEEKLY
+else ifeq ($(BUILD_TYPE),OFFICIAL)
       IS_OFFICIAL=true
       STAG_BUILD_TYPE := OFFICIAL
-   else
-       STAG_BUILD_TYPE := UNOFFICIAL
-   endif
+else
+      STAG_BUILD_TYPE := UNOFFICIAL
 endif
 
 STAG_VERSION := StagOS-$(CURRENT_DEVICE)-$(StagOS_VERSION).$(StagOS_BUILD)-$(STAG_BUILD_TYPE)-$(shell date -u +%Y%m%d-%H%M)
