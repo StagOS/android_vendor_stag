@@ -147,4 +147,6 @@
     -->
     <integer name="config_defaultNightMode">2</integer>
 
+    <!-- Whether the device supports Smart Pixels.  -->
+    <bool name="config_enableSmartPixels">true</bool>
 </resources>
