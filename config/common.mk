@@ -103,3 +103,8 @@ PRODUCT_SOONG_NAMESPACES += \
     frameworks/av/camera/cameraserver \
     frameworks/av/services/camera/libcameraservice
 endif
+
+ifeq ($(EXTRA_FOD_ANIMATIONS),true)
+DEVICE_PACKAGE_OVERLAYS += vendor/stag/overlay/fod
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/stag/overlay/fod
+endif
