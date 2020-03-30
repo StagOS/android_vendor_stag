@@ -28,6 +28,7 @@ PRODUCT_PACKAGES += \
     Longshot \
     messaging \
     PixelLiveWallpaperPrebuilt \
+    OmniSwitch \
     OPScreenRecorder \
     Phonograph \
     PixelThemesStub2019 \
