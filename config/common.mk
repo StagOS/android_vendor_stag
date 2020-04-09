@@ -91,11 +91,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
    vendor/stag/prebuilt/common/etc/permissions/privapp-permissions-stag.xml:system/etc/permissions/privapp-permissions-stag.xml \
 
-# Hidden API whitelist
-PRODUCT_COPY_FILES += \
-    vendor/stag/prebuilt/common/etc/permissions/stag-hiddenapi-package-whitelist.xml:system/etc/permissions/stag-hiddenapi-package-whitelist.xml
-
-
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
