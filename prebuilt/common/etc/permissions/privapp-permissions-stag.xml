@@ -119,10 +119,6 @@
         <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
     </privapp-permissions>
 
-    <privapp-permissions package="org.pixelexperience.screenshot">
-        <permission name="android.permission.READ_FRAME_BUFFER"/>
-    </privapp-permissions>
-
     <privapp-permissions package="org.omnirom.omniswitch">
         <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
         <permission name="android.permission.FORCE_STOP_PACKAGES"/>
