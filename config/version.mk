@@ -28,12 +28,20 @@ else
       STAG_BUILD_TYPE := UNOFFICIAL
 endif
 
-STAG_VERSION := StagOS-$(CURRENT_DEVICE)-$(StagOS_VERSION).$(StagOS_BUILD)-$(STAG_BUILD_TYPE)-$(shell date -u +%Y%m%d-%H%M)
+STAG_ZIP_TYPE = Pristine
+
+# GApps
+ifeq ($(WITH_GAPPS),true)
+STAG_ZIP_TYPE := GApps
+endif
+
+STAG_VERSION := StagOS-$(CURRENT_DEVICE)-$(StagOS_VERSION).$(StagOS_BUILD)-$(STAG_BUILD_TYPE)-$(STAG_ZIP_TYPE)-$(shell date -u +%Y%m%d-%H%M)
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
  ro.stag.version=$(StagOS_VERSION) \
  ro.stag.releasetype=$(STAG_BUILD_TYPE) \
- ro.mod.version=$(StagOS_VERSION)
+ ro.mod.version=$(StagOS_VERSION) \
+ ro.stag.ziptype=$(STAG_ZIP_TYPE)
 
 STAG_DISPLAY_VERSION := StagOS-$(StagOS_VERSION).$(StagOS_BUILD)-$(STAG_BUILD_TYPE)
 ROM_FINGERPRINT := StagOS/$(STAG_VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date -u +%Y%m%d-%H%M)

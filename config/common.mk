@@ -108,3 +108,8 @@ ifeq ($(EXTRA_FOD_ANIMATIONS),true)
 DEVICE_PACKAGE_OVERLAYS += vendor/stag/overlay/fod
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/stag/overlay/fod
 endif
+
+# GApps
+ifeq ($(WITH_GAPPS),true)
+include vendor/pixelgapps/pixel-gapps.mk
+endif
