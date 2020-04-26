@@ -9,6 +9,6 @@ PRODUCT_PACKAGES += \
     Updater
 
 PRODUCT_COPY_FILES += \
-    vendor/stag/config/permissions/com.stag.ota.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.stag.ota.xml
+    vendor/stag/config/permissions/com.stag.updater.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.stag.updater.xml
 
 endif
