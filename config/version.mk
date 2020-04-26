@@ -16,6 +16,8 @@
 StagOS_VERSION = 10.0
 StagOS_BUILD = 2
 
+STAG_BASE_VERSION = $(StagOS_VERSION).$(StagOS_BUILD)
+
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 TARGET_PRODUCT_SHORT := $(subst aosp_,,$(CUSTOM_BUILD))
 
@@ -41,6 +43,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
  ro.stag.version=$(StagOS_VERSION) \
  ro.stag.releasetype=$(STAG_BUILD_TYPE) \
  ro.mod.version=$(StagOS_VERSION) \
+ ro.stag.build.version=$(STAG_BASE_VERSION) \
  ro.stag.ziptype=$(STAG_ZIP_TYPE)
 
 STAG_DISPLAY_VERSION := StagOS-$(StagOS_VERSION).$(StagOS_BUILD)-$(STAG_BUILD_TYPE)
