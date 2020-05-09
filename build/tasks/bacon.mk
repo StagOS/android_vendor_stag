@@ -49,3 +49,4 @@ stag: $(INTERNAL_OTA_PACKAGE_TARGET)
 	echo -e ${CL_BLD}${CL_YLW}"MD5: "${CL_YLW}" `cat $(STAG_TARGET_PACKAGE).md5sum | awk '{print $$1}' `"${CL_RST}
 	echo -e ${CL_BLD}${CL_YLW}"Size:"${CL_YLW}" `du -sh $(STAG_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
 	echo -e ${CL_BLD}${CL_CYN}"====================================================="${CL_RST}
+	$(hide) bash vendor/stag/tools/json.sh
