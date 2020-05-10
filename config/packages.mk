@@ -12,7 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
 # Required packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
@@ -25,6 +24,7 @@ PRODUCT_PACKAGES += \
     Jelly \
     LatinIME \
     Launcher3QuickStep \
+    LiveWallpapersPicker \
     messaging \
     PixelLiveWallpaperPrebuilt \
     OmniSwitch \
