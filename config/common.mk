@@ -93,7 +93,8 @@ PRODUCT_COPY_FILES += \
 
 # Stag Perms
 PRODUCT_COPY_FILES += \
-   vendor/stag/prebuilt/common/etc/permissions/privapp-permissions-stag.xml:system/etc/permissions/privapp-permissions-stag.xml \
+   vendor/stag/prebuilt/common/etc/permissions/privapp-permissions-stag-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-stag.xml \
+   vendor/stag/prebuilt/common/etc/permissions/privapp-permissions-stag-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-stag.xml \
 
 # Lawnchair
 ifeq ($(TARGET_EXCLUDE_LAWNCHAIR),)
