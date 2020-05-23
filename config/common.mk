@@ -97,7 +97,7 @@ PRODUCT_COPY_FILES += \
    vendor/stag/prebuilt/common/etc/permissions/privapp-permissions-stag-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-stag.xml \
 
 # Lawnchair
-ifeq ($(TARGET_EXCLUDE_LAWNCHAIR),)
+ifeq ($(TARGET_INCLUDE_LAWNCHAIR),true)
 PRODUCT_PACKAGE_OVERLAYS += vendor/stag/overlay/lawnchair
 
 PRODUCT_COPY_FILES += \
