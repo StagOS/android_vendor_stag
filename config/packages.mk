@@ -67,7 +67,9 @@ PRODUCT_PACKAGES += \
     SystemNightOverlay \
     SystemUINightOverlay \
     SystemSolarizedDarkOverlay \
-    SystemUISolarizedDarkOverlay
+    SystemUISolarizedDarkOverlay \
+    SystemTransPOverlay \
+    SystemUITransPOverlay \
 
 # Extra tools
 PRODUCT_PACKAGES += \
