@@ -73,7 +73,9 @@ PRODUCT_PACKAGES += \
     SystemBakedGreenOverlay \
     SystemUIBakedGreenOverlay \
     SystemChocoXOverlay \
-    SystemUIChocoXOverlay
+    SystemUIChocoXOverlay \
+    SystemTransPOverlay \
+    SystemUITransPOverlay \
 
 # Extra tools
 PRODUCT_PACKAGES += \
