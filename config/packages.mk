@@ -70,6 +70,12 @@ PRODUCT_PACKAGES += \
     SystemUISolarizedDarkOverlay \
     SystemTransPOverlay \
     SystemUITransPOverlay \
+    SystemMaterialOceanOverlay \
+    SystemUIMaterialOceanOverlay \
+    SystemBakedGreenOverlay \
+    SystemUIBakedGreenOverlay \
+    SystemChocoXOverlay \
+    SystemUIChocoXOverlay
 
 # Extra tools
 PRODUCT_PACKAGES += \
