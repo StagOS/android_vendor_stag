@@ -40,23 +40,70 @@ PRODUCT_PACKAGES += \
     Lawnchair
 endif
 
-# Accents
+# Accent Overlays
 PRODUCT_PACKAGES += \
-    AccentColorYellowOverlay \
-    AccentColorVioletOverlay \
-    AccentColorTealOverlay \
-    AccentColorRedOverlay \
-    AccentColorQGreenOverlay \
-    AccentColorPinkOverlay \
-    AccentColorPixelBlueOverlay \
-    AccentColorLightPurpleOverlay \
-    AccentColorIndigoOverlay \
-    AccentColorFlatPinkOverlay \
-    AccentColorCyanOverlay \
-    AccentColorBlueGrayOverlay
+    AmberAccent \
+    BlackAccent \
+    BlueAccent \
+    BlueGreyAccent \
+    BrownAccent \
+    CandyRed \
+    CyanAccent \
+    DeepOrangeAccent \
+    DeepPurpleAccent \
+    ExtendedGreen \
+    DuiDark \
+    GBoardDark \
+    GreenAccent \
+    GreyAccent \
+    IndigoAccent \
+    JadeGreen \
+    LightBlueAccent \
+    LightGreenAccent \
+    LimeAccent \
+    OrangeAccent \
+    PaleBlue \
+    PaleRed \
+    PinkAccent \
+    PurpleAccent \
+    RedAccent \
+    SettingsDark \
+    SystemDark \
+    TealAccent \
+    YellowAccent \
+    WhiteAccent \
+    UserOne \
+    UserTwo \
+    UserThree \
+    UserFour \
+    UserFive \
+    UserSix \
+    UserSeven \
+    ObfusBleu \
+    NotImpPurple \
+    Holillusion \
+    MoveMint \
+    FootprintPurple \
+    BubblegumPink \
+    FrenchBleu \
+    Stock \
+    ManiaAmber \
+    SeasideMint \
+    DreamyPurple \
+    SpookedPurple \
+    HeirloomBleu \
+    TruFilPink \
+    WarmthOrange \
+    ColdBleu \
+    DiffDayGreen \
+    DuskPurple \
+    BurningRed \
+    HazedPink \
+    ColdYellow \
+    NewHouseOrange \
+    IllusionsPurple
 
-# Custom Overlays
-# Settings
+# Custom Theme Overlays
 PRODUCT_PACKAGES += \
     SystemPitchBlackOverlay \
     SystemUIPitchBlackOverlay \
@@ -195,3 +242,4 @@ PRODUCT_PACKAGES += \
 
 # Icon Shapes
 include vendor/stag/config/iconshapes.mk
+
