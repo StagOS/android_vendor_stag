@@ -121,8 +121,8 @@ PRODUCT_PACKAGES += \
     SystemUIBakedGreenOverlay \
     SystemChocoXOverlay \
     SystemUIChocoXOverlay \
-    SystemTransPOverlay \
-    SystemUITransPOverlay \
+    SystemClearSpringOverlay \
+    SystemUIClearSpringOverlay \
 
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -242,4 +242,3 @@ PRODUCT_PACKAGES += \
 
 # Icon Shapes
 include vendor/stag/config/iconshapes.mk
-
