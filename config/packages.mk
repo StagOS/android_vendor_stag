@@ -253,6 +253,7 @@ PRODUCT_PACKAGES += \
     QStileWavey \
     QStileCookie \
     QStileInkDrop \
+    QStileIconAccent \
     QStileSquaremedo \
     QStileCosmos \
     QStileDividedCircle \
