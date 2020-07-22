@@ -31,6 +31,7 @@ PRODUCT_PACKAGES += \
     OPScreenRecorder \
     Phonograph \
     PixelThemesStub2019 \
+    StagWalls \
     StitchImage \
     Stk \
     ThemePicker
