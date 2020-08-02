@@ -477,6 +477,7 @@ $(BOARD_PREBUILT_DTBOIMAGE):
 	@echo "Building dtbo.img"
 	$(hide) find $(DTBO_OUT)/arch/$(KERNEL_ARCH)/boot/dts -type f -name "*.dtbo" | xargs rm -f
 	$(call make-dtbo-target,$(KERNEL_DEFCONFIG))
+	$(call make-dtbo-target,$(TARGET_KERNEL_DTB))
 ifeq ($(BOARD_KERNEL_SEPARATED_DTBO),true)
 	$(call make-dtbo-target,dtbs)
 ifdef BOARD_DTBO_CFG
@@ -496,6 +497,10 @@ ifeq ($(BOARD_PREBUILT_DTBIMAGE_DIR),)
 $(DTB_OUT):
 	mkdir -p $(DTB_OUT)
 
+ifdef BOARD_DTB_CFG
+MKDTBOIMG := $(HOST_OUT_EXECUTABLES)/mkdtboimg.py$(HOST_EXECUTABLE_SUFFIX)
+$(INSTALLED_DTBIMAGE_TARGET): $(MKDTBOIMG)
+endif
 $(INSTALLED_DTBIMAGE_TARGET): $(DTC) $(DTB_OUT)
 ifeq ($(TARGET_WANTS_EMPTY_DTB),true)
 	@rm -f $@
@@ -504,8 +509,12 @@ else
 	@echo "Building dtb.img"
 	$(hide) find $(DTB_OUT)/arch/$(KERNEL_ARCH)/boot/dts -type f -name "*.dtb" | xargs rm -f
 	$(call make-dtb-target,$(KERNEL_DEFCONFIG))
-	$(call make-dtb-target,dtbs)
+	$(call make-dtb-target,$(TARGET_KERNEL_DTB))
+ifdef BOARD_DTB_CFG
+	$(MKDTBOIMG) cfg_create $@ $(BOARD_DTB_CFG) -d $(DTB_OUT)/arch/$(KERNEL_ARCH)/boot/dts
+else
 	cat $(shell find $(DTB_OUT)/arch/$(KERNEL_ARCH)/boot/dts -type f -name "*.dtb" | sort) > $@
+endif # BOARD_DTB_CFG
 	$(hide) touch -c $(DTB_OUT)
 endif # !TARGET_WANTS_EMPTY_DTB
 
