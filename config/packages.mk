@@ -40,70 +40,23 @@ PRODUCT_PACKAGES += \
     Lawnchair
 endif
 
-# Accent Overlays
+# Accents
 PRODUCT_PACKAGES += \
-    AmberAccent \
-    BlackAccent \
-    BlueAccent \
-    BlueGreyAccent \
-    BrownAccent \
-    CandyRed \
-    CyanAccent \
-    DeepOrangeAccent \
-    DeepPurpleAccent \
-    ExtendedGreen \
-    DuiDark \
-    GBoardDark \
-    GreenAccent \
-    GreyAccent \
-    IndigoAccent \
-    JadeGreen \
-    LightBlueAccent \
-    LightGreenAccent \
-    LimeAccent \
-    OrangeAccent \
-    PaleBlue \
-    PaleRed \
-    PinkAccent \
-    PurpleAccent \
-    RedAccent \
-    SettingsDark \
-    SystemDark \
-    TealAccent \
-    YellowAccent \
-    WhiteAccent \
-    UserOne \
-    UserTwo \
-    UserThree \
-    UserFour \
-    UserFive \
-    UserSix \
-    UserSeven \
-    ObfusBleu \
-    NotImpPurple \
-    Holillusion \
-    MoveMint \
-    FootprintPurple \
-    BubblegumPink \
-    FrenchBleu \
-    Stock \
-    ManiaAmber \
-    SeasideMint \
-    DreamyPurple \
-    SpookedPurple \
-    HeirloomBleu \
-    TruFilPink \
-    WarmthOrange \
-    ColdBleu \
-    DiffDayGreen \
-    DuskPurple \
-    BurningRed \
-    HazedPink \
-    ColdYellow \
-    NewHouseOrange \
-    IllusionsPurple
+    AccentColorYellowOverlay \
+    AccentColorVioletOverlay \
+    AccentColorTealOverlay \
+    AccentColorRedOverlay \
+    AccentColorQGreenOverlay \
+    AccentColorPinkOverlay \
+    AccentColorPixelBlueOverlay \
+    AccentColorLightPurpleOverlay \
+    AccentColorIndigoOverlay \
+    AccentColorFlatPinkOverlay \
+    AccentColorCyanOverlay \
+    AccentColorBlueGrayOverlay
 
-# Custom Theme Overlays
+# Custom Overlays
+# Settings
 PRODUCT_PACKAGES += \
     SystemPitchBlackOverlay \
     SystemUIPitchBlackOverlay \
