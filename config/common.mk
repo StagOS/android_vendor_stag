@@ -14,14 +14,12 @@ include vendor/stag/config/props.mk
 include vendor/stag/config/packages.mk
 
 # Bootanimation
-ifeq ($(TARGET_EXCLUDE_BOOTANIMATION),)
 ifeq ($(TARGET_SCREEN_RES), 720)
 	PRODUCT_COPY_FILES += vendor/stag/prebuilt/common/bootanimation/720p.zip:system/media/bootanimation.zip
 else ifeq ($(TARGET_SCREEN_RES), 1080)
 	PRODUCT_COPY_FILES += vendor/stag/prebuilt/common/bootanimation/1080p.zip:system/media/bootanimation.zip
 else
 	PRODUCT_COPY_FILES += vendor/stag/prebuilt/common/bootanimation/1080p.zip:system/media/bootanimation.zip
-endif
 endif
 
 # Extra packages

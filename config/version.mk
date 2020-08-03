@@ -14,7 +14,7 @@
 # limitations under the License.
 
 StagOS_VERSION = 10.0
-StagOS_BUILD = 4
+StagOS_BUILD = 5
 
 STAG_BASE_VERSION = $(StagOS_VERSION).$(StagOS_BUILD)
 
