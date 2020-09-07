@@ -14,13 +14,13 @@
 
 # Required packages
 PRODUCT_PACKAGES += \
+    Aves \
     BluetoothExt \
     Calendar \
     Contacts \
     DeskClock \
     Dialer \
     ExactCalculator \
-    Gallery2 \
     Jelly \
     LatinIME \
     Launcher3QuickStep \
