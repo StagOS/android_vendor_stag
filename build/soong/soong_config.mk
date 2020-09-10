@@ -25,6 +25,7 @@ $(call add_json_str_omitempty, Target_shim_libs, $(subst $(space),:,$(TARGET_LD_
 $(call add_json_bool, Target_needs_netd_direct_connect_rule, $(filter true,$(TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE)))
 $(call add_json_bool, Target_camera_needs_client_info, $(filter true,$(TARGET_CAMERA_NEEDS_CLIENT_INFO)))
 $(call add_json_bool, Target_ignores_ftp_pptp_conntrack_failure, $(filter true,$(TARGET_IGNORES_FTP_PPTP_CONNTRACK_FAILURE)))
+$(call add_json_str_omitempty, Target_specific_header_path, $(TARGET_SPECIFIC_HEADER_PATH))
 $(call add_json_str_omitempty, Target_surfaceflinger_fod_lib, $(TARGET_SURFACEFLINGER_FOD_LIB))
 $(call add_json_bool, Target_uses_prebuilt_dynamic_partitions,   $(filter true,$(TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS)))
 $(call add_json_bool, Uses_generic_camera_parameter_library, $(if $(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY),,true))
