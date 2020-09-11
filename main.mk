@@ -8,7 +8,7 @@ include vendor/stag/config/version.mk
 include vendor/stag/config/overrides.mk
 
 # Ringtones
-include frameworks/base/data/sounds/StagAudio.mk
+#include frameworks/base/data/sounds/StagAudio.mk
 
 # Fonts
 include vendor/stag/config/fonts.mk
@@ -17,4 +17,4 @@ include vendor/stag/config/fonts.mk
 include vendor/stag/config/ota.mk
 
 # Plugins
-include packages/apps/PotatoPlugins/plugins.mk
+#include packages/apps/PotatoPlugins/plugins.mk

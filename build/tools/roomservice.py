@@ -31,7 +31,7 @@ DEBUG = False
 default_manifest = ".repo/manifests/snippets/stag.xml"
 
 custom_local_manifest = ".repo/local_manifests/stag_manifest.xml"
-custom_default_revision = "sx"
+custom_default_revision = "sxi"
 custom_dependencies = "stag.dependencies"
 org_manifest = "stagos-devices"  # leave empty if org is provided in manifest
 org_display = "StagOS-DEVICES"  # needed for displaying

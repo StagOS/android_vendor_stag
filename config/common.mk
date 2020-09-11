@@ -61,6 +61,7 @@ PRODUCT_COPY_FILES += \
     vendor/stag/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
     vendor/stag/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
     vendor/stag/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+
 ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.ota.allow_downgrade=true
@@ -95,13 +96,13 @@ PRODUCT_COPY_FILES += \
    vendor/stag/prebuilt/common/etc/permissions/privapp-permissions-stag-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-stag.xml \
 
 # Lawnchair
-ifeq ($(TARGET_INCLUDE_LAWNCHAIR),true)
-PRODUCT_PACKAGE_OVERLAYS += vendor/stag/overlay/lawnchair
+#ifeq ($(TARGET_INCLUDE_LAWNCHAIR),true)
+#PRODUCT_PACKAGE_OVERLAYS += vendor/stag/overlay/lawnchair
 
-PRODUCT_COPY_FILES += \
-    vendor/stag/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-lawnchair.xml \
-    vendor/stag/prebuilt/common/etc/permissions/lawnchair-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
-endif
+#PRODUCT_COPY_FILES += \
+#    vendor/stag/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-lawnchair.xml \
+#    vendor/stag/prebuilt/common/etc/permissions/lawnchair-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
+#endif
 
 # Clean up packages cache to avoid wrong strings and resources
 PRODUCT_COPY_FILES += \
@@ -114,11 +115,11 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 PRODUCT_PACKAGES += \
     apns-conf.xml
 
-ifneq ($(TARGET_USES_PREBUILT_CAMERA_SERVICE), true)
-PRODUCT_SOONG_NAMESPACES += \
-    frameworks/av/camera/cameraserver \
-    frameworks/av/services/camera/libcameraservice
-endif
+#ifneq ($(TARGET_USES_PREBUILT_CAMERA_SERVICE), true)
+#PRODUCT_SOONG_NAMESPACES += \
+#    frameworks/av/camera/cameraserver \
+#    frameworks/av/services/camera/libcameraservice
+#endif
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
@@ -130,16 +131,16 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/stag/overlay/fod
 endif
 
 # Face Unlock
-TARGET_FACE_UNLOCK_SUPPORTED := false
-ifneq ($(TARGET_DISABLE_ALTERNATIVE_FACE_UNLOCK), true)
-PRODUCT_PACKAGES += \
-    FaceUnlockService
-TARGET_FACE_UNLOCK_SUPPORTED := true
-endif
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.face.moto_unlock_service=$(TARGET_FACE_UNLOCK_SUPPORTED)
+#TARGET_FACE_UNLOCK_SUPPORTED := false
+#ifneq ($(TARGET_DISABLE_ALTERNATIVE_FACE_UNLOCK), true)
+#PRODUCT_PACKAGES += \
+#    FaceUnlockService
+#TARGET_FACE_UNLOCK_SUPPORTED := true
+#endif
+#PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+#    ro.face.moto_unlock_service=$(TARGET_FACE_UNLOCK_SUPPORTED)
 
 # GApps
-ifeq ($(WITH_GAPPS),true)
-include vendor/pixelgapps/pixel-gapps.mk
-endif
+#ifeq ($(WITH_GAPPS),true)
+#include vendor/pixelgapps/pixel-gapps.mk
+#endif

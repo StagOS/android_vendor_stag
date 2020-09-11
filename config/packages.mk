@@ -36,47 +36,47 @@ PRODUCT_PACKAGES += \
     Stk \
     ThemePicker
 
-ifeq ($(TARGET_INCLUDE_LAWNCHAIR),true)
-PRODUCT_PACKAGES += \
-    Lawnchair
-endif
+#ifeq ($(TARGET_INCLUDE_LAWNCHAIR),true)
+#PRODUCT_PACKAGES += \
+#    Lawnchair
+#endif
 
 # Accents
-PRODUCT_PACKAGES += \
-    AccentColorYellowOverlay \
-    AccentColorVioletOverlay \
-    AccentColorTealOverlay \
-    AccentColorRedOverlay \
-    AccentColorQGreenOverlay \
-    AccentColorPinkOverlay \
-    AccentColorPixelBlueOverlay \
-    AccentColorLightPurpleOverlay \
-    AccentColorIndigoOverlay \
-    AccentColorFlatPinkOverlay \
-    AccentColorCyanOverlay \
-    AccentColorBlueGrayOverlay
+#PRODUCT_PACKAGES += \
+#    AccentColorYellowOverlay \
+#    AccentColorVioletOverlay \
+#    AccentColorTealOverlay \
+#    AccentColorRedOverlay \
+#    AccentColorQGreenOverlay \
+#    AccentColorPinkOverlay \
+#    AccentColorPixelBlueOverlay \
+#    AccentColorLightPurpleOverlay \
+#    AccentColorIndigoOverlay \
+#    AccentColorFlatPinkOverlay \
+#    AccentColorCyanOverlay \
+#    AccentColorBlueGrayOverlay
 
 # Custom Overlays
 # Settings
-PRODUCT_PACKAGES += \
-    SystemPitchBlackOverlay \
-    SystemUIPitchBlackOverlay \
-    SystemDarkGrayOverlay \
-    SystemUIDarkGrayOverlay \
-    SystemStyleOverlay \
-    SystemUIStyleOverlay \
-    SystemNightOverlay \
-    SystemUINightOverlay \
-    SystemSolarizedDarkOverlay \
-    SystemUISolarizedDarkOverlay \
-    SystemMaterialOceanOverlay \
-    SystemUIMaterialOceanOverlay \
-    SystemBakedGreenOverlay \
-    SystemUIBakedGreenOverlay \
-    SystemChocoXOverlay \
-    SystemUIChocoXOverlay \
-    SystemClearSpringOverlay \
-    SystemUIClearSpringOverlay \
+#PRODUCT_PACKAGES += \
+#    SystemPitchBlackOverlay \
+#    SystemUIPitchBlackOverlay \
+#    SystemDarkGrayOverlay \
+#    SystemUIDarkGrayOverlay \
+#    SystemStyleOverlay \
+#    SystemUIStyleOverlay \
+#    SystemNightOverlay \
+#    SystemUINightOverlay \
+#    SystemSolarizedDarkOverlay \
+#    SystemUISolarizedDarkOverlay \
+#    SystemMaterialOceanOverlay \
+#    SystemUIMaterialOceanOverlay \
+#    SystemBakedGreenOverlay \
+#    SystemUIBakedGreenOverlay \
+#    SystemChocoXOverlay \
+#    SystemUIChocoXOverlay \
+#    SystemClearSpringOverlay \
+#    SystemUIClearSpringOverlay \
 
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -148,73 +148,73 @@ PRODUCT_PACKAGES += \
     charger_res_images
 
 # Gradients
-PRODUCT_PACKAGES += \
-    BlueSkyTheme \
-    CherryTheme \
-    DeepSkylineTheme \
-    DeepSunsetTheme \
-    DefaultTheme \
-    FireTheme \
-    FlareTheme \
-    GrapeVineTheme \
-    HyakkimaruTheme \
-    KyeMehTheme \
-    LavenderTheme \
-    LightSeaStormTheme \
-    OrangeCoralTheme \
-    PeachyTheme \
-    PolarGreenTheme \
-    PureLustTheme \
-    QuepalTheme \
-    ReaTheme \
-    SeaStormTheme \
-    ShadesofGreyTheme \
-    SinCityRedTheme \
-    SkylineTheme \
-    SublimeTheme \
-    TimberTheme \
-    WitchingHourTheme \
-    YodaTheme
+#PRODUCT_PACKAGES += \
+#    BlueSkyTheme \
+#    CherryTheme \
+#    DeepSkylineTheme \
+#    DeepSunsetTheme \
+#    DefaultTheme \
+#    FireTheme \
+#    FlareTheme \
+#    GrapeVineTheme \
+#    HyakkimaruTheme \
+#    KyeMehTheme \
+#    LavenderTheme \
+#    LightSeaStormTheme \
+#    OrangeCoralTheme \
+#    PeachyTheme \
+#    PolarGreenTheme \
+#    PureLustTheme \
+#    QuepalTheme \
+#    ReaTheme \
+#    SeaStormTheme \
+#    ShadesofGreyTheme \
+#    SinCityRedTheme \
+#    SkylineTheme \
+#    SublimeTheme \
+#    TimberTheme \
+#    WitchingHourTheme \
+#    YodaTheme
 
 # Recorder
 #PRODUCT_PACKAGES += \
 #    Recorder
 
 # OmniStyle
-PRODUCT_PACKAGES += \
-    OmniStyle
+#PRODUCT_PACKAGES += \
+#    OmniStyle
 
 #Custom Overlays
-PRODUCT_PACKAGES += \
-    SystemPitchBlackOverlay \
-    SystemDarkGrayOverlay \
-    SystemUIDarkGrayOverlay \
-    SystemStyleOverlay \
-    SystemUIStyleOverlay \
-    SystemNightOverlay \
-    SystemUINightOverlay
+#PRODUCT_PACKAGES += \
+#    SystemPitchBlackOverlay \
+#    SystemDarkGrayOverlay \
+#    SystemUIDarkGrayOverlay \
+#    SystemStyleOverlay \
+#    SystemUIStyleOverlay \
+#    SystemNightOverlay \
+#    SystemUINightOverlay
 
 # QS tile styles
-PRODUCT_PACKAGES += \
-    QStileCircleTrim \
-    QStileDefault \
-    QStileDualToneCircle \
-    QStileSquircleTrim \
-    QStileAttemptMountain \
-    QStileDottedCircle \
-    QStileNinja \
-    QStilePokesign \
-    QStileWavey \
-    QStileCookie \
-    QStileInkDrop \
-    QStileIconAccent \
-    QStileSquaremedo \
-    QStileCosmos \
-    QStileDividedCircle \
-    QStileNeonLight \
-    QStileOxygen \
-    QStileTriangles \
-    QStileCircleOutline
+#PRODUCT_PACKAGES += \
+#    QStileCircleTrim \
+#    QStileDefault \
+#    QStileDualToneCircle \
+#    QStileSquircleTrim \
+#    QStileAttemptMountain \
+#    QStileDottedCircle \
+#    QStileNinja \
+#    QStilePokesign \
+#    QStileWavey \
+#    QStileCookie \
+#    QStileInkDrop \
+#    QStileIconAccent \
+#    QStileSquaremedo \
+#    QStileCosmos \
+#    QStileDividedCircle \
+#    QStileNeonLight \
+#    QStileOxygen \
+#    QStileTriangles \
+#    QStileCircleOutline
 
 # Icon Shapes
 include vendor/stag/config/iconshapes.mk

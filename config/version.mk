@@ -13,29 +13,30 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-StagOS_VERSION = 10.0
-StagOS_BUILD = 6
+StagOS_VERSION = 11.0
+StagOS_BUILD = 0
 
 STAG_BASE_VERSION = $(StagOS_VERSION).$(StagOS_BUILD)
 
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 TARGET_PRODUCT_SHORT := $(subst aosp_,,$(CUSTOM_BUILD))
 
-ifeq ($(STAG_WEEKLY),true)
-      STAG_BUILD_TYPE := WEEKLY
-else ifeq ($(BUILD_TYPE),OFFICIAL)
-      IS_OFFICIAL=true
-      STAG_BUILD_TYPE := OFFICIAL
-else
-      STAG_BUILD_TYPE := UNOFFICIAL
-endif
+#ifeq ($(STAG_WEEKLY),true)
+#      STAG_BUILD_TYPE := WEEKLY
+#else ifeq ($(BUILD_TYPE),OFFICIAL)
+#      IS_OFFICIAL=true
+#      STAG_BUILD_TYPE := OFFICIAL
+#else
+#      STAG_BUILD_TYPE := UNOFFICIAL
+#endif
 
+STAG_BUILD_TYPE := BETA
 STAG_ZIP_TYPE = Pristine
 
 # GApps
-ifeq ($(WITH_GAPPS),true)
-STAG_ZIP_TYPE := GApps
-endif
+#ifeq ($(WITH_GAPPS),true)
+#STAG_ZIP_TYPE := GApps
+#endif
 
 STAG_VERSION := StagOS-$(CURRENT_DEVICE)-$(StagOS_VERSION).$(StagOS_BUILD)-$(STAG_BUILD_TYPE)-$(STAG_ZIP_TYPE)-$(shell date -u +%Y%m%d-%H%M)
 
