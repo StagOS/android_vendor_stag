@@ -29,16 +29,17 @@
 endif
 
 STAG_TARGET_PACKAGE := $(PRODUCT_OUT)/$(STAG_VERSION).zip
+MD5 := prebuilts/build-tools/path/$(HOST_OS)-x86/md5sum
 
 .PHONY: bacon stag
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(STAG_TARGET_PACKAGE)
-	$(hide) $(SHA256UM) $(STAG_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(STAG_TARGET_PACKAGE).sha256um
+	$(hide) $(MD5) $(STAG_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(STAG_TARGET_PACKAGE).md5sum
 	@echo "Package Complete: $(STAG_TARGET_PACKAGE)" >&2
 
 stag: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(STAG_TARGET_PACKAGE)
-	$(hide) $(SHA256UM) $(STAG_TARGET_PACKAGE) > $(STAG_TARGET_PACKAGE).sha256um
+	$(hide) $(MD5) $(STAG_TARGET_PACKAGE) > $(STAG_TARGET_PACKAGE).md5sum
 
 	echo -e ${CL_RED}"    ______________   ______      ____  _____"${CL_RST}
 	echo -e ${CL_GRN}"   / ___/_  __/   | / ____/     / __ \/ ___/"${CL_RST}
@@ -50,4 +51,3 @@ stag: $(INTERNAL_OTA_PACKAGE_TARGET)
 	echo -e ${CL_BLD}${CL_YLW}"MD5: "${CL_YLW}" `cat $(STAG_TARGET_PACKAGE).md5sum | awk '{print $$1}' `"${CL_RST}
 	echo -e ${CL_BLD}${CL_YLW}"Size:"${CL_YLW}" `du -sh $(STAG_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
 	echo -e ${CL_BLD}${CL_CYN}"====================================================="${CL_RST}
-	$(hide) bash vendor/stag/tools/json.sh
