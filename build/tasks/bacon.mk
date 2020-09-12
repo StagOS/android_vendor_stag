@@ -1,3 +1,4 @@
+
 # Copyright (C) 2017 Unlegacy-Android
 # Copyright (C) 2017 The LineageOS Project
 #
@@ -32,12 +33,12 @@ STAG_TARGET_PACKAGE := $(PRODUCT_OUT)/$(STAG_VERSION).zip
 .PHONY: bacon stag
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(STAG_TARGET_PACKAGE)
-	$(hide) $(MD5SUM) $(STAG_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(STAG_TARGET_PACKAGE).md5sum
+	$(hide) $(SHA256UM) $(STAG_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(STAG_TARGET_PACKAGE).sha256um
 	@echo "Package Complete: $(STAG_TARGET_PACKAGE)" >&2
 
 stag: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(STAG_TARGET_PACKAGE)
-	$(hide) $(MD5SUM) $(STAG_TARGET_PACKAGE) > $(STAG_TARGET_PACKAGE).md5sum
+	$(hide) $(SHA256UM) $(STAG_TARGET_PACKAGE) > $(STAG_TARGET_PACKAGE).sha256um
 
 	echo -e ${CL_RED}"    ______________   ______      ____  _____"${CL_RST}
 	echo -e ${CL_GRN}"   / ___/_  __/   | / ____/     / __ \/ ___/"${CL_RST}
