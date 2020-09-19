@@ -4,6 +4,9 @@ PRODUCT_BRAND := stag
 PRODUCT_DEVICE := generic
 EXCLUDE_SYSTEMUI_TESTS := true
 
+# Qcom
+include vendor/stag/config/ProductConfigQcom.mk
+
 # version
 include vendor/stag/config/version.mk
 
