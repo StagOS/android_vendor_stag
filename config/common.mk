@@ -7,8 +7,6 @@ EXCLUDE_SYSTEMUI_TESTS := true
 # Qcom
 include vendor/stag/config/ProductConfigQcom.mk
 
-PRODUCT_SOONG_NAMESPACES += $(PATHMAP_SOONG_NAMESPACES)
-
 # version
 include vendor/stag/config/version.mk
 
