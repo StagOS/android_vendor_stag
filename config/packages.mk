@@ -37,6 +37,11 @@ PRODUCT_PACKAGES += \
     Stk \
     ThemePicker
 
+# Navbar
+PRODUCT_PACKAGES += \
+    GesturalNavigationOverlayLong \
+    GesturalNavigationOverlayMedium
+
 #ifeq ($(TARGET_INCLUDE_LAWNCHAIR),true)
 #PRODUCT_PACKAGES += \
 #    Lawnchair
