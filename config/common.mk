@@ -22,6 +22,11 @@ else
 	PRODUCT_COPY_FILES += vendor/stag/prebuilt/common/bootanimation/1080p.zip:system/media/bootanimation.zip
 endif
 
+# Signapk/Brotli
+PRODUCT_HOST_PACKAGES += \
+    signapk \
+    brotli
+
 # Extra packages
 PRODUCT_PACKAGES += \
     libjni_latinimegoogle
