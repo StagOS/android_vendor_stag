@@ -57,15 +57,15 @@ endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/stag/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/stag/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/stag/prebuilt/common/bin/50-stag.sh:system/addon.d/50-stag.sh \
+    vendor/stag/prebuilt/common/bin/backuptool.sh:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.sh \
+    vendor/stag/prebuilt/common/bin/backuptool.functions:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.functions \
+    vendor/stag/prebuilt/common/bin/50-stag.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-stag.sh \
 
 ifneq ($(AB_OTA_PARTITIONS),)
 PRODUCT_COPY_FILES += \
-    vendor/stag/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
-    vendor/stag/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
-    vendor/stag/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+    vendor/stag/prebuilt/common/bin/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
+    vendor/stag/prebuilt/common/bin/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
+    vendor/stag/prebuilt/common/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
 
 ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
