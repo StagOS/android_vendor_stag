@@ -69,6 +69,8 @@ PRODUCT_PACKAGES += \
     SystemUINightOverlay \
     SystemSolarizedDarkOverlay \
     SystemUISolarizedDarkOverlay \
+    SystemTransPOverlay \
+    SystemUITransPOverlay \
     SystemMaterialOceanOverlay \
     SystemUIMaterialOceanOverlay \
     SystemBakedGreenOverlay \
