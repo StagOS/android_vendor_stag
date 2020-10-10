@@ -58,25 +58,25 @@ PRODUCT_PACKAGES += \
 
 # Custom Overlays
 # Settings
-#PRODUCT_PACKAGES += \
-#    SystemPitchBlackOverlay \
-#    SystemUIPitchBlackOverlay \
-#    SystemDarkGrayOverlay \
-#    SystemUIDarkGrayOverlay \
-#    SystemStyleOverlay \
-#    SystemUIStyleOverlay \
-#    SystemNightOverlay \
-#    SystemUINightOverlay \
-#    SystemSolarizedDarkOverlay \
-#    SystemUISolarizedDarkOverlay \
-#    SystemMaterialOceanOverlay \
-#    SystemUIMaterialOceanOverlay \
-#    SystemBakedGreenOverlay \
-#    SystemUIBakedGreenOverlay \
-#    SystemChocoXOverlay \
-#    SystemUIChocoXOverlay \
-#    SystemClearSpringOverlay \
-#    SystemUIClearSpringOverlay \
+PRODUCT_PACKAGES += \
+    SystemPitchBlackOverlay \
+    SystemUIPitchBlackOverlay \
+    SystemDarkGrayOverlay \
+    SystemUIDarkGrayOverlay \
+    SystemStyleOverlay \
+    SystemUIStyleOverlay \
+    SystemNightOverlay \
+    SystemUINightOverlay \
+    SystemSolarizedDarkOverlay \
+    SystemUISolarizedDarkOverlay \
+    SystemMaterialOceanOverlay \
+    SystemUIMaterialOceanOverlay \
+    SystemBakedGreenOverlay \
+    SystemUIBakedGreenOverlay \
+    SystemChocoXOverlay \
+    SystemUIChocoXOverlay \
+    SystemClearSpringOverlay \
+    SystemUIClearSpringOverlay \
 
 # Extra tools
 PRODUCT_PACKAGES += \
