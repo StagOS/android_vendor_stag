@@ -31,6 +31,7 @@ PRODUCT_PACKAGES += \
     OPScreenRecorder \
     PixelThemesStub \
     PulseMusic \
+    QuickAccessWallet \
     StagWalls \
     StagThemesStub \
     StitchImage \
