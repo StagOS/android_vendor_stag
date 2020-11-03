@@ -152,6 +152,10 @@ endif
 PRODUCT_PACKAGES += \
     charger_res_images
 
+# SystemUI plugins
+PRODUCT_PACKAGES += \
+    QuickAccessWallet
+
 # Gradients
 #PRODUCT_PACKAGES += \
 #    BlueSkyTheme \
