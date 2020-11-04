@@ -126,6 +126,10 @@ PRODUCT_PACKAGES += \
 #    frameworks/av/services/camera/libcameraservice
 #endif
 
+# Config
+PRODUCT_PACKAGES += \
+    SimpleDeviceConfig
+
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
