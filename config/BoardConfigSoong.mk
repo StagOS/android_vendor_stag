@@ -20,10 +20,19 @@ SOONG_CONFIG_NAMESPACES += stagVarsPlugin
 
 SOONG_CONFIG_stagVarsPlugin :=
 
+ifneq ($(TARGET_FORCE_BUILD_FINGERPRINT),)
+SOONG_CONFIG_customGlobalVars += force_build_fingerprint
+endif
+
 define addVar
   SOONG_CONFIG_stagVarsPlugin += $(1)
   SOONG_CONFIG_stagVarsPlugin_$(1) := $$(subst ",\",$$($1))
 endef
+
+SOONG_CONFIG_stagGlobalVars :=
+ifneq ($(TARGET_FORCE_BUILD_FINGERPRINT),)
+SOONG_CONFIG_customGlobalVars_force_build_fingerprint := $(TARGET_FORCE_BUILD_FINGERPRINT)
+endif
 
 $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
 
@@ -42,7 +51,7 @@ SOONG_CONFIG_stagGlobalVars += \
     target_process_sdk_version_override \
     target_surfaceflinger_fod_lib \
     target_uses_prebuilt_dynamic_partitions \
-    uses_camera_parameter_lib
+    uses_camera_parameter_lib \
 
 SOONG_CONFIG_NAMESPACES += stagNvidiaVars
 SOONG_CONFIG_stagNvidiaVars += \
