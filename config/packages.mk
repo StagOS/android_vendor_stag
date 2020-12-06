@@ -30,7 +30,7 @@ PRODUCT_PACKAGES += \
     OmniSwitch \
     OPScreenRecorder \
     Phonograph \
-    PixelThemesStub2019 \
+    PixelThemesStub \
     StagWalls \
     StitchImage \
     Stk \
