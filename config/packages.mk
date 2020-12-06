@@ -218,4 +218,4 @@ PRODUCT_PACKAGES += \
 #    QStileCircleOutline
 
 # Icon Shapes
-#include vendor/stag/config/iconshapes.mk
+include vendor/stag/config/iconshapes.mk
