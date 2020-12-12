@@ -146,6 +146,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.face.moto_unlock_service=$(TARGET_FACE_UNLOCK_SUPPORTED)
 
 # GApps
-#ifeq ($(WITH_GAPPS),true)
-#include vendor/pixelgapps/pixel-gapps.mk
-#endif
+ifeq ($(WITH_GAPPS),true)
+include vendor/gapps/config.mk
+endif

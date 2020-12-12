@@ -14,7 +14,7 @@
 # limitations under the License.
 
 StagOS_VERSION = 11.0
-StagOS_BUILD = B1
+StagOS_BUILD = B2
 
 STAG_BASE_VERSION = $(StagOS_VERSION).$(StagOS_BUILD)
 
@@ -34,9 +34,9 @@ STAG_BUILD_TYPE := BETA
 STAG_ZIP_TYPE = Pristine
 
 # GApps
-#ifeq ($(WITH_GAPPS),true)
-#STAG_ZIP_TYPE := GApps
-#endif
+ifeq ($(WITH_GAPPS),true)
+STAG_ZIP_TYPE := GApps
+endif
 
 STAG_VERSION := StagOS-$(CURRENT_DEVICE)-$(StagOS_VERSION).$(StagOS_BUILD)-$(STAG_BUILD_TYPE)-$(STAG_ZIP_TYPE)-$(shell date -u +%Y%m%d-%H%M)
 
