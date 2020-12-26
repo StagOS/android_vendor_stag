@@ -147,5 +147,5 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # GApps
 ifeq ($(WITH_GAPPS),true)
-include vendor/gapps/config.mk
+include vendor/gapps/common/common-vendor.mk
 endif
