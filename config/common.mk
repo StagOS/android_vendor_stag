@@ -13,6 +13,9 @@ include vendor/stag/config/props.mk
 # Packages
 include vendor/stag/config/packages.mk
 
+# Sounds
+include vendor/stag/config/sounds.mk
+
 # Bootanimation
 ifeq ($(TARGET_SCREEN_RES), 720)
 	PRODUCT_COPY_FILES += vendor/stag/prebuilt/common/bootanimation/720p.zip:system/media/bootanimation.zip
