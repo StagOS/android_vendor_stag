@@ -163,33 +163,33 @@ PRODUCT_PACKAGES += \
     QuickAccessWallet
 
 # Gradients
-#PRODUCT_PACKAGES += \
-#    BlueSkyTheme \
-#    CherryTheme \
-#    DeepSkylineTheme \
-#    DeepSunsetTheme \
-#    DefaultTheme \
-#    FireTheme \
-#    FlareTheme \
-#    GrapeVineTheme \
-#    HyakkimaruTheme \
-#    KyeMehTheme \
-#    LavenderTheme \
-#    LightSeaStormTheme \
-#    OrangeCoralTheme \
-#    PeachyTheme \
-#    PolarGreenTheme \
-#    PureLustTheme \
-#    QuepalTheme \
-#    ReaTheme \
-#    SeaStormTheme \
-#    ShadesofGreyTheme \
-#    SinCityRedTheme \
-#    SkylineTheme \
-#    SublimeTheme \
-#    TimberTheme \
-#    WitchingHourTheme \
-#    YodaTheme
+PRODUCT_PACKAGES += \
+    BlueSkyTheme \
+    CherryTheme \
+    DeepSkylineTheme \
+    DeepSunsetTheme \
+    DefaultTheme \
+    FireTheme \
+    FlareTheme \
+    GrapeVineTheme \
+    HyakkimaruTheme \
+    KyeMehTheme \
+    LavenderTheme \
+    LightSeaStormTheme \
+    OrangeCoralTheme \
+    PeachyTheme \
+    PolarGreenTheme \
+    PureLustTheme \
+    QuepalTheme \
+    ReaTheme \
+    SeaStormTheme \
+    ShadesofGreyTheme \
+    SinCityRedTheme \
+    SkylineTheme \
+    SublimeTheme \
+    TimberTheme \
+    WitchingHourTheme \
+    YodaTheme
 
 # Recorder
 #PRODUCT_PACKAGES += \
