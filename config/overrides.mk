@@ -1,3 +1,4 @@
+
 # Copyright (C) 2018-2019 STAG OS
 #
 # Licensed under the Apache License, Version 2.0 (the "License"); 
@@ -15,5 +16,6 @@
 # Default ringtones/notification/alarm sounds
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.ringtone=Stag.ogg \
+    ro.config.ringtone2=Cia.ogg \
     ro.config.alarm_alert=Bright_morning.ogg \
     ro.config.notification_sound=Altair.ogg
