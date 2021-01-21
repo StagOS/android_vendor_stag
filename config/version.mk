@@ -14,7 +14,7 @@
 # limitations under the License.
 
 StagOS_VERSION = 11.0
-StagOS_BUILD = B2
+StagOS_BUILD = R1
 
 STAG_BASE_VERSION = $(StagOS_VERSION).$(StagOS_BUILD)
 
@@ -23,14 +23,14 @@ TARGET_PRODUCT_SHORT := $(subst aosp_,,$(CUSTOM_BUILD))
 
 #ifeq ($(STAG_WEEKLY),true)
 #      STAG_BUILD_TYPE := WEEKLY
-#else ifeq ($(BUILD_TYPE),OFFICIAL)
-#      IS_OFFICIAL=true
-#      STAG_BUILD_TYPE := OFFICIAL
-#else
-#      STAG_BUILD_TYPE := UNOFFICIAL
-#endif
+ifeq ($(BUILD_TYPE),OFFICIAL)
+      IS_OFFICIAL=true
+      STAG_BUILD_TYPE := OFFICIAL
+else
+      STAG_BUILD_TYPE := UNOFFICIAL
+endif
 
-STAG_BUILD_TYPE := BETA
+#STAG_BUILD_TYPE := BETA
 STAG_ZIP_TYPE = Pristine
 
 # GApps
