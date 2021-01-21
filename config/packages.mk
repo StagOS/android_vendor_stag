@@ -210,26 +210,26 @@ PRODUCT_PACKAGES += \
 #    SystemUINightOverlay
 
 # QS tile styles
-#PRODUCT_PACKAGES += \
-#    QStileCircleTrim \
-#    QStileDefault \
-#    QStileDualToneCircle \
-#    QStileSquircleTrim \
-#    QStileAttemptMountain \
-#    QStileDottedCircle \
-#    QStileNinja \
-#    QStilePokesign \
-#    QStileWavey \
-#    QStileCookie \
-#    QStileInkDrop \
-#    QStileIconAccent \
-#    QStileSquaremedo \
-#    QStileCosmos \
-#    QStileDividedCircle \
-#    QStileNeonLight \
-#    QStileOxygen \
-#    QStileTriangles \
-#    QStileCircleOutline
+PRODUCT_PACKAGES += \
+    QStileCircleTrim \
+    QStileDefault \
+    QStileDualToneCircle \
+    QStileSquircleTrim \
+    QStileAttemptMountain \
+    QStileDottedCircle \
+    QStileNinja \
+    QStilePokesign \
+    QStileWavey \
+    QStileCookie \
+    QStileInkDrop \
+    QStileIconAccent \
+    QStileSquaremedo \
+    QStileCosmos \
+    QStileDividedCircle \
+    QStileNeonLight \
+    QStileOxygen \
+    QStileTriangles \
+    QStileCircleOutline
 
 # Icon Shapes
 include vendor/stag/config/iconshapes.mk
