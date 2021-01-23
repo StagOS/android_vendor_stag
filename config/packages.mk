@@ -83,12 +83,6 @@ PRODUCT_PACKAGES += \
     SystemClearSpringOverlay \
     SystemUIClearSpringOverlay \
 
-# FOD Animations
-ifeq ($(EXTRA_FOD_ANIMATIONS),true)
-PRODUCT_PACKAGES += \
-    FodAnimations
-endif
-
 # Extra tools
 PRODUCT_PACKAGES += \
     7z \
