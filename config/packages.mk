@@ -29,8 +29,8 @@ PRODUCT_PACKAGES += \
     PixelLiveWallpaperPrebuilt \
     OmniSwitch \
     OPScreenRecorder \
-    Phonograph \
     PixelThemesStub \
+    RetroMusic \
     StagWalls \
     StagThemesStub \
     StitchImage \

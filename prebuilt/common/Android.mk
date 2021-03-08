@@ -62,6 +62,18 @@ LOCAL_PRODUCT_MODULE := true
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+
+# Retro Music
+include $(CLEAR_VARS)
+LOCAL_MODULE := RetroMusic
+LOCAL_SRC_FILES := app/RetroMusic.apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_DEX_PREOPT := false
+include $(BUILD_PREBUILT)
+
 # StagWalls
 include $(CLEAR_VARS)
 LOCAL_MODULE := StagWalls
