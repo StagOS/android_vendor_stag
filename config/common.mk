@@ -19,12 +19,15 @@ include vendor/stag/config/sounds.mk
 # Include Switch Styles
 include vendor/stag/switch/switch.mk
 
+
+
 # Bootanimation
+TARGET_SCREEN_WIDTH ?= 1080
+TARGET_SCREEN_HEIGHT ?= 1920
+TARGET_SCREEN_RES ?= 1080
 ifeq ($(TARGET_SCREEN_RES), 720)
 	PRODUCT_COPY_FILES += vendor/stag/prebuilt/common/bootanimation/720p.zip:system/media/bootanimation.zip
 else ifeq ($(TARGET_SCREEN_RES), 1080)
-	PRODUCT_COPY_FILES += vendor/stag/prebuilt/common/bootanimation/1080p.zip:system/media/bootanimation.zip
-else
 	PRODUCT_COPY_FILES += vendor/stag/prebuilt/common/bootanimation/1080p.zip:system/media/bootanimation.zip
 endif
 
