@@ -34,6 +34,7 @@ PRODUCT_PACKAGES += \
     StagWalls \
     StagThemesStub \
     StitchImage \
+    StitchImageService \
     Stk \
     ThemePicker
 
@@ -195,8 +196,8 @@ PRODUCT_PACKAGES += \
 #    Recorder
 
 # OmniStyle
-#PRODUCT_PACKAGES += \
-#    OmniStyle
+PRODUCT_PACKAGES += \
+    OmniStyle
 
 #Custom Overlays
 #PRODUCT_PACKAGES += \
