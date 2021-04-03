@@ -4,6 +4,7 @@ STAG_OTA_VERSION_CODE := eleven
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.stag.ota.version_code=$(STAG_OTA_VERSION_CODE)
+    stag.updater.allow_downgrading=true
 
 PRODUCT_PACKAGES += \
     Updater
