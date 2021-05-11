@@ -25,3 +25,10 @@ PRODUCT_PACKAGES += \
     PixelFwResOverlay \
     GoogleConfigOverlay \
 #    SystemUIGoogleOverlay
+    GesturalNavigationOverlayLong \
+    GesturalNavigationOverlayMedium
+
+ifeq ($(TARGET_INCLUDE_LIVE_WALLPAPERS),true)
+PRODUCT_PACKAGES += \
+    PixelLiveWallpapersOverlay
+endif
