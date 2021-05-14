@@ -13,6 +13,7 @@ include vendor/stag/config/fonts.mk
 # OTA
 include vendor/stag/config/ota.mk
 
-include device/stag/sepolicy/common/sepolicy.mk
 # Plugins
-#include packages/apps/PotatoPlugins/plugins.mk
+include packages/apps/PotatoPlugins/plugins.mk
+
+include device/stag/sepolicy/common/sepolicy.mk
