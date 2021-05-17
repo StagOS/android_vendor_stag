@@ -140,10 +140,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
 
-ifeq ($(EXTRA_FOD_ANIMATIONS),true)
-DEVICE_PACKAGE_OVERLAYS += vendor/stag/overlay/fod
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/stag/overlay/fod
-endif
+#ifeq ($(EXTRA_FOD_ANIMATIONS),true)
+#DEVICE_PACKAGE_OVERLAYS += vendor/stag/overlay/fod
+#PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/stag/overlay/fod
+#endif
 
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= true
