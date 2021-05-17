@@ -67,8 +67,8 @@ include $(CLEAR_VARS)
 
 # Retro Music
 include $(CLEAR_VARS)
-LOCAL_MODULE := RetroMusic
-LOCAL_SRC_FILES := app/RetroMusic.apk
+LOCAL_MODULE := PulseMusic
+LOCAL_SRC_FILES := app/PulseMusic.apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_CERTIFICATE := platform
@@ -89,8 +89,8 @@ include $(BUILD_PREBUILT)
 
 # Aves
 include $(CLEAR_VARS)
-LOCAL_MODULE := Aves
-LOCAL_SRC_FILES := app/Aves.apk
+LOCAL_MODULE := Gallery
+LOCAL_SRC_FILES := app/Gallery.apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_CERTIFICATE := platform

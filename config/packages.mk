@@ -14,13 +14,13 @@
 
 # Required packages
 PRODUCT_PACKAGES += \
-    Aves \
     BluetoothExt \
     Calendar \
     Contacts \
     DeskClock \
     Dialer \
     ExactCalculator \
+    Gallery \
     Jelly \
     LatinIME \
     Launcher3QuickStep \
@@ -30,7 +30,7 @@ PRODUCT_PACKAGES += \
     OmniSwitch \
     OPScreenRecorder \
     PixelThemesStub \
-    RetroMusic \
+    PulseMusic \
     StagWalls \
     StagThemesStub \
     StitchImage \
