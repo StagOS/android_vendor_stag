@@ -158,7 +158,7 @@ endif
 
 # GApps
 ifeq ($(WITH_GAPPS),true)
-include vendor/gapps/gapps.mk
+include vendor/gapps/arm64/arm64-vendor.mk
 endif
 
 ifeq ($(TARGET_USES_CARRIERSETTINGS),true)
