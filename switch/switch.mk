@@ -9,4 +9,5 @@ PRODUCT_PACKAGES += \
     MD2 \
     Stockish \
     Gradient \
-    OOS
+    OOS \
+    Fluid
