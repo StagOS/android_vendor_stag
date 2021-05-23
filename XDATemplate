@@ -1,0 +1,262 @@
+[CENTER][IMG]https://raw.githubusercontent.com/DrtSinX98/Maintainers/master/stagnew/banner.png[/IMG]
+
+
+Hey another day another rom, that's what you might be thinking. but we at stag (I'll try not to use big words, because the idea is to be simple) aim at something towards elegance. We are learners just like everyone out there, This is small something we have started which helps us learn every single day. Why Stag, you might question, my answer would be why not. After all Harry's patronus was a stag(pun intended). Anyway, so the aim here is to provide a really good experience to everyone who uses, everyone on telegram channel can contact us and request, everything will be considered, because if you as users feel something missing, it obviously must be missing. So looking forward for people using our StagOS and giving us all your precious feedback. 
+
+~Sic Parvis Magna~
+
+PS: for people wondering what sic parvis magna is, it translates to great endings from small beginnings, Something i picked up while playing a game.
+
+Credits where they are Due:
+
+Google(No explanation needed n this regards)
+
+Lineage(For starting of the custom rom war)
+
+KCUF Rom(For acting as base)
+
+Omni Rom, Slim Rom, DirtyUnicorns, AospExtended and every other project whose contributions lead to many of the features present.
+
+
+[IMG]https://raw.githubusercontent.com/DrtSinX98/Maintainers/master/stagnew/disclaimer.png[/IMG]
+
+[CODE][SIZE="4"]/*
+
+ * Your warranty is now void.
+
+ *
+
+ * I am not responsible for bricked devices, dead SD cards,
+
+ * thermonuclear war, or you getting fired because the alarm app failed. Please
+
+ * do some research if you have any concerns about features included in this ROM
+
+ * before flashing it! YOU are choosing to make these modifications, and if
+
+ * you point the finger at me for messing up your device, I will laugh at you.
+
+ */[/SIZE][/CODE]
+
+
+[IMG]https://raw.githubusercontent.com/DrtSinX98/Maintainers/master/stagnew/features.png[/IMG]
+
+[HIDE]
+
+1. StatusBar
+
+
+-Traffic Indicators
+
+-Battery Icon
+
+-Clock Settings
+
+-Carrier Label
+
+-Old Mobile Type Icons
+
+-Brightness Control
+
+-4G - LTE Toggle
+
+-Volit Icon Toggle
+
+
+2. Quick Settings
+
+
+-Header Images
+
+-QS panel Opacity
+
+-QS Tile Animations
+
+-Brightness Slider Position
+
+-Auto Brightness Icon Toggle
+
+-Status Bar Header Clock
+
+-QS Rows And Columns Customisation
+
+
+3. Volume Keys
+
+
+-Volume Keys Cursor
+
+-Playback Control
+
+-Volume Rocker Wake
+
+
+4. Animations
+
+
+-System Animations
+
+-Listview Animations
+
+-Screen Off Animations
+
+-Power Menu Animations
+
+-QS tiles Animations
+
+
+5. Navigation Bar
+
+
+-Full Screen Gesture Mode
+
+-Invert Layout
+
+-Pulse
+
+
+6. Gestures
+
+
+-AOSP Gestures
+
+-Prevent Ringing
+
+-DT2S On Lockscreen Ans Statusbar
+
+-Three Finger Screenshot
+
+
+7. Lock Screen
+
+
+-Lock Screen Clock Styles
+
+-Music Visualiser
+
+-Charging info
+
+
+8. Power Menu
+
+
+-Advanced Restart
+
+-Screenshot
+
+-Settings
+
+
+9. Styles And Wallpapers
+
+
+-Lockscreen Clock Faces
+
+-Styles (Icon Shapes And All)
+
+
+10. Notifications
+
+
+-Notification Light
+
+-Battery Charging Light
+
+-Heads Up Notifications toggle
+
+-Edge Lighting
+
+
+11. Display
+
+
+-Ambient Display
+
+-Night Light
+
+-Icon Shapes
+
+-Color Bucket
+
+-RGB Accent Picker
+
+-Gradient Accents
+
+-Font Manager
+
+
+12. System
+
+
+-RGB Accent Picker
+
+-Dashboard Icons
+
+-Gaming Mode
+
+
+[/HIDE]
+
+
+[IMG]https://raw.githubusercontent.com/DrtSinX98/Maintainers/master/stagnew/downloads.png[/IMG]
+
+[URL="link.to.file"][SIZE="6"]Pristine Variant[/SIZE][/URL]
+
+[URL="link.to.file"][SIZE="6"]GAPPS Variant[/SIZE][/URL]
+
+
+[IMG]https://raw.githubusercontent.com/DrtSinX98/Maintainers/master/stagnew/installation.png[/IMG]
+
+[/CENTER]
+
+[COLOR="Blue"]1) You need have a custom recovery installed (TWRP recommended)
+
+    *For this please check in the device specific forums
+
+2) Download the latest StagOS Build and Open gapps package from the link provided official ones remove some default apps.
+
+3) Boot into recovery
+
+4) Go to Wipe and wipe system,data,dalvik & cache as a precaution
+
+5) Flash StagOS zip & Gapps package(Optional)
+
+6) Flash Magisk Root(Optional)[/COLOR]
+
+
+[CENTER]
+
+
+[IMG]https://raw.githubusercontent.com/DrtSinX98/Maintainers/master/stagnew/checklist.png[/IMG]
+
+Whatever Features you find in first build there's no guarantee that they will carry on to the subsequent builds.
+
+As 69+ features help only to boast, and this ROM over here is not only meant for that. We want you to boast but not by the features, We want you to fall in love with the touch. So here I'll be adding up the features that i intend on adding/removing. we are starting of with many features just to find out what you like/what you don't. 
+
+
+[IMG]https://raw.githubusercontent.com/DrtSinX98/Maintainers/master/stagnew/credits.png[/IMG]
+
+[SIZE="5"]There's a huge list here[/SIZE]
+
+There a lot of people that have helped throughout since the beginning of StagOS 9.0, from whom we have learned improved and are where we ae now.
+
+Finally vjspranav and phenom87. for the existence of stag.
+
+The wallpaper and bootanimation you experience are all thanks to Pritish Joshi, Rahul Ahuja and Sanchit Rabadey
+
+[IMG]https://raw.githubusercontent.com/DrtSinX98/Maintainers/master/stagnew/connect.png[/IMG]
+
+
+[URL="https://github.com/StagOS"][img]https://raw.githubusercontent.com/DrtSinX98/Maintainers/master/stagnew/github.png[/img][/URL]  [URL="https://t.me/HornsOfficial"][img]https://raw.githubusercontent.com/DrtSinX98/Maintainers/master/stagnew/telegram.png[/img][/URL]
+
+
+[IMG]https://raw.githubusercontent.com/DrtSinX98/Maintainers/master/stagnew/sources.png[/IMG]
+
+[SIZE="5"][URL="https://github.com/StagOS"]ROM[/URL]
+
+[URL="https://github.com/DrtSinX98/kernel_xiaomi_msm8953/"]Kernel[/URL]
+
+[URL="https://github.com/StagOS-Devices/device_xiaomi_mido"]Device Tree[/URL][/SIZE]
+
+[/CENTER]
+
