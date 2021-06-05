@@ -36,7 +36,8 @@ PRODUCT_PACKAGES += \
     StitchImage \
     StitchImageService \
     Stk \
-    ThemePicker
+    ThemePicker \
+    TouchGestures
 
 # Navbar
 PRODUCT_PACKAGES += \

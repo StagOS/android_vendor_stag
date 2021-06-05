@@ -15,5 +15,3 @@ include vendor/stag/config/ota.mk
 
 # Plugins
 include packages/apps/PotatoPlugins/plugins.mk
-
-include device/stag/sepolicy/common/sepolicy.mk
