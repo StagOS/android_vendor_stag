@@ -953,7 +953,7 @@ alias cmkap='dopush cmka'
 
 function picklist() {
     T=$(gettop)
-    $T/vendor/lineage/build/tools/picklist.py $@
+    $T/vendor/stag/build/tools/picklist.py $@
 }
 
 function repopick() {
