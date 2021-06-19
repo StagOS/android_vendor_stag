@@ -65,8 +65,8 @@ endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/stag/prebuilt/common/bin/backuptool.sh:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.sh \
-    vendor/stag/prebuilt/common/bin/backuptool.functions:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.functions \
+    vendor/stag/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/stag/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/stag/prebuilt/common/bin/50-stag.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-stag.sh \
 
 ifneq ($(strip $(AB_OTA_PARTITIONS) $(AB_OTA_POSTINSTALL_CONFIG)),)
