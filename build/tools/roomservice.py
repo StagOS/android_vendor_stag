@@ -20,6 +20,7 @@ import json
 import netrc
 import os
 import sys
+import shutil
 
 from xml.etree import ElementTree
 
@@ -28,6 +29,8 @@ import urllib.parse
 import urllib.request
 
 DEBUG = False
+CUSTOM_HAL_DIR = None
+
 default_manifest = ".repo/manifests/snippets/stag.xml"
 
 custom_local_manifest = ".repo/local_manifests/stag_manifest.xml"
@@ -194,6 +197,7 @@ _fetch_dep_cache = []
 
 def fetch_dependencies(repo_path, fallback_branch=None):
     global _fetch_dep_cache
+    global CUSTOM_HAL_DIR
     if repo_path in _fetch_dep_cache:
         return
     _fetch_dep_cache.append(repo_path)
@@ -219,6 +223,11 @@ def fetch_dependencies(repo_path, fallback_branch=None):
 
             fetch_list.append(dependency)
             syncable_repos.append(dependency['target_path'])
+            if dependency['target_path'].startswith('hardware/qcom-caf/'):
+                if dependency['target_path'].endswith('display') or dependency['target_path'].endswith('audio') or dependency['target_path'].endswith('media'):
+                    if not CUSTOM_HAL_DIR:
+                        CUSTOM_HAL_DIR = dependency['target_path'].split('/')[2]
+                    print('Custom hal path ', dependency['target_path'])
         else:
             print("Dependency already present in manifest: %s => %s" % (dependency['repository'], dependency['target_path']))
 
@@ -273,9 +282,9 @@ def detect_revision(repo):
           "specify a list of fallback branches.")
     sys.exit()
 
-
 def main():
     global DEBUG
+    global CUSTOM_HAL_DIR
     try:
         depsonly = bool(sys.argv[2] in ['true', 1])
     except IndexError:
@@ -335,8 +344,14 @@ def main():
         print("Syncing repository to retrieve project.")
         os.system('repo sync --force-sync --no-tags --current-branch --no-clone-bundle %s' % repo_path)
         print("Repository synced!")
-
         fetch_dependencies(repo_path, fallback_branch)
+        if CUSTOM_HAL_DIR:
+            try:
+                shutil.copy2('hardware/qcom-caf/common/os_pickup.mk', 'hardware/qcom-caf/'+CUSTOM_HAL_DIR+'/Android.mk')
+                shutil.copy2('hardware/qcom-caf/common/os_pickup.bp', 'hardware/qcom-caf/'+CUSTOM_HAL_DIR+'/Android.bp')
+            except:
+                print('Something went wrong file copying guard')
+            print('Successfully added guard to hardware/qcom-caf/' + CUSTOM_HAL_DIR)
         print("Done")
         sys.exit()
 
