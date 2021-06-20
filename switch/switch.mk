@@ -10,4 +10,5 @@ PRODUCT_PACKAGES += \
     Stockish \
     Gradient \
     OOS \
-    Fluid
+    Fluid \
+    AndroidS
