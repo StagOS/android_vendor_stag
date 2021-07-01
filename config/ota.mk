@@ -10,6 +10,6 @@ PRODUCT_PACKAGES += \
     Updater
 
 PRODUCT_COPY_FILES += \
-    vendor/stag/config/permissions/com.stag.updater.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.stag.updater.xml
+    vendor/stag/config/permissions/org.lineageos.updater.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/org.lineageos.updater.xml
 
 endif
