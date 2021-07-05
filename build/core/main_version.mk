@@ -2,7 +2,7 @@
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.stag.version=$(STAG_VERSION) \
     ro.stag.releasetype=$(STAG_BUILD_TYPE) \
-    ro.stag.build.version=$(StagOS_VERSION).$(StagOS_VERSION_MIN) \
+    ro.stag.build.version=$(StagOS_VERSION).$(StagOS_BUILD) \
     ro.modversion=$(STAG_VERSION) \
 
 # StagOS Platform Display Version
