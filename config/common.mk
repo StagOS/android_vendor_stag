@@ -163,7 +163,7 @@ endif
 
 # GApps
 ifeq ($(WITH_GAPPS),true)
-include vendor/gapps/arm64/arm64-vendor.mk
+include vendor/gms/products/gms.mk
 endif
 
 ifeq ($(TARGET_USES_CARRIERSETTINGS),true)
