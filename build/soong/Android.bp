@@ -224,7 +224,7 @@ legacy_hw_disk_encryption {
 soong_config_module_type {
     name: "camera_needs_client_info",
     module_type: "cc_defaults",
-    config_namespace: "blissGlobalVars",
+    config_namespace: "stagGlobalVars",
     bool_variables: ["camera_needs_client_info"],
     properties: ["cppflags"],
 }
@@ -418,6 +418,25 @@ qti_usb_hal_supported_modes {
         },
         supports_debug_accessory: {
             cppflags: ["-DSUPPORTS_DEBUG_ACCESSORY"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "camera_boottime_timestamp",
+    module_type: "cc_defaults",
+    config_namespace: "stagQcomVars",
+    bool_variables: ["needs_camera_boottime_timestamp"],
+    properties: [
+        "cflags",
+    ],
+}
+
+camera_boottime_timestamp {
+    name: "needs_camera_boottime",
+    soong_config_variables: {
+        needs_camera_boottime_timestamp: {
+            cflags: ["-DTARGET_CAMERA_BOOTTIME_TIMESTAMP"],
         },
     },
 }
