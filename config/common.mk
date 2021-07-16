@@ -46,7 +46,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     vendor/stag/overlay/common \
-    vendor/stag/overlay/lawnchair
 
 # Copy all custom init rc files
 $(foreach f,$(wildcard vendor/stag/prebuilt/common/etc/init/*.rc),\
@@ -107,15 +106,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
    vendor/stag/prebuilt/common/etc/permissions/privapp-permissions-stag-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-stag.xml \
    vendor/stag/prebuilt/common/etc/permissions/privapp-permissions-stag-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-stag.xml \
-
-# Lawnchair
-#ifeq ($(TARGET_INCLUDE_LAWNCHAIR),true)
-#PRODUCT_PACKAGE_OVERLAYS += vendor/stag/overlay/lawnchair
-
-#PRODUCT_COPY_FILES += \
-#    vendor/stag/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-lawnchair.xml \
-#    vendor/stag/prebuilt/common/etc/permissions/lawnchair-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
-#endif
 
 # Clean up packages cache to avoid wrong strings and resources
 PRODUCT_COPY_FILES += \

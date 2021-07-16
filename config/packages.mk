@@ -45,11 +45,6 @@ PRODUCT_PACKAGES += \
     GesturalNavigationOverlayLong \
     GesturalNavigationOverlayMedium
 
-#ifeq ($(TARGET_INCLUDE_LAWNCHAIR),true)
-#PRODUCT_PACKAGES += \
-#    Lawnchair
-#endif
-
 # Accents
 #PRODUCT_PACKAGES += \
 #    AccentColorYellowOverlay \
