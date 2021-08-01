@@ -144,6 +144,8 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
     NexusLauncherRelease
 
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/stag/config/device_framework_matrix.xml
+
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= false
 ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
