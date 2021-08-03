@@ -31,7 +31,10 @@ import urllib.request
 DEBUG = False
 CUSTOM_HAL_DIR = None
 
+android_manifest = ".repo/manifests/snippets/stag.xml"
 default_manifest = ".repo/manifests/snippets/stag.xml"
+lineage_manifest = ".repo/manifests/snippets/lineage.xml"
+remove_manifest = ".repo/manifests/snippets/remove.xml"
 
 custom_local_manifest = ".repo/local_manifests/stag_manifest.xml"
 custom_default_revision = "r11"
@@ -123,10 +126,16 @@ def get_from_manifest(device_name):
     return None
 
 
-def is_in_manifest(project_path):
-    for local_path in load_manifest(custom_local_manifest).findall("project"):
-        if local_path.get("path") == project_path:
+def is_in_remove(project_path, manifest=custom_local_manifest):
+    for local_path in load_manifest(manifest).findall("remove-project"):
+        if local_path.get("name") == project_path:
             return True
+    return False
+
+def is_in_manifest(project_path, manifest=custom_local_manifest):
+    for local_path in load_manifest(manifest).findall("project"):
+        if local_path.get("path") == project_path:
+            return local_path.get("name")
     return False
 
 
@@ -181,7 +190,33 @@ def add_to_manifest(repos, fallback_branch=None):
         if 'clone-depth' in repo:
             print("Setting clone-depth to %s for %s" % (repo['clone-depth'], repo_name))
             project.set('clone-depth', repo['clone-depth'])
-
+        
+        # Checking if the path already exists
+        if os.path.isdir(repo_path):
+            # Checking if it is already there in a project somewhere
+            existing_repo_name = is_in_manifest(repo_path, manifest=default_manifest) or is_in_manifest(repo_path, manifest=lineage_manifest)
+            if existing_repo_name:
+                if not is_in_remove(existing_repo_name):
+                    # Add to remove
+                    remove = ElementTree.Element("remove-project",
+                        attrib={"name":  repo_name}
+                    )
+                    print('Existing Repository found\nRemoving Project:\nRepository: %s\n' % (existing_repo_name))
+                    lm.append(remove)
+            # Checking if we are overriding a default repo which we directly track from google
+            elif is_in_manifest(repo_path, manifest=android_manifest):
+                existing_repo_name=is_in_manifest(repo_path, manifest=android_manifest)
+                if not is_in_remove(existing_repo_name) and not is_in_remove(existing_repo_name, manifest=remove_manifest):
+                    # Add to remove
+                    remove = ElementTree.Element("remove-project",
+                        attrib={"name":  repo_name}
+                    )
+                    print('Existing Repository found\nRemoving Project:\nRepository: %s\n' % (existing_repo_name))
+                    lm.append(remove)
+            # the path exists but is not a repo from manifest
+            else:
+                print('Existing Repository found, Not part of manifest\nRemoving Directory: %s\n' % (repo_path))
+                os.rmdir(repo_path)
         lm.append(project)
 
     indent(lm)
