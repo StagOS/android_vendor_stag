@@ -1,3 +1,7 @@
+# Fonts
+PRODUCT_PACKAGES += \
+    Custom-Fonts
+
 # Copy to System fonts
 PRODUCT_COPY_FILES += \
     vendor/stag/fonts/gobold/Gobold.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Gobold.ttf \
