@@ -199,7 +199,7 @@ def add_to_manifest(repos, fallback_branch=None):
                 if not is_in_remove(existing_repo_name):
                     # Add to remove
                     remove = ElementTree.Element("remove-project",
-                        attrib={"name":  repo_name}
+                        attrib={"name":  existing_repo_name}
                     )
                     print('Existing Repository found\nRemoving Project:\nRepository: %s\n' % (existing_repo_name))
                     lm.append(remove)
@@ -209,7 +209,7 @@ def add_to_manifest(repos, fallback_branch=None):
                 if not is_in_remove(existing_repo_name) and not is_in_remove(existing_repo_name, manifest=remove_manifest):
                     # Add to remove
                     remove = ElementTree.Element("remove-project",
-                        attrib={"name":  repo_name}
+                        attrib={"name":  existing_repo_name}
                     )
                     print('Existing Repository found\nRemoving Project:\nRepository: %s\n' % (existing_repo_name))
                     lm.append(remove)
