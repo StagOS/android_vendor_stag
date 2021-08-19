@@ -49,6 +49,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 endif
 endif
 
+# Blurs
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.sf.blurs_are_expensive=1 \
+    ro.surface_flinger.supports_background_blur=1
+
 # Call Recording
 TARGET_CALL_RECORDING_SUPPORTED ?= true
 ifneq ($(TARGET_CALL_RECORDING_SUPPORTED),false)
