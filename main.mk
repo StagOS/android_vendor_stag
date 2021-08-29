@@ -8,7 +8,7 @@ include vendor/stag/config/version.mk
 include vendor/stag/config/overrides.mk
 
 # Fonts
-#include vendor/stag/config/fonts.mk
+include vendor/stag/config/fonts.mk
 
 # OTA
 include vendor/stag/config/ota.mk
