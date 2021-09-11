@@ -21,6 +21,7 @@ PRODUCT_PACKAGES += \
     Dialer \
     ExactCalculator \
     Gallery \
+    GamingMode \
     Jelly \
     LatinIME \
     Launcher3QuickStep \
