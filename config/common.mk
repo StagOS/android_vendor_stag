@@ -25,6 +25,10 @@ else ifeq ($(TARGET_SCREEN_RES), 1080)
 	PRODUCT_COPY_FILES += vendor/stag/prebuilt/common/bootanimation/1080p.zip:system/media/bootanimation.zip
 endif
 
+# PixelPropsUtils
+PRODUCT_COPY_FILES += \
+    vendor/stag/prebuilt/common/etc/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_2016_exclusive.xml
+
 # Signapk/Brotli
 PRODUCT_HOST_PACKAGES += \
     signapk \
