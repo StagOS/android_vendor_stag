@@ -51,8 +51,8 @@ endif
 
 TARGET_KERNEL_HEADERS ?= $(TARGET_KERNEL_SOURCE)
 
-CLANG_PREBUILTS := $(BUILD_TOP)/prebuilts/clang/host/$(HOST_PREBUILT_TAG)/clang-r383902b
 GCC_PREBUILTS := $(BUILD_TOP)/prebuilts/gcc/$(HOST_PREBUILT_TAG)
+CLANG_PREBUILTS := $(BUILD_TOP)/prebuilts/clang/host/$(HOST_OS)-x86/clang-r416183b
 
 ifeq ($(TARGET_KERNEL_NEW_GCC_COMPILE),true)
     ifeq ($(TARGET_KERNEL_CLANG_COMPILE),true)
