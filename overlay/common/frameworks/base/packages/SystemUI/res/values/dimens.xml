@@ -22,4 +22,6 @@
     <!-- Size of the edge panel arrow -->
     <dimen name="navigation_edge_panel_height">20dp</dimen>
 
+    <!-- Remove power menu shadow -->
+    <dimen name="global_actions_translate">0dp</dimen>
 </resources>
