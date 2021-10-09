@@ -35,6 +35,8 @@ PRODUCT_PACKAGES += \
     StagThemesStub \
     Stk \
     ThemePicker \
+    NoCutoutOverlay \
+    AvoidAppsInCutoutOverlay
 
 # Config
 PRODUCT_PACKAGES += \
