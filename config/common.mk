@@ -131,6 +131,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/stag/prebuilt/common/etc/sensitive_pn.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sensitive_pn.xml
 
+# Fonts
+$(call inherit-product, vendor/pixys/config/fonts.mk)
+
 # Config
 PRODUCT_PACKAGES += \
     SimpleDeviceConfig
