@@ -47,3 +47,7 @@ else
         ro.secure=1 \
         persist.service.adb.enable=0
 endif
+
+# Enable support of one-handed mode
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_one_handed_mode=true
