@@ -42,9 +42,9 @@ PRODUCT_PACKAGES += \
     TouchGestures
 
 # Navbar
-PRODUCT_PACKAGES += \
-    GesturalNavigationOverlayLong \
-    GesturalNavigationOverlayMedium
+#PRODUCT_PACKAGES += \
+#    GesturalNavigationOverlayLong \
+#    GesturalNavigationOverlayMedium
 
 #ifeq ($(TARGET_INCLUDE_LAWNCHAIR),true)
 #PRODUCT_PACKAGES += \
@@ -67,30 +67,30 @@ PRODUCT_PACKAGES += \
 #    AccentColorBlueGrayOverlay
 
 # Gradient
-PRODUCT_PACKAGES += \
-    AccentColorGradientIndianOverlay
+#PRODUCT_PACKAGES += \
+#    AccentColorGradientIndianOverlay
 
 # Custom Overlays
 # Settings
-PRODUCT_PACKAGES += \
-    SystemPitchBlackOverlay \
-    SystemUIPitchBlackOverlay \
-    SystemDarkGrayOverlay \
-    SystemUIDarkGrayOverlay \
-    SystemStyleOverlay \
-    SystemUIStyleOverlay \
-    SystemNightOverlay \
-    SystemUINightOverlay \
-    SystemSolarizedDarkOverlay \
-    SystemUISolarizedDarkOverlay \
-    SystemMaterialOceanOverlay \
-    SystemUIMaterialOceanOverlay \
-    SystemBakedGreenOverlay \
-    SystemUIBakedGreenOverlay \
-    SystemChocoXOverlay \
-    SystemUIChocoXOverlay \
-    SystemClearSpringOverlay \
-    SystemUIClearSpringOverlay \
+#PRODUCT_PACKAGES += \
+#    SystemPitchBlackOverlay \
+#    SystemUIPitchBlackOverlay \
+#    SystemDarkGrayOverlay \
+#    SystemUIDarkGrayOverlay \
+#    SystemStyleOverlay \
+#    SystemUIStyleOverlay \
+#    SystemNightOverlay \
+#    SystemUINightOverlay \
+#    SystemSolarizedDarkOverlay \
+#    SystemUISolarizedDarkOverlay \
+#    SystemMaterialOceanOverlay \
+#    SystemUIMaterialOceanOverlay \
+#    SystemBakedGreenOverlay \
+#    SystemUIBakedGreenOverlay \
+#    SystemChocoXOverlay \
+#    SystemUIChocoXOverlay \
+#    SystemClearSpringOverlay \
+#    SystemUIClearSpringOverlay \
 
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -166,41 +166,41 @@ PRODUCT_PACKAGES += \
     QuickAccessWallet
 
 # Gradients
-PRODUCT_PACKAGES += \
-    BlueSkyTheme \
-    CherryTheme \
-    DeepSkylineTheme \
-    DeepSunsetTheme \
-    DefaultTheme \
-    FireTheme \
-    FlareTheme \
-    GrapeVineTheme \
-    HyakkimaruTheme \
-    KyeMehTheme \
-    LavenderTheme \
-    LightSeaStormTheme \
-    OrangeCoralTheme \
-    PeachyTheme \
-    PolarGreenTheme \
-    PureLustTheme \
-    QuepalTheme \
-    ReaTheme \
-    SeaStormTheme \
-    ShadesofGreyTheme \
-    SinCityRedTheme \
-    SkylineTheme \
-    SublimeTheme \
-    TimberTheme \
-    WitchingHourTheme \
-    YodaTheme
+#PRODUCT_PACKAGES += \
+#    BlueSkyTheme \
+#    CherryTheme \
+#    DeepSkylineTheme \
+#    DeepSunsetTheme \
+#    DefaultTheme \
+#    FireTheme \
+#    FlareTheme \
+#    GrapeVineTheme \
+#    HyakkimaruTheme \
+#    KyeMehTheme \
+#    LavenderTheme \
+#    LightSeaStormTheme \
+#    OrangeCoralTheme \
+#    PeachyTheme \
+#    PolarGreenTheme \
+#    PureLustTheme \
+#    QuepalTheme \
+#    ReaTheme \
+#    SeaStormTheme \
+#    ShadesofGreyTheme \
+#    SinCityRedTheme \
+#    SkylineTheme \
+#    SublimeTheme \
+#    TimberTheme \
+#    WitchingHourTheme \
+#    YodaTheme
 
 # Recorder
 #PRODUCT_PACKAGES += \
 #    Recorder
 
 # OmniStyle
-PRODUCT_PACKAGES += \
-    OmniStyle
+#PRODUCT_PACKAGES += \
+#    OmniStyle
 
 #Custom Overlays
 #PRODUCT_PACKAGES += \
@@ -213,26 +213,26 @@ PRODUCT_PACKAGES += \
 #    SystemUINightOverlay
 
 # QS tile styles
-PRODUCT_PACKAGES += \
-    QStileCircleTrim \
-    QStileDefault \
-    QStileDualToneCircle \
-    QStileSquircleTrim \
-    QStileAttemptMountain \
-    QStileDottedCircle \
-    QStileNinja \
-    QStilePokesign \
-    QStileWavey \
-    QStileCookie \
-    QStileInkDrop \
-    QStileIconAccent \
-    QStileSquaremedo \
-    QStileCosmos \
-    QStileDividedCircle \
-    QStileNeonLight \
-    QStileOxygen \
-    QStileTriangles \
-    QStileCircleOutline
+#PRODUCT_PACKAGES += \
+#    QStileCircleTrim \
+#    QStileDefault \
+#    QStileDualToneCircle \
+#    QStileSquircleTrim \
+#    QStileAttemptMountain \
+#    QStileDottedCircle \
+#    QStileNinja \
+#    QStilePokesign \
+#    QStileWavey \
+#    QStileCookie \
+#    QStileInkDrop \
+#    QStileIconAccent \
+#    QStileSquaremedo \
+#    QStileCosmos \
+#    QStileDividedCircle \
+#    QStileNeonLight \
+#    QStileOxygen \
+#    QStileTriangles \
+#    QStileCircleOutline
 
 # Icon Shapes
-include vendor/stag/config/iconshapes.mk
+#include vendor/stag/config/iconshapes.mk

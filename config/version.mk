@@ -13,28 +13,27 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-StagOS_VERSION = 11.0
-StagOS_BUILD = R5.1
+StagOS_VERSION = 12.0
 
-STAG_BASE_VERSION = $(StagOS_VERSION).$(StagOS_BUILD)
+STAG_BASE_VERSION = $(StagOS_VERSION)
 
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 TARGET_PRODUCT_SHORT := $(subst aosp_,,$(CUSTOM_BUILD))
 
 #ifeq ($(STAG_WEEKLY),true)
 #      STAG_BUILD_TYPE := WEEKLY
-ifeq ($(BUILD_TYPE),OFFICIAL)
-      IS_OFFICIAL=true
-      STAG_BUILD_TYPE := OFFICIAL
-else
-ifeq ($(BUILD_TYPE),TEST)
-   STAG_BUILD_TYPE := TEST
-else
-   STAG_BUILD_TYPE := UNOFFICIAL
-endif
-endif
+#ifeq ($(BUILD_TYPE),OFFICIAL)
+#      IS_OFFICIAL=true
+#      STAG_BUILD_TYPE := OFFICIAL
+#else
+#ifeq ($(BUILD_TYPE),TEST)
+#   STAG_BUILD_TYPE := TEST
+#else
+#   STAG_BUILD_TYPE := UNOFFICIAL
+#endif
+#endif
 
-#STAG_BUILD_TYPE := BETA
+STAG_BUILD_TYPE := BETA
 STAG_ZIP_TYPE = Pristine
 
 # GApps
@@ -42,7 +41,7 @@ ifeq ($(WITH_GAPPS),true)
 STAG_ZIP_TYPE := GApps
 endif
 
-STAG_VERSION := StagOS-$(CURRENT_DEVICE)-$(StagOS_VERSION).$(StagOS_BUILD)-$(STAG_BUILD_TYPE)-$(STAG_ZIP_TYPE)-$(shell date -u +%Y%m%d-%H%M)
+STAG_VERSION := StagOS-$(CURRENT_DEVICE)-$(StagOS_VERSION)-$(STAG_BUILD_TYPE)-$(STAG_ZIP_TYPE)-$(shell date -u +%Y%m%d-%H%M)
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
  ro.stag.version=$(StagOS_VERSION) \
@@ -51,7 +50,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
  ro.stag.build.version=$(STAG_BASE_VERSION) \
  ro.stag.ziptype=$(STAG_ZIP_TYPE)
 
-STAG_DISPLAY_VERSION := StagOS-$(StagOS_VERSION).$(StagOS_BUILD)-$(STAG_BUILD_TYPE)
+STAG_DISPLAY_VERSION := StagOS-$(StagOS_VERSION)-$(STAG_BUILD_TYPE)
 ROM_FINGERPRINT := StagOS/$(STAG_VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date -u +%Y%m%d-%H%M)
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \

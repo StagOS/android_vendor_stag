@@ -16,7 +16,7 @@ include vendor/stag/config/packages.mk
 include vendor/stag/config/sounds.mk
 
 # Include Switch Styles
-include vendor/stag/switch/switch.mk
+# include vendor/stag/switch/switch.mk
 
 # Statusbar Icons Themes
 include vendor/stag/icons/icons.mk
@@ -110,15 +110,6 @@ PRODUCT_COPY_FILES += \
    vendor/stag/prebuilt/common/etc/permissions/privapp-permissions-stag-system_ext.xml:system_ext/etc/permissions/privapp-permissions-stag.xml \
    vendor/stag/prebuilt/common/etc/permissions/privapp-permissions-stag-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-stag.xml \
 
-# Lawnchair
-#ifeq ($(TARGET_INCLUDE_LAWNCHAIR),true)
-#PRODUCT_PACKAGE_OVERLAYS += vendor/stag/overlay/lawnchair
-
-#PRODUCT_COPY_FILES += \
-#    vendor/stag/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-lawnchair.xml \
-#    vendor/stag/prebuilt/common/etc/permissions/lawnchair-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
-#endif
-
 # Clean up packages cache to avoid wrong strings and resources
 PRODUCT_COPY_FILES += \
     vendor/stag/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
@@ -142,12 +133,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/stag/prebuilt/common/etc/sensitive_pn.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sensitive_pn.xml
 
-#ifneq ($(TARGET_USES_PREBUILT_CAMERA_SERVICE), true)
-#PRODUCT_SOONG_NAMESPACES += \
-#    frameworks/av/camera/cameraserver \
-#    frameworks/av/services/camera/libcameraservice
-#endif
-
 # Config
 PRODUCT_PACKAGES += \
     SimpleDeviceConfig
@@ -156,13 +141,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
 
-#ifeq ($(EXTRA_FOD_ANIMATIONS),true)
-#DEVICE_PACKAGE_OVERLAYS += vendor/stag/overlay/fod
-#PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/stag/overlay/fod
-#endif
-
 # Face Unlock
-TARGET_FACE_UNLOCK_SUPPORTED ?= true
+TARGET_FACE_UNLOCK_SUPPORTED ?= false
 ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
 PRODUCT_PACKAGES += \
     FaceUnlockService
