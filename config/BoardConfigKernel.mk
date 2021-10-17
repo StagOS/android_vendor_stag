@@ -139,9 +139,15 @@ ifneq ($(TARGET_KERNEL_ADDITIONAL_FLAGS),)
 endif
 
 TOOLS_PATH_OVERRIDE := \
-    PATH=$(BUILD_TOP)/$(prebuilt_build_tools_stag_bin):$$PATH \
     LD_LIBRARY_PATH=$(BUILD_TOP)/$(prebuilt_build_tools_stag)/$(HOST_PREBUILT_TAG)/lib:$$LD_LIBRARY_PATH \
     PERL5LIB=$(BUILD_TOP)/$(prebuilt_build_tools_stag)/common/perl-base
+
+ifeq ($(KERNEL_ARCH),arm64)
+  # Add 32-bit GCC to PATH so that arm-linux-androidkernel-as is available for CONFIG_COMPAT_VDSO
+  TOOLS_PATH_OVERRIDE += PATH=$(BUILD_TOP)/$(prebuilt_build_tools_stag)/$(HOST_PREBUILT_TAG)/bin:$(KERNEL_TOOLCHAIN_arm):$$PATH
+else
+  TOOLS_PATH_OVERRIDE += PATH=$(BUILD_TOP)/$(prebuilt_build_tools_stag)/$(HOST_PREBUILT_TAG)/bin:$$PATH
+endif
 
 # Set DTBO image locations so the build system knows to build them
 ifeq ($(TARGET_NEEDS_DTBOIMAGE),true)
