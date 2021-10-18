@@ -21,25 +21,20 @@ PRODUCT_PACKAGES += \
     Dialer \
     ExactCalculator \
     Gallery \
-    GamingMode \
     Jelly \
     LatinIME \
     Launcher3QuickStep \
     LiveWallpapersPicker \
     messaging \
     PixelLiveWallpaperPrebuilt \
-    OmniSwitch \
     OPScreenRecorder \
     PixelThemesStub \
     PulseMusic \
     QuickAccessWallet \
     StagWalls \
     StagThemesStub \
-    StitchImage \
-    StitchImageService \
     Stk \
     ThemePicker \
-    TouchGestures
 
 # Navbar
 #PRODUCT_PACKAGES += \
