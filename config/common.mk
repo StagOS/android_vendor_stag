@@ -15,12 +15,6 @@ include vendor/stag/config/packages.mk
 # Sounds
 include vendor/stag/config/sounds.mk
 
-# Include Switch Styles
-# include vendor/stag/switch/switch.mk
-
-# Statusbar Icons Themes
-include vendor/stag/icons/icons.mk
-
 # Bootanimation
 TARGET_SCREEN_WIDTH ?= 1080
 TARGET_SCREEN_HEIGHT ?= 1920
