@@ -36,6 +36,10 @@ PRODUCT_PACKAGES += \
     Stk \
     ThemePicker \
 
+# Config
+PRODUCT_PACKAGES += \
+    SimpleDeviceConfig \
+
 # Navbar
 #PRODUCT_PACKAGES += \
 #    GesturalNavigationOverlayLong \
