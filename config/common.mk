@@ -150,6 +150,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
 endif
 
+TARGET_BUILD_LAWNCHAIR ?= true
+ifeq ($(strip $(TARGET_BUILD_LAWNCHAIR)),true)
+include vendor/lawnchair/lawnchair.mk
+endif
+
 # GApps
 ifeq ($(WITH_GAPPS),true)
 include vendor/gapps/config.mk
