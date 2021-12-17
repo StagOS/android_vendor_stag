@@ -20,20 +20,17 @@ STAG_BASE_VERSION = $(StagOS_VERSION)
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 TARGET_PRODUCT_SHORT := $(subst aosp_,,$(CUSTOM_BUILD))
 
-#ifeq ($(STAG_WEEKLY),true)
-#      STAG_BUILD_TYPE := WEEKLY
-#ifeq ($(BUILD_TYPE),OFFICIAL)
-#      IS_OFFICIAL=true
-#      STAG_BUILD_TYPE := OFFICIAL
-#else
-#ifeq ($(BUILD_TYPE),TEST)
-#   STAG_BUILD_TYPE := TEST
-#else
-#   STAG_BUILD_TYPE := UNOFFICIAL
-#endif
-#endif
+ifeq ($(BUILD_TYPE),OFFICIAL)
+      IS_OFFICIAL=true
+      STAG_BUILD_TYPE := OFFICIAL
+else
+ifeq ($(BUILD_TYPE),TEST)
+   STAG_BUILD_TYPE := TEST
+else
+   STAG_BUILD_TYPE := UNOFFICIAL
+endif
+endif
 
-STAG_BUILD_TYPE := BETA
 STAG_ZIP_TYPE = Pristine
 
 # GApps
