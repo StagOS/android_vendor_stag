@@ -45,7 +45,8 @@ else
     PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
         ro.adb.secure=1 \
         ro.secure=1 \
-        persist.service.adb.enable=0
+        persist.service.adb.enable=0 \
+        ro.debuggable = 0
 endif
 
 # Enable support of one-handed mode
