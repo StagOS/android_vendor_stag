@@ -141,7 +141,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI
+    SystemUI \
+    NexusLauncherRelease
 
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= false
@@ -156,8 +157,18 @@ endif
 
 TARGET_BUILD_LAWNCHAIR ?= true
 
+# TextClassifier
+PRODUCT_PACKAGES += \
+	libtextclassifier_annotator_en_model \
+	libtextclassifier_annotator_universal_model \
+	libtextclassifier_actions_suggestions_universal_model \
+	libtextclassifier_lang_id_model
+
 # GApps
 ifeq ($(WITH_GAPPS),true)
+# RRO Overlays
+$(call inherit-product, vendor/stag/config/rro_overlays.mk)
+
 include vendor/gapps/config.mk
 else
 ifeq ($(strip $(TARGET_BUILD_LAWNCHAIR)),true)
