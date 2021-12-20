@@ -155,13 +155,14 @@ PRODUCT_COPY_FILES += \
 endif
 
 TARGET_BUILD_LAWNCHAIR ?= true
-ifeq ($(strip $(TARGET_BUILD_LAWNCHAIR)),true)
-include vendor/lawnchair/lawnchair.mk
-endif
 
 # GApps
 ifeq ($(WITH_GAPPS),true)
 include vendor/gapps/config.mk
+else
+ifeq ($(strip $(TARGET_BUILD_LAWNCHAIR)),true)
+include vendor/lawnchair/lawnchair.mk
+endif
 endif
 
 ifeq ($(TARGET_USES_CARRIERSETTINGS),true)
