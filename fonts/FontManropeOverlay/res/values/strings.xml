@@ -19,4 +19,7 @@
     <!-- Manrope overlay -->
     <string name="font_manrope_overlay" translatable="false">Manrope</string>
 
+    <!-- Enable All Apps header scrim (works fine with our fixed search UI) -->
+    <bool name="config_header_protection_supported">true</bool>
+
 </resources>
