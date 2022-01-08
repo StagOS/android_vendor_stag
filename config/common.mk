@@ -194,6 +194,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/stag/overlay/common
 
 PRODUCT_PACKAGES += \
+    AndroidBlackThemeOverlay \
     DocumentsUIOverlay \
     NetworkStackOverlay
 
