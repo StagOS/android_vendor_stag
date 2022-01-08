@@ -1,3 +1,7 @@
+# Custom Themes
+PRODUCT_PACKAGES += \
+    AndroidBlackThemeOverlay
+
 # Fonts
 PRODUCT_PACKAGES += \
     fonts_customization.xml \
