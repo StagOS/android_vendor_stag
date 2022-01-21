@@ -180,3 +180,10 @@ ifeq ($(TARGET_USES_CARRIERSETTINGS),true)
 # CarrierSettings
 $(call inherit-product, vendor/stag/CarrierSettings/config.mk)
 endif
+
+EXTRA_UDFPS_ANIMATIONS ?= false
+ifeq ($(EXTRA_UDFPS_ANIMATIONS),true)
+PRODUCT_PACKAGES += \
+    UdfpsResources
+endif
+
