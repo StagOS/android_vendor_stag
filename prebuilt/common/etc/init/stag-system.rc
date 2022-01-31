@@ -1,6 +1,6 @@
 # LineageOS core functionality
 on init
-    export TERMINFO /product/etc/terminfo
+    export TERMINFO /system_ext/etc/terminfo
 
 on post-fs-data
     mkdir /cache/recovery 0770 system cache
