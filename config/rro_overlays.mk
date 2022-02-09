@@ -25,7 +25,6 @@ PRODUCT_PACKAGES += \
     PixelSetupWizardOverlayActiveEdge \
     PixelFwResOverlay \
     GoogleConfigOverlay \
-#    SystemUIGoogleOverlay
     GesturalNavigationOverlayLong \
     GesturalNavigationOverlayMedium \
    NavigationBarNoHintOverlay
