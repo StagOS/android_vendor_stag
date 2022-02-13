@@ -35,6 +35,7 @@ PRODUCT_PACKAGES += \
     StagThemesStub \
     Stk \
     ThemePicker \
+    TouchGestures \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay
 
