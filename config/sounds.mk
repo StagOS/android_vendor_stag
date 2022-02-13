@@ -13,10 +13,10 @@
 # limitations under the License.
 
 PRODUCT_COPY_FILES += \
-    vendor/stag/prebuilt/ringtones/June27.ogg:system/media/audio/ringtones/June27.ogg \
-    vendor/stag/prebuilt/ringtones/Mann.ogg:system/media/audio/ringtones/Mann.ogg \
-    vendor/stag/prebuilt/ringtones/Cia.ogg:system/media/audio/ringtones/Cia.ogg \
-    vendor/stag/prebuilt/ringtones/Stag.ogg:system/media/audio/ringtones/Stag.ogg \
-    vendor/stag/prebuilt/ringtones/Iphone.ogg:system/media/audio/ringtones/Iphone.ogg \
-    vendor/stag/prebuilt/ringtones/FF.ogg:system/media/audio/ringtones/FF.ogg \
-    vendor/stag/prebuilt/ringtones/GetAway.ogg:system/media/audio/ringtones/GetAway.ogg \
+    vendor/stag/prebuilt/ringtones/June27.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/June27.ogg \
+    vendor/stag/prebuilt/ringtones/Mann.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Mann.ogg \
+    vendor/stag/prebuilt/ringtones/Cia.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Cia.ogg \
+    vendor/stag/prebuilt/ringtones/Stag.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Stag.ogg \
+    vendor/stag/prebuilt/ringtones/Iphone.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Iphone.ogg \
+    vendor/stag/prebuilt/ringtones/FF.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/FF.ogg \
+    vendor/stag/prebuilt/ringtones/GetAway.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/GetAway.ogg \

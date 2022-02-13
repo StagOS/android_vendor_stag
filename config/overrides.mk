@@ -16,6 +16,5 @@
 # Default ringtones/notification/alarm sounds
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.ringtone=Stag.ogg \
-    ro.config.ringtone2=Champagne_Edition.ogg \
     ro.config.alarm_alert=Argon.ogg \
     ro.config.notification_sound=Altair.ogg
