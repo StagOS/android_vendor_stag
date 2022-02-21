@@ -11,7 +11,7 @@ include vendor/stag/config/overrides.mk
 #include vendor/stag/config/fonts.mk
 
 # OTA
-#include vendor/stag/config/ota.mk
+include vendor/stag/config/ota.mk
 
 # Plugins
 #include packages/apps/PotatoPlugins/plugins.mk
