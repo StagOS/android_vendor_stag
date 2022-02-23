@@ -47,7 +47,7 @@ SOONG_CONFIG_stagGlobalVars += \
     has_memfd_backport \
     ignores_ftp_pptp_conntrack_failure \
     needs_netd_direct_connect_rule \
-    target_camera_needs_client_info \
+    camera_needs_client_info \
     target_init_vendor_lib \
     target_ld_shim_libs \
     target_process_sdk_version_override \
@@ -81,12 +81,12 @@ SOONG_CONFIG_stagQcomVars += \
 endif
 
 # Soong bool variables
-SOONG_CONFIG_stagGlobalVars_camera_needs_client_info_lib := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB)
+SOONG_CONFIG_stagGlobalVars_camera_needs_client_info_lib := $(CAMERA_NEEDS_CLIENT_INFO_LIB)
 SOONG_CONFIG_stagGlobalVars_disable_postrender_cleanup := $(TARGET_DISABLE_POSTRENDER_CLEANUP)
 SOONG_CONFIG_stagGlobalVars_has_legacy_camera_hal1 := $(TARGET_HAS_LEGACY_CAMERA_HAL1)
 SOONG_CONFIG_stagGlobalVars_ignores_ftp_pptp_conntrack_failure := $(TARGET_IGNORES_FTP_PPTP_CONNTRACK_FAILURE)
 SOONG_CONFIG_stagGlobalVars_needs_netd_direct_connect_rule := $(TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE)
-SOONG_CONFIG_stagGlobalVars_target_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
+SOONG_CONFIG_stagGlobalVars_camera_needs_client_info := $(CAMERA_NEEDS_CLIENT_INFO)
 SOONG_CONFIG_stagGlobalVars_target_uses_prebuilt_dynamic_partitions := $(TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS)
 SOONG_CONFIG_stagNvidiaVars_uses_nv_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
 SOONG_CONFIG_stagQcomVars_legacy_hw_disk_encryption := $(TARGET_LEGACY_HW_DISK_ENCRYPTION)

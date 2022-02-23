@@ -254,7 +254,7 @@ camera_needs_client_info {
     name: "camera_needs_client_info_defaults",
     soong_config_variables: {
         camera_needs_client_info: {
-            cppflags: ["-DTARGET_NEEDS_CLIENT_INFO"],
+            cppflags: ["-DCAMERA_NEEDS_CLIENT_INFO"],
         },
     },
 }
