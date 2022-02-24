@@ -41,7 +41,7 @@ endif
 STAG_VERSION := StagOS-$(CURRENT_DEVICE)-$(StagOS_VERSION)-$(STAG_BUILD_TYPE)-$(STAG_ZIP_TYPE)-$(shell date -u +%Y%m%d-%H%M)
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
- ro.stag.version=$(StagOS_VERSION) \
+ ro.stag.version=$(STAG_VERSION) \
  ro.stag.releasetype=$(STAG_BUILD_TYPE) \
  ro.mod.version=$(StagOS_VERSION) \
  ro.stag.build.version=$(STAG_BASE_VERSION) \
