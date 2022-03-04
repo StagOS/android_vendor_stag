@@ -21,7 +21,7 @@ SOONG_CONFIG_NAMESPACES += stagVarsPlugin
 SOONG_CONFIG_stagVarsPlugin :=
 
 ifneq ($(TARGET_FORCE_BUILD_FINGERPRINT),)
-SOONG_CONFIG_customGlobalVars += force_build_fingerprint
+SOONG_CONFIG_stagGlobalVars += force_build_fingerprint
 endif
 
 define addVar
@@ -31,7 +31,7 @@ endef
 
 SOONG_CONFIG_stagGlobalVars :=
 ifneq ($(TARGET_FORCE_BUILD_FINGERPRINT),)
-SOONG_CONFIG_customGlobalVars_force_build_fingerprint := $(TARGET_FORCE_BUILD_FINGERPRINT)
+SOONG_CONFIG_stagGlobalVars_force_build_fingerprint := $(TARGET_FORCE_BUILD_FINGERPRINT)
 endif
 
 $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
