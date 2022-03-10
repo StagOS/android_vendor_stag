@@ -44,9 +44,10 @@ PRODUCT_PACKAGES += \
     SimpleDeviceConfig \
 
 # Navbar
-#PRODUCT_PACKAGES += \
-#    GesturalNavigationOverlayLong \
-#    GesturalNavigationOverlayMedium
+PRODUCT_PACKAGES += \
+    GesturalNavigationOverlayLong \
+    GesturalNavigationOverlayMedium \
+    NavigationBarNoHintOverlay
 
 #ifeq ($(TARGET_INCLUDE_LAWNCHAIR),true)
 #PRODUCT_PACKAGES += \

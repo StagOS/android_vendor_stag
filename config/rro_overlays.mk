@@ -24,10 +24,7 @@ PRODUCT_PACKAGES += \
     PixelSetupWizardOverlay2019 \
     PixelSetupWizardOverlayActiveEdge \
     PixelFwResOverlay \
-    GoogleConfigOverlay \
-    GesturalNavigationOverlayLong \
-    GesturalNavigationOverlayMedium \
-   NavigationBarNoHintOverlay
+    GoogleConfigOverlay
 
 ifeq ($(TARGET_INCLUDE_LIVE_WALLPAPERS),true)
 PRODUCT_PACKAGES += \
