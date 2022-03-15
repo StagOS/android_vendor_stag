@@ -187,3 +187,8 @@ PRODUCT_PACKAGES += \
     UdfpsResources
 endif
 
+# Quick Tap
+ifeq ($(TARGET_SUPPORTS_QUICK_TAP),true)
+PRODUCT_COPY_FILES += \
+    vendor/stag/prebuilt/common/etc/sysconfig/quick_tap.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/quick_tap.xml
+endif
