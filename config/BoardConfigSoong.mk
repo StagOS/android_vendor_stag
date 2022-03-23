@@ -55,7 +55,9 @@ SOONG_CONFIG_stagGlobalVars += \
     target_uses_prebuilt_dynamic_partitions \
     uses_camera_parameter_lib \
     target_surfaceflinger_udfps_lib \
-    needs_camera_boottime
+    needs_camera_boottime \
+    uses_camera_parameter_lib \
+    uses_egl_display_array
 
 SOONG_CONFIG_NAMESPACES += stagNvidiaVars
 SOONG_CONFIG_stagNvidiaVars += \
@@ -88,6 +90,7 @@ SOONG_CONFIG_stagGlobalVars_has_legacy_camera_hal1 := $(TARGET_HAS_LEGACY_CAMERA
 SOONG_CONFIG_stagGlobalVars_ignores_ftp_pptp_conntrack_failure := $(TARGET_IGNORES_FTP_PPTP_CONNTRACK_FAILURE)
 SOONG_CONFIG_stagGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
 SOONG_CONFIG_stagGlobalVars_needs_netd_direct_connect_rule := $(TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE)
+SOONG_CONFIG_stagGlobalVars_uses_egl_display_array := $(TARGET_USES_EGL_DISPLAY_ARRAY)
 SOONG_CONFIG_stagGlobalVars_camera_needs_client_info := $(CAMERA_NEEDS_CLIENT_INFO)
 SOONG_CONFIG_stagGlobalVars_target_uses_prebuilt_dynamic_partitions := $(TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS)
 SOONG_CONFIG_stagNvidiaVars_uses_nv_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
