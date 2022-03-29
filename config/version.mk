@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-StagOS_VERSION = 12.0
+StagOS_VERSION = 12.1
 
 STAG_BASE_VERSION = $(StagOS_VERSION)
 
