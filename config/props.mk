@@ -24,8 +24,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1 \
     ro.opa.eligible_device=true \
     persist.sys.disable_rescue=true \
-    ro.config.calibration_cad=/system/etc/calibration_cad.xml
-
+    ro.config.calibration_cad=/system/etc/calibration_cad.xml \
+    ro.com.android.mobiledata=false
 
 ifeq ($(TARGET_BUILD_VARIANT),eng)
     # Disable ADB authentication
