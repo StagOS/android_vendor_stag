@@ -167,7 +167,7 @@ PRODUCT_PACKAGES += \
 # GApps
 ifeq ($(WITH_GAPPS),true)
 # RRO Overlays
-$(call inherit-product, vendor/stag/config/rro_overlays.mk)
+#$(call inherit-product, vendor/stag/config/rro_overlays.mk)
 
 include vendor/gapps/config.mk
 else
