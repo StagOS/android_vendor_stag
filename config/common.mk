@@ -169,7 +169,7 @@ ifeq ($(WITH_GAPPS),true)
 # RRO Overlays
 #$(call inherit-product, vendor/stag/config/rro_overlays.mk)
 
-include vendor/gapps/config.mk
+$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
 else
 ifeq ($(strip $(TARGET_BUILD_LAWNCHAIR)),true)
 include vendor/lawnchair/lawnchair.mk

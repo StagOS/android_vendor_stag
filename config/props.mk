@@ -68,7 +68,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     setupwizard.theme=glif_v3_light \
     setupwizard.feature.skip_button_use_mobile_data.carrier1839=true \
     setupwizard.feature.show_pai_screen_in_main_flow.carrier1839=false \
-    setupwizard.feature.show_pixel_tos=false \
     setupwizard.feature.show_support_link_in_deferred_setup=false \
     setupwizard.feature.day_night_mode_enabled=true \
     setupwizard.feature.portal_notification=true
