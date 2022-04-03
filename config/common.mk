@@ -155,7 +155,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
 endif
 
-TARGET_BUILD_LAWNCHAIR ?= true
+# TARGET_BUILD_LAWNCHAIR ?= true
 
 # TextClassifier
 PRODUCT_PACKAGES += \
