@@ -168,8 +168,8 @@ PRODUCT_PACKAGES += \
 ifeq ($(WITH_GAPPS),true)
 # RRO Overlays
 #$(call inherit-product, vendor/stag/config/rro_overlays.mk)
-
 $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+$(call inherit-product, vendor/PixelLauncher/PixelLauncher.mk)
 else
 ifeq ($(strip $(TARGET_BUILD_LAWNCHAIR)),true)
 include vendor/lawnchair/lawnchair.mk
