@@ -30,12 +30,10 @@ PRODUCT_CFI_INCLUDE_PATHS += \
     hardware/qcom-caf/wlan/qcwcn/wpa_supplicant_8_lib
 else
 
+QC_OPEN_PATH := vendor/qcom/opensource
+
 ifneq ($(FORCE_QCOM_DISPLAY_HAL_VARIANT),)
 $(call set-device-specific-path,DISPLAY,display,hardware/qcom-caf/$(FORCE_QCOM_DISPLAY_HAL_VARIANT)/display)
 endif
-
-else
-
-QC_OPEN_PATH := vendor/qcom/opensource
 
 endif
