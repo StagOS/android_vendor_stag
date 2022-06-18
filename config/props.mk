@@ -18,7 +18,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
     ro.com.google.clientidbase=android-google \
     ro.com.android.wifi-watchlist=GoogleGuest \
-    ro.com.android.dataroaming=false \
     drm.service.enabled=true \
     net.tethering.noprovisioning=true \
     persist.sys.dun.override=0 \
