@@ -32,6 +32,7 @@ PRODUCT_PACKAGES += \
     PixelThemesStub \
     PulseMusic \
     QuickAccessWallet \
+    RepainterServicePriv \
     StagWalls \
     StagThemesStub \
     Stk \
