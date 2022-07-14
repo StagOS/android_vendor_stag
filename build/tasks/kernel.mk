@@ -44,6 +44,8 @@
 #                                          For example, for ARM devices,
 #                                          use zImage-dtb instead of zImage.
 #
+#   BOARD_DTB_CFG                      = Path to a mkdtboimg.py config file for dtb.img
+#
 #   BOARD_DTBO_CFG                     = Path to a mkdtboimg.py config file
 #
 #   BOARD_CUSTOM_DTBOIMG_MK            = Path to a custom dtboimage makefile
