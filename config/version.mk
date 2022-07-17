@@ -14,6 +14,7 @@
 # limitations under the License.
 
 StagOS_VERSION = 12.1
+STAG_PLATFORM_RELEASE_OR_CODENAME := 12L
 
 STAG_BASE_VERSION = $(StagOS_VERSION)
 
@@ -45,7 +46,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
  ro.stag.releasetype=$(STAG_BUILD_TYPE) \
  ro.mod.version=$(StagOS_VERSION) \
  ro.stag.build.version=$(STAG_BASE_VERSION) \
- ro.stag.ziptype=$(STAG_ZIP_TYPE)
+ ro.stag.ziptype=$(STAG_ZIP_TYPE) \
+ ro.stag.settings.android_version=$(STAG_PLATFORM_RELEASE_OR_CODENAME)
+
 
 STAG_DISPLAY_VERSION := StagOS-$(StagOS_VERSION)-$(STAG_BUILD_TYPE)
 ROM_FINGERPRINT := StagOS/$(STAG_VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date -u +%Y%m%d-%H%M)
@@ -53,3 +56,4 @@ ROM_FINGERPRINT := StagOS/$(STAG_VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date -
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
  ro.stag.display.version=$(STAG_DISPLAY_VERSION) \
  ro.stag.fingerprint=$(ROM_FINGERPRINT)
+
