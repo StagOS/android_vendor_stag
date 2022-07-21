@@ -31,6 +31,11 @@
 #                                        makefile. Can be overriden in device trees
 #                                        in the event of prebuilt kernel.
 #
+#   TARGET_KERNEL_EXT_MODULE_ROOT      = Optional, the external modules root directory
+#                                          Defaults to empty
+#   TARGET_KERNEL_EXT_MODULES          = Optional, the external modules we are
+#                                          building. Defaults to empty
+#
 #   KERNEL_TOOLCHAIN_PREFIX            = Overrides TARGET_KERNEL_CROSS_COMPILE_PREFIX,
 #                                          Set this var in shell to override
 #                                          toolchain specified in BoardConfig.mk
@@ -159,6 +164,10 @@ BOARD_PREBUILT_DTBOIMAGE ?= $(PRODUCT_OUT)/dtbo/arch/$(KERNEL_ARCH)/boot/dtbo.im
 else ifeq ($(BOARD_KERNEL_SEPARATED_DTBO),true)
 BOARD_PREBUILT_DTBOIMAGE ?= $(PRODUCT_OUT)/dtbo-pre.img
 endif
+
+# Set no external modules by default
+TARGET_KERNEL_EXT_MODULE_ROOT ?=
+TARGET_KERNEL_EXT_MODULES ?=
 
 # Set use the full path to the make command
 KERNEL_MAKE_CMD := $(BUILD_TOP)/prebuilts/build-tools/$(HOST_PREBUILT_TAG)/bin/make
