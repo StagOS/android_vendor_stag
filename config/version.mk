@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-StagOS_VERSION = 12.1
+StagOS_VERSION = 13.0
 STAG_PLATFORM_RELEASE_OR_CODENAME := 12L
 
 STAG_BASE_VERSION = $(StagOS_VERSION)
@@ -32,6 +32,7 @@ else
 endif
 endif
 
+STAG_BUILD_TYPE := BETA
 STAG_ZIP_TYPE = Pristine
 
 # GApps
