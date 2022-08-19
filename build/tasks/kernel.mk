@@ -229,13 +229,7 @@ ifeq ($(or $(FULL_RECOVERY_KERNEL_BUILD), $(FULL_KERNEL_BUILD)),true)
 PATH_OVERRIDE := PATH=$(KERNEL_BUILD_OUT_PREFIX)$(HOST_OUT_EXECUTABLES):$$PATH
 ifneq ($(TARGET_KERNEL_CLANG_COMPILE),false)
     ifneq ($(TARGET_KERNEL_CLANG_VERSION),)
-        ifeq ($(TARGET_KERNEL_CLANG_VERSION),latest)
-            # Set the latest version of clang
-            KERNEL_CLANG_VERSION := $(shell ls -d $(BUILD_TOP)/prebuilts/clang/host/$(HOST_OS)-x86/clang-r* | xargs -n 1 basename | tail -1)
-        else
-            # Find the clang-* directory containing the specified version
-            KERNEL_CLANG_VERSION := clang-$(TARGET_KERNEL_CLANG_VERSION)
-        endif
+        KERNEL_CLANG_VERSION := clang-$(TARGET_KERNEL_CLANG_VERSION)
     else
         # Use the default version of clang if TARGET_KERNEL_CLANG_VERSION hasn't been set by the device config
         KERNEL_CLANG_VERSION := $(LLVM_PREBUILTS_VERSION)
@@ -255,24 +249,6 @@ ifneq ($(TARGET_KERNEL_CLANG_COMPILE),false)
     ifeq ($(KERNEL_LD),)
         KERNEL_LD :=
     endif
-endif
-
-# As
-ifeq ($(KERNEL_SUPPORTS_LLVM_TOOLS),true)
-    LLVM_TOOLS ?= $(TARGET_KERNEL_CLANG_PATH)/bin
-    KERNEL_LD := LD=$(LLVM_TOOLS)/ld.lld
-    KERNEL_AR := AR=$(LLVM_TOOLS)/llvm-ar
-    KERNEL_OBJCOPY := OBJCOPY=$(LLVM_TOOLS)/llvm-objcopy
-    KERNEL_OBJDUMP := OBJDUMP=$(LLVM_TOOLS)/llvm-objdump
-    KERNEL_NM := NM=$(LLVM_TOOLS)/llvm-nm
-    KERNEL_STRIP := STRIP=$(LLVM_TOOLS)/llvm-strip
-else
-    KERNEL_LD :=
-    KERNEL_AR :=
-    KERNEL_OBJCOPY :=
-    KERNEL_OBJDUMP :=
-    KERNEL_NM :=
-    KERNEL_STRIP :=
 endif
 
 ifneq ($(TARGET_KERNEL_MODULES),)
