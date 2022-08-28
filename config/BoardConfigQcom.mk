@@ -153,13 +153,6 @@ ifneq ($(USE_DEVICE_SPECIFIC_DATASERVICES),true)
     PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/dataservices
 endif
 
-ifeq ($(TARGET_USE_QTI_BT_STACK),true)
-PRODUCT_SOONG_NAMESPACES += \
-    vendor/qcom/opensource/commonsys/packages/apps/Bluetooth \
-    vendor/qcom/opensource/commonsys/system/bt/conf \
-    vendor/qcom/opensource/commonsys/system/bt/main
-endif #TARGET_USE_QTI_BT_STACK
-
 SOONG_CONFIG_NAMESPACES += DATASERVICES
 SOONG_CONFIG_DATASERVICES += USES_PRE_UPLINK_FEATURES_NETMGRD
 SOONG_CONFIG_DATASERVICES_USES_PRE_UPLINK_FEATURES_NETMGRD := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
