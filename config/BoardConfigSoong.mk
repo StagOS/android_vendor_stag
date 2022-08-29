@@ -65,13 +65,9 @@ SOONG_CONFIG_stagNvidiaVars += \
 
 SOONG_CONFIG_NAMESPACES += stagQcomVars
 SOONG_CONFIG_stagQcomVars += \
-    legacy_hw_disk_encryption \
-    should_wait_for_qsee \
     supports_audio_accessory \
     supports_debug_accessory \
     supports_extended_compress_format \
-    supports_hw_fde \
-    supports_hw_fde_perf \
     no_camera_smooth_apis \
     uses_pre_uplink_features_netmgrd \
     uses_qcom_bsp_legacy \
@@ -94,13 +90,9 @@ SOONG_CONFIG_stagGlobalVars_uses_egl_display_array := $(TARGET_USES_EGL_DISPLAY_
 SOONG_CONFIG_stagGlobalVars_camera_needs_client_info := $(CAMERA_NEEDS_CLIENT_INFO)
 SOONG_CONFIG_stagGlobalVars_target_uses_prebuilt_dynamic_partitions := $(TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS)
 SOONG_CONFIG_stagNvidiaVars_uses_nv_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
-SOONG_CONFIG_stagQcomVars_legacy_hw_disk_encryption := $(TARGET_LEGACY_HW_DISK_ENCRYPTION)
-SOONG_CONFIG_stagQcomVars_should_wait_for_qsee := $(TARGET_KEYMASTER_WAIT_FOR_QSEE)
 SOONG_CONFIG_stagQcomVars_supports_audio_accessory := $(TARGET_QTI_USB_SUPPORTS_AUDIO_ACCESSORY)
 SOONG_CONFIG_stagQcomVars_supports_debug_accessory := $(TARGET_QTI_USB_SUPPORTS_DEBUG_ACCESSORY)
 SOONG_CONFIG_stagQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
-SOONG_CONFIG_stagQcomVars_supports_hw_fde := $(TARGET_HW_DISK_ENCRYPTION)
-SOONG_CONFIG_stagQcomVars_supports_hw_fde_perf := $(TARGET_HW_DISK_ENCRYPTION_PERF)
 SOONG_CONFIG_stagQcomVars_no_camera_smooth_apis := $(TARGET_HAS_NO_CAMERA_SMOOTH_APIS)
 SOONG_CONFIG_stagQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
 SOONG_CONFIG_stagQcomVars_uses_qcom_bsp_legacy := $(TARGET_USES_QCOM_BSP_LEGACY)
