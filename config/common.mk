@@ -166,9 +166,8 @@ PRODUCT_PACKAGES += \
 
 # GApps
 ifeq ($(WITH_GAPPS),true)
-$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+$(call inherit-product-if-exists, vendor/gms/common/gms-full.mk)
 ifneq ($(TARGET_MINIFIED_GAPPS),true)
-$(call inherit-product, vendor/PixelLauncher/PixelLauncher.mk)
 # Setup some Flags, can be disabled in Device tree
 TARGET_INCLUDE_STOCK_ARCORE ?= true
 TARGET_INCLUDE_LIVE_WALLPAPERS ?= true
