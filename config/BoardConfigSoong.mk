@@ -48,6 +48,7 @@ SOONG_CONFIG_stagGlobalVars += \
     ignores_ftp_pptp_conntrack_failure \
     needs_netd_direct_connect_rule \
     camera_needs_client_info \
+    gralloc_handle_has_reserved_size \
     target_init_vendor_lib \
     target_inputdispatcher_skip_event_key \
     target_ld_shim_libs \
@@ -98,10 +99,12 @@ SOONG_CONFIG_stagQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_
 SOONG_CONFIG_stagQcomVars_uses_qcom_bsp_legacy := $(TARGET_USES_QCOM_BSP_LEGACY)
 SOONG_CONFIG_stagQcomVars_uses_qti_camera_device := $(TARGET_USES_QTI_CAMERA_DEVICE)
 SOONG_CONFIG_stagGlobalVars_has_memfd_backport := $(TARGET_HAS_MEMFD_BACKPORT)
+SOONG_CONFIG_stagGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
+TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY ?= libcamera_parameters
 TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
