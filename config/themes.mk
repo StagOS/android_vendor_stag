@@ -1,6 +1,8 @@
 # Custom Themes
 PRODUCT_PACKAGES += \
-    AndroidBlackThemeOverlay
+    AndroidBlackThemeOverlay \
+    AndroidClearThemeOverlay \
+    AndroidVividThemeOverlay
 
 # Fonts
 PRODUCT_PACKAGES += \
