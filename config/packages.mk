@@ -25,6 +25,7 @@ PRODUCT_PACKAGES += \
     Jelly \
     LatinIME \
     Launcher3QuickStep \
+    LineageSetupWizard \
     LiveWallpapersPicker \
     messaging \
     PixelLiveWallpaperPrebuilt \
