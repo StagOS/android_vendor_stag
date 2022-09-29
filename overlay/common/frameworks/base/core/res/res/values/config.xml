@@ -192,4 +192,9 @@
 
     <!-- Whether or not to add a "people" notifications section -->
     <bool name="config_usePeopleFiltering">true</bool>
+
+    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
+         in hardware. -->
+    <bool name="config_setColorTransformAccelerated">true</bool>
+
 </resources>
