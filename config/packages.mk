@@ -48,8 +48,6 @@ PRODUCT_PACKAGES += \
 
 # Navbar
 PRODUCT_PACKAGES += \
-    GesturalNavigationOverlayLong \
-    GesturalNavigationOverlayMedium \
     NavigationBarNoHintOverlay
 
 #ifeq ($(TARGET_INCLUDE_LAWNCHAIR),true)
