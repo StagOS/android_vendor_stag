@@ -42,6 +42,11 @@ endif
 
 STAG_VERSION := StagOS-$(CURRENT_DEVICE)-$(StagOS_VERSION)-$(STAG_BUILD_TYPE)-$(STAG_ZIP_TYPE)-$(shell date -u +%Y%m%d-%H%M)
 
+ifneq ($(STAG_RELEASE_KEYS),)
+      STAG_VERSION := $(STAG_VERSION)-signed
+      PRODUCT_DEFAULT_DEV_CERTIFICATE := $(STAG_RELEASE_KEYS)
+endif
+
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
  ro.stag.version=$(STAG_VERSION) \
  ro.stag.releasetype=$(STAG_BUILD_TYPE) \
