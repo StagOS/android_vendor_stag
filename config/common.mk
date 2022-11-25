@@ -99,6 +99,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/stag/prebuilt/common/etc/init/init.stag-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.stag-updater.rc
 
+# BtHelper
+PRODUCT_PACKAGES += \
+    BtHelper
+
 # Config
 PRODUCT_PACKAGES += \
     SimpleDeviceConfig \
