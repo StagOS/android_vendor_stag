@@ -155,7 +155,7 @@ PRODUCT_PACKAGES += \
 
 # GApps
 ifeq ($(WITH_GAPPS),true)
-$(call inherit-product-if-exists, vendor/gms/common/gms-full.mk)
+$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
 ifneq ($(TARGET_MINIFIED_GAPPS),true)
 # Setup some Flags, can be disabled in Device tree
 TARGET_INCLUDE_STOCK_ARCORE ?= true
