@@ -34,11 +34,14 @@ PRODUCT_PACKAGES += \
     PulseMusic \
     QuickAccessWallet \
     RepainterServicePriv \
+    SettingsIntelligenceGooglePrebuilt \
     StagWalls \
     StagThemesStub \
     Stk \
     ThemePicker \
     TouchGestures \
+    TurboAdapter \
+    TurboPrebuilt \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay
 
