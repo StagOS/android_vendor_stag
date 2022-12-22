@@ -39,6 +39,8 @@ PRODUCT_PACKAGES += \
     Stk \
     ThemePicker \
     TouchGestures \
+    TurboAdapter \
+    TurboPrebuilt \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay
 

@@ -38,4 +38,10 @@
         <permission name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS"/>                                                                                                                                           
         <permission name="lineageos.permission.MANAGE_LIVEDISPLAY"/>                                                                                                                                                    
     </privapp-permissions>    
+
+    <privapp-permissions package="com.google.android.turboadapter">
+        <permission name="android.permission.BATTERY_STATS"/>
+        <permission name="android.permission.DUMP"/>
+    </privapp-permissions>
+
 </permissions>
