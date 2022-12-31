@@ -34,6 +34,7 @@ PRODUCT_PACKAGES += \
     PulseMusic \
     QuickAccessWallet \
     RepainterServicePriv \
+    SecurityHubPrebuilt \
     SettingsIntelligenceGooglePrebuilt \
     StagWalls \
     StagThemesStub \
