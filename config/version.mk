@@ -32,7 +32,6 @@ else
 endif
 endif
 
-STAG_BUILD_TYPE := BETA
 STAG_ZIP_TYPE = Pristine
 
 # GApps
