@@ -133,6 +133,80 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
 
+
+# Allow the following
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/app/NfcNci/NfcNci.apk \
+    system/app/NfcNci/lib/arm64/libnfc_nci_jni.so \
+    system/app/PulseMusic/PulseMusic.apk \
+    system/app/StagWalls/StagWalls.apk \
+    system/bin/clean_cache.sh \
+    system/bin/curl \
+    system/bin/fsck.ntfs \
+    system/bin/mkfs.ntfs \
+    system/bin/mount.ntfs \
+    system/bin/procmem \
+    system/etc/default-permissions/org.pixelexperience.weather.client.xml \
+    system/etc/init/stag-init.rc \
+    system/etc/init/stag-iosched.rc \
+    system/etc/init/stag-ssh.rc \
+    system/etc/init/stag-system.rc \
+    system/etc/init/stag-updates.rc \
+    system/etc/libnfc-nci.conf \
+    system/etc/permissions/android.hardware.biometrics.face.xml \
+    system/etc/permissions/android.software.nfc.beam.xml \
+    system/etc/permissions/org.lineageos.updater.xml \
+    system/etc/permissions/org.pixelexperience.weather.client.xml \
+    system/etc/permissions/privapp-permissions-camera2.xml \
+    system/etc/permissions/privapp-permissions-org.pixelexperience.faceunlock.xml \
+    system/etc/permissions/privapp-permissions-snap.xml \
+    system/etc/permissions/privapp-permissions-stag.xml \
+    system/etc/sensitive_pn.xml \
+    system/etc/sysconfig/hiddenapi-whitelist-org.pixelexperience.faceunlock.xml \
+    system/etc/sysconfig/stag-power-whitelist.xml \
+    system/etc/textclassifier/actions_suggestions.universal.model \
+    system/etc/textclassifier/lang_id.model \
+    system/etc/textclassifier/textclassifier.en.model \
+    system/etc/textclassifier/textclassifier.universal.model \
+    system/lib/libRSSupport.so \
+    system/lib/libblasV8.so \
+    system/lib/librsjni.so \
+    system/lib/libsepol.so \
+    system/lib64/android.hardware.nfc-V1-ndk.so \
+    system/lib64/android.hardware.nfc@1.0.so \
+    system/lib64/android.hardware.nfc@1.1.so \
+    system/lib64/android.hardware.nfc@1.2.so \
+    system/lib64/faceunlock_vendor_dependencies.so \
+    system/lib64/libFaceDetectCA.so \
+    system/lib64/libMegviiUnlock-jni-1.2.so \
+    system/lib64/libMegviiUnlock.so \
+    system/lib64/libRSSupport.so \
+    system/lib64/libarcsoft-lib.so \
+    system/lib64/libarcsoft_faceid.so \
+    system/lib64/libarcsoftbase.so \
+    system/lib64/libblasV8.so \
+    system/lib64/libfuse-lite.so \
+    system/lib64/libmegface.so \
+    system/lib64/libmpbase.so \
+    system/lib64/libnfc-nci.so \
+    system/lib64/libnfc_nci_jni.so \
+    system/lib64/libntfs-3g.so \
+    system/lib64/librsjni.so \
+    system/lib64/libsepol.so \
+    system/media/bootanimation.zip \
+    system/priv-app/FaceUnlockService/FaceUnlockService.apk \
+    system/priv-app/TurboAdapter/TurboAdapter.apk \
+    system/priv-app/TurboPrebuilt/TurboPrebuilt.apk \
+    system/xbin/wget \
+    system/app/GoogleExtShared/GoogleExtShared.apk \
+    system/app/GooglePrintRecommendationService/GooglePrintRecommendationService.apk \
+    system/bin/sqlite3 \
+    system/bin/strace \
+    system/etc/permissions/privapp-permissions-google.xml \
+    system/priv-app/DocumentsUIGoogle/DocumentsUIGoogle.apk \
+    system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk \
+    system/priv-app/TagGoogle/TagGoogle.apk
+
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= true
 ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
