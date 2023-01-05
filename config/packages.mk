@@ -22,7 +22,6 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     Gallery \
     GameSpace \
-    Jelly \
     LatinIME \
     Launcher3QuickStep \
     LineageSetupWizard \
@@ -43,6 +42,7 @@ PRODUCT_PACKAGES += \
     TouchGestures \
     TurboAdapter \
     TurboPrebuilt \
+    Via \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay
 
