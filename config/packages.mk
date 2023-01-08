@@ -14,6 +14,7 @@
 
 # Required packages
 PRODUCT_PACKAGES += \
+    Aperture \
     BluetoothExt \
     Calendar \
     Contacts \

@@ -206,7 +206,8 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/priv-app/DocumentsUIGoogle/DocumentsUIGoogle.apk \
     system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk \
     system/priv-app/TagGoogle/TagGoogle.apk \
-    system/app/Via/Via.apk
+    system/app/Via/Via.apk \
+    system/priv-app/GoogleExtServices/GoogleExtServices.apk
 
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= true
