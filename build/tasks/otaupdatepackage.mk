@@ -14,7 +14,7 @@
 # limitations under the License.
 
 # -----------------------------------------------------------------
-# Stag fastboot update package
+# Stag fastboot update package and OTA package (for recovery)
 
 # Build system colors
  ifneq ($(BUILD_WITH_COLORS),0)
@@ -28,12 +28,15 @@
 endif
 
 STAG_TARGET_UPDATEPACKAGE := $(PRODUCT_OUT)/$(STAG_VERSION)-updatepackage.zip
+STAG_TARGET_PACKAGE := $(PRODUCT_OUT)/$(STAG_VERSION).zip
 MD5 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/md5sum
 
-.PHONY: updatepackage
-updatepackage: $(INTERNAL_UPDATE_PACKAGE_TARGET)
+.PHONY: stagotaupdatepackage
+stagupdatepackage: $(INTERNAL_UPDATE_PACKAGE_TARGET) $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_UPDATE_PACKAGE_TARGET) $(STAG_TARGET_UPDATEPACKAGE)
+	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(STAG_TARGET_PACKAGE)
 	$(hide) $(MD5) $(STAG_TARGET_UPDATEPACKAGE) > $(STAG_TARGET_UPDATEPACKAGE).md5sum
+	$(hide) $(MD5) $(STAG_TARGET_PACKAGE) > $(STAG_TARGET_PACKAGE).md5sum
 
 	echo -e ${CL_RED}"    ______________   ______      ____  _____"${CL_RST}
 	echo -e ${CL_GRN}"   / ___/_  __/   | / ____/     / __ \/ ___/"${CL_RST}
@@ -41,7 +44,10 @@ updatepackage: $(INTERNAL_UPDATE_PACKAGE_TARGET)
 	echo -e ${CL_BLU}"  ___/ // / / ___ / /_/ /_____/ /_/ /___/ / "${CL_RST}
 	echo -e ${CL_MAG}" /____//_/ /_/  |_\____/      \____//____/  "${CL_RST}
 	echo -e ${CL_BLD}${CL_CYN}"===============-Sic Parvis Magna-==============="${CL_RST}
-	echo -e ${CL_BLD}${CL_YLW}"Name: "${CL_YLW} $(STAG_VERSION)-updatepackage.zip${CL_RST}
+	echo -e ${CL_BLD}${CL_YLW}"OTA: "${CL_YLW} $(STAG_VERSION).zip${CL_RST}
+	echo -e ${CL_BLD}${CL_YLW}"MD5: "${CL_YLW}" `cat $(STAG_TARGET_PACKAGE).md5sum | awk '{print $$1}' `"${CL_RST}
+	echo -e ${CL_BLD}${CL_YLW}"Size:"${CL_YLW}" `du -sh $(STAG_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
+	echo -e ${CL_BLD}${CL_YLW}"UP: "${CL_YLW} $(STAG_VERSION)-updatepackage.zip${CL_RST}
 	echo -e ${CL_BLD}${CL_YLW}"MD5: "${CL_YLW}" `cat $(STAG_TARGET_UPDATEPACKAGE).md5sum | awk '{print $$1}' `"${CL_RST}
 	echo -e ${CL_BLD}${CL_YLW}"Size:"${CL_YLW}" `du -sh $(STAG_TARGET_UPDATEPACKAGE) | awk '{print $$1}' `"${CL_RST}
 	echo -e ${CL_BLD}${CL_CYN}"====================================================="${CL_RST}
