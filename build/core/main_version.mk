@@ -11,3 +11,9 @@ ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.stag.version=$(STAG_VERSION) \
     ro.stag.device=$(STAG_BUILD) \
     ro.modversion=$(STAG_VERSION)
+
+# Updater
+ifeq ($(IS_OFFICIAL),true)
+    ADDITIONAL_SYSTEM_PROPERTIES  += \
+        ro.is_official=true
+endif

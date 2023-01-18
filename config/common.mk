@@ -111,13 +111,6 @@ ifneq ($(TARGET_DISABLE_EPPE),true)
 $(call enforce-product-packages-exist-internal,$(wildcard device/*/$(STAG_BUILD)/$(TARGET_PRODUCT).mk),product_manifest.xml rild Calendar Launcher3 Launcher3Go Launcher3QuickStep Launcher3QuickStepGo android.hidl.memory@1.0-impl.vendor vndk_apex_snapshot_package)
 endif
 
-# StagOS packages
-PRODUCT_PACKAGES += \
-    Updater
-
-PRODUCT_COPY_FILES += \
-    vendor/stag/prebuilt/common/etc/init/init.stag-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.stag-updater.rc
-
 # BtHelper
 PRODUCT_PACKAGES += \
     BtHelper
@@ -243,5 +236,8 @@ else
 endif
 
 include vendor/stag/config/version.mk
+
+# OTA
+$(call inherit-product, vendor/stag/config/ota.mk)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
