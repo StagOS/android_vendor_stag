@@ -33,43 +33,8 @@ ifeq ($(TARGET_BUILD_VARIANT),eng)
         ro.adb.secure=0 \
         ro.secure=0 \
         persist.service.adb.enable=1
-else
-    # Enable ADB authentication
-    PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
-
-    # Disable extra StrictMode features on all non-engineering builds
-    PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.strictmode.disable=true
-
-
-    PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
-        ro.adb.secure=1 \
-        ro.secure=1 \
-        persist.service.adb.enable=0 \
-        ro.debuggable = 0
 endif
 
 # Enable support of one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
-
-ifeq ($(WITH_GAPPS),true)
-# Gboard configuration
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.com.google.ime.theme_id=5 \
-    ro.com.google.ime.system_lm_dir=/product/usr/share/ime/google/d3_lms
-
-# OPA configuration
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.opa.eligible_device=true
-
-# Google legal
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
-    ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html
-
-# Google Play services configuration
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.com.google.clientidbase=android-google \
-    ro.error.receiver.system.apps=com.google.android.gms \
-    ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent
-endif

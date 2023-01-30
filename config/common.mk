@@ -232,6 +232,13 @@ PRODUCT_PACKAGES += \
 # GApps
 ifeq ($(WITH_GAPPS),true)
 $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+
+ifeq ($(TARGET_FLATTEN_APEX), false)
+$(call inherit-product-if-exists, vendor/partner_modules/build/mainline_modules.mk)
+else
+$(call inherit-product-if-exists, vendor/partner_modules/build/mainline_modules_flatten_apex.mk)
+endif
+
 ifneq ($(TARGET_MINIFIED_GAPPS),true)
 # Setup some Flags, can be disabled in Device tree
 TARGET_INCLUDE_STOCK_ARCORE ?= true
