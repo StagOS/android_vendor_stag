@@ -4,6 +4,10 @@ PRODUCT_PACKAGES += \
     AndroidClearThemeOverlay \
     AndroidVividThemeOverlay
 
+# google-sans family
+PRODUCT_PACKAGES += \
+    GoogleSansClock-Regular.ttf
+
 # Fonts
 PRODUCT_PACKAGES += \
     fonts_customization.xml \

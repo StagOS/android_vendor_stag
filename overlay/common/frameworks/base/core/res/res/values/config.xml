@@ -185,4 +185,6 @@
          in hardware. -->
     <bool name="config_setColorTransformAccelerated">true</bool>
 
+    <!-- Name of the font family to use in the default lockscreen clock -->
+    <string name="config_clockFontFamily">google-sans-clock</string>
 </resources>

@@ -86,6 +86,10 @@
     <alias name="fifa2018-semi-bold" to="fifa2018" weight="600" />
     <alias name="fifa2018-bold" to="fifa2018" weight="700" />
 
+    <family customizationType="new-named-family" name="google-sans-clock">
+      <font>GoogleSansClock-Regular.ttf</font>
+    </family>
+
     <!-- Google Sans -->
     <family customizationType="new-named-family" name="googlesans">
         <font weight="400" style="normal">GoogleSans-Regular.ttf</font>
