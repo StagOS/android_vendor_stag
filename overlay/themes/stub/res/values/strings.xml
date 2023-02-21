@@ -2,7 +2,6 @@
 <resources>
     <string name="app_name">Stag Themes</string>
 
-
     <!-- Color section -->
     <string name="bundle1_color_name">Carbon</string>
     <string name="bundle2_color_name">Paper</string>

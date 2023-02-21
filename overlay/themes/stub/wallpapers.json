@@ -1,0 +1,17 @@
+{
+    "Stag": {
+        "author": "Team Stag",
+        "featured": "monet_stag_blue",
+        "wallpapers": {
+            "Cyan Hue": {
+                "1" : ""
+            },
+            "Gold Hue": {
+                "1" : ""
+            },
+            "Red Hue": {
+                "1" : ""
+            }
+        }
+    }
+}
