@@ -38,9 +38,11 @@ PRODUCT_HOST_PACKAGES += \
 PRODUCT_PACKAGES += \
     libjni_latinimegoogle
 
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/lineage/overlay/no-rro
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/stag/overlay/common \
+    vendor/stag/overlay/no-rro \
     vendor/stag/overlay
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
