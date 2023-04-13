@@ -13,8 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-StagOS_VERSION = 13.0
-STAG_PLATFORM_RELEASE_OR_CODENAME := 12L
+StagOS_VERSION = 13.1
 
 STAG_BASE_VERSION = $(StagOS_VERSION)
 
