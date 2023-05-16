@@ -49,6 +49,7 @@ SOONG_CONFIG_stagGlobalVars += \
     ignores_ftp_pptp_conntrack_failure \
     needs_netd_direct_connect_rule \
     camera_needs_client_info \
+    gralloc_handle_has_custom_content_md_reserved_size \
     gralloc_handle_has_reserved_size \
     target_init_vendor_lib \
     target_inputdispatcher_skip_event_key \
@@ -87,6 +88,7 @@ SOONG_CONFIG_stagQcomVars += \
 endif
 
 # Soong bool variables
+SOONG_CONFIG_stagGlobalVars_gralloc_handle_has_custom_content_md_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE)
 SOONG_CONFIG_stagGlobalVars_camera_needs_client_info_lib := $(CAMERA_NEEDS_CLIENT_INFO_LIB)
 SOONG_CONFIG_stagGlobalVars_disable_postrender_cleanup := $(TARGET_DISABLE_POSTRENDER_CLEANUP)
 SOONG_CONFIG_stagGlobalVars_has_legacy_camera_hal1 := $(TARGET_HAS_LEGACY_CAMERA_HAL1)
@@ -112,6 +114,7 @@ SOONG_CONFIG_stagGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
+TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE ?= false
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY ?= libcamera_parameters
