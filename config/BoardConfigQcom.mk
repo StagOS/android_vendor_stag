@@ -55,6 +55,16 @@ ifneq ($(filter $(B_FAMILY) $(B64_FAMILY) $(BR_FAMILY),$(TARGET_BOARD_PLATFORM))
     TARGET_USES_QCOM_BSP := true
 endif
 
+# Add rmnetctl to soong config namespaces
+SOONG_CONFIG_NAMESPACES += rmnetctl
+
+# Add supported variables to rmnetctl config
+SOONG_CONFIG_rmnetctl += \
+    old_rmnet_data
+
+# Set default values for rmnetctl config
+SOONG_CONFIG_rmnetctl_old_rmnet_data ?= false
+
 # Tell HALs that we're compiling an AOSP build with an in-line kernel
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 
@@ -131,6 +141,11 @@ else ifneq ($(filter $(UM_5_4_FAMILY),$(TARGET_BOARD_PLATFORM)),)
 else
     MSM_VIDC_TARGET_LIST := $(TARGET_BOARD_PLATFORM)
     QCOM_HARDWARE_VARIANT := $(TARGET_BOARD_PLATFORM)
+endif
+
+# Opt-in for old rmnet_data driver
+ifeq ($(filter $(UM_5_15_FAMILY),$(TARGET_BOARD_PLATFORM)),)
+    SOONG_CONFIG_rmnetctl_old_rmnet_data := true
 endif
 
 # Allow a device to manually override which HALs it wants to use
