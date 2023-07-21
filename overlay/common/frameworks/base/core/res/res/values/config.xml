@@ -54,6 +54,8 @@
         <item>com.mediatek.ims</item>
         <item>com.qualcomm.qti.cne</item>
         <item>com.shannon.imsservice</item>
+        <!-- MediaTek ImsService -->
+        <item>com.mediatek.ims</item>
         <item>co.aospa.sense</item>
     </string-array>
 
