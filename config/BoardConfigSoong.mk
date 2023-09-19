@@ -49,6 +49,7 @@ SOONG_CONFIG_stagGlobalVars += \
     ignores_ftp_pptp_conntrack_failure \
     needs_netd_direct_connect_rule \
     camera_needs_client_info \
+    camera_override_format_from_reserved \
     gralloc_handle_has_custom_content_md_reserved_size \
     gralloc_handle_has_reserved_size \
     sdmcore_has_is_display_hw_available_func \
@@ -98,6 +99,7 @@ SOONG_CONFIG_stagQcomVars += \
 endif
 
 # Soong bool variables
+SOONG_CONFIG_stagGlobalVars_camera_override_format_from_reserved := $(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED)
 SOONG_CONFIG_stagGlobalVars_gralloc_handle_has_custom_content_md_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE)
 SOONG_CONFIG_stagGlobalVars_camera_needs_client_info_lib := $(CAMERA_NEEDS_CLIENT_INFO_LIB)
 SOONG_CONFIG_stagGlobalVars_disable_postrender_cleanup := $(TARGET_DISABLE_POSTRENDER_CLEANUP)
@@ -127,6 +129,7 @@ SOONG_CONFIG_stagGlobalVars_gralloc_handle_has_ubwcp_format := $(TARGET_GRALLOC_
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
+TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED ?= false
 TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE ?= false
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 TARGET_GRALLOC_HANDLE_HAS_UBWCP_FORMAT ?= false
