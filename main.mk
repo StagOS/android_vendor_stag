@@ -11,10 +11,10 @@ include vendor/stag/config/version.mk
 include vendor/stag/config/overrides.mk
 
 # Themes
-$(call inherit-product, vendor/stag/config/themes.mk)
+#$(call inherit-product, vendor/stag/config/themes.mk)
 
 # OTA
-include vendor/stag/config/ota.mk
+#include vendor/stag/config/ota.mk
 
 # Plugins
 #include packages/apps/PotatoPlugins/plugins.mk

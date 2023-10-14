@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-StagOS_VERSION = 13.1
+StagOS_VERSION = 14.0
 
 STAG_BASE_VERSION = $(StagOS_VERSION)
 
@@ -30,6 +30,8 @@ else
    STAG_BUILD_TYPE := UNOFFICIAL
 endif
 endif
+
+STAG_BUILD_TYPE := BETA
 
 STAG_ZIP_TYPE = Pristine
 
