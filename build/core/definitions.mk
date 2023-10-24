@@ -7,6 +7,3 @@ endef
 
 # Include board/platform macros
 include vendor/stag/build/core/utils.mk
-
-# Include vendor platform definitions
-include vendor/stag/build/core/vendor/*.mk
