@@ -39,6 +39,8 @@ LOCAL_PRODUCT_MODULE := true
 
 include $(BUILD_PREBUILT)
 
+
+ifneq ($(WITH_GAPPS), true)
 include $(CLEAR_VARS)
 LOCAL_MODULE := PixelThemesStub
 LOCAL_MODULE_TAGS := optional
@@ -49,6 +51,7 @@ LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_DEX_PREOPT := false
 LOCAL_PRODUCT_MODULE := true
 include $(BUILD_PREBUILT)
+endif
 
 # Retro Music
 include $(CLEAR_VARS)
