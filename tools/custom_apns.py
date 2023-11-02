@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #
 # Copyright (C) 2018 The LineageOS Project
 #
@@ -16,6 +16,7 @@
 #
 
 import sys
+from importlib import reload
 from xml.dom.minidom import parseString
 
 def main(argv):
