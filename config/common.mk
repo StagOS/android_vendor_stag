@@ -235,6 +235,7 @@ PRODUCT_PACKAGES += \
 # GApps
 ifeq ($(WITH_GAPPS),true)
 $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+$(call inherit-product, vendor/stag/config/pixel-rro_overlays.mk)
 ifneq ($(TARGET_MINIFIED_GAPPS),true)
 # Setup some Flags, can be disabled in Device tree
 TARGET_INCLUDE_STOCK_ARCORE ?= true

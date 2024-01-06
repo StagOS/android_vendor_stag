@@ -1,22 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<!--
+     Copyright (C) 2013 The CyanogenMod Project
+               (C) 2017 The LineageOS Project
+               (c) 2018 The PixelExperience Project
 
-    <string-array name="config_locationProviderPackageNames" translatable="false">
-        <!-- qcom provider -->
-        <item>com.qualcomm.location</item>
-        <!-- The Google provider -->
-        <item>com.google.android.gms</item>
-        <!-- The standard AOSP fused location provider -->
-        <item>com.android.location.fused</item>
-        <!-- Standalone UnifiedNlp (for gapps) -->
-        <item>org.microg.nlp</item>
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Disable stock components if installed -->
+    <string-array name="config_globallyDisabledComponents" translatable="false">
+        <item>com.android.vending/com.google.android.finsky.systemupdate.SystemUpdateSettingsContentProvider</item>
+        <item>com.android.vending/com.google.android.finsky.systemupdateactivity.SettingsSecurityEntryPoint</item>
+        <item>com.android.vending/com.google.android.finsky.systemupdateactivity.SystemUpdateActivity</item>
+        <item>com.google.android.gms/com.google.android.gms.update.phone.PopupDialog</item>
+        <item>com.google.android.gms/com.google.android.gms.chimera.GmsIntentOperationService$GmsExternalReceiver</item>
+        <item>com.google.android.gms/com.google.android.gms.stats.service.DropBoxEntryAddedReceiver</item>
+        <item>com.google.android.gms/com.google.android.gms.update.OtaSuggestionActivity</item>
+        <item>com.google.android.gms/com.google.android.gms.update.OtaSuggestionSummaryProvider</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateActivity</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateGcmTaskService</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdatePersistentListenerService</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService.ActiveReceiver</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService.Receiver</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService.SecretCodeReceiver</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicSettingsActivity</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicSetupWizardActivity</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicNotificationsSettingsActivity</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.history.HistoryContentProvider</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.history.HistoryActivity</item>
+        <item>com.google.android.setupwizard/com.google.android.setupwizard.update.OtaUpdateActivity</item>
     </string-array>
 
-    <!-- Force enabling of some services that could have been previously disabled 
-    <string-array name="config_forceEnabledComponents" translatable="false">
-        <item>com.google.android.gsf/com.google.android.gsf.update.SystemUpdateService</item>
-        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService</item>
-    </string-array> -->
+    <!-- These are system packages exempted from privacy indicator -->
+    <string-array name="config_indicatorExemptedPackageNames" translatable="false">
+        <item>com.android.bluetooth</item>
+        <item>com.android.networkstack.tethering</item>
+        <item>com.android.phone</item>
+        <item>com.android.printspooler</item>
+        <item>com.android.systemui</item>
+        <item>com.google.android.googlequicksearchbox</item>
+        <item>com.google.android.settings.intelligence</item>
+        <item>com.mediatek.ims</item>
+        <item>com.qualcomm.qti.cne</item>
+        <item>com.shannon.imsservice</item>
+        <item>co.aospa.sense</item>
+    </string-array>
+
+    <bool name="config_cellBroadcastAppLinks">true</bool>
 
     <!-- Set this to true to enable the platform's auto-power-save modes like doze and
          app standby.  These are not enabled by default because they require a standard
@@ -27,131 +68,45 @@
          so that applications can still use their own mechanisms. -->
     <bool name="config_enableAutoPowerModes">true</bool>
 
-    <!-- Whether WiFi display is supported by this device.
-         There are many prerequisites for this feature to work correctly.
-         Here are a few of them:
-         * The WiFi radio must support WiFi P2P.
-         * The WiFi radio must support concurrent connections to the WiFi display and
-           to an access point.
-         * The Audio Flinger audio_policy.conf file must specify a rule for the "r_submix"
-           remote submix module.  This module is used to record and stream system
-           audio output to the WiFi display encoder in the media server.
-         * The remote submix module "audio.r_submix.default" must be installed on the device.
-         * The device must be provisioned with HDCP keys (for protected content).
-    -->
-    <bool name="config_enableWifiDisplay">true</bool>
-
-    <!-- If this is true, long press on power button will be available from a
-         non-interactive state. -->
-    <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
-
     <!--  Whether Multiuser UI should be shown -->
     <bool name="config_enableMultiUserUI">true</bool>
 
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">4</integer>
 
-    <!-- Flag indicating which package name can access the persistent data partition -->
-    <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
+    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
+         in hardware. -->
+    <bool name="config_setColorTransformAccelerated">true</bool>
 
-    <!-- Whether action menu items should be displayed in ALLCAPS or not.
-         Defaults to true. If this is not appropriate for specific locales
-         it should be disabled in that locale's resources. -->
-    <bool name="config_buttonTextAllCaps">false</bool>
+    <!-- If this is true, long press on power button will be available from a
+         non-interactive state. -->
+    <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
 
-    <!-- Disable stock components if installed -->
-    <string-array name="config_globallyDisabledComponents" translatable="false">
-        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateActivity</item>
-        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService</item>
-        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateGcmTaskService</item>
-        <item>com.google.android.setupwizard/com.google.android.setupwizard.time.DateTimeCheck</item>
-        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicSettingsActivity</item>
-        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicSetupWizardActivity</item>
-        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicNotificationsSettingsActivity</item>
-        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.history.HistoryContentProvider</item>
-        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.history.HistoryActivity</item>
-    </string-array>
+    <!-- Whether or not to add a "people" notifications section -->
+    <bool name="config_usePeopleFiltering">true</bool>
 
-    <!-- Force enabling of some services that could have been previously disabled -->
-    <string-array name="config_forceEnabledComponents" translatable="false">
-        <item>com.google.android.gsf/com.google.android.gsf.update.SystemUpdateService</item>
-        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService</item>
-    </string-array>
+    <!-- Whether this device is supporting the microphone toggle -->
+    <bool name="config_supportsMicToggle">true</bool>
 
-    <!-- Pixel -->
-    <bool name="config_smart_battery_available">true</bool>
-    <bool name="config_unplugTurnsOnScreen">true</bool>
+    <!-- Whether this device is supporting the camera toggle -->
+    <bool name="config_supportsCamToggle">true</bool>
 
-    <!-- Flag indicating whether we should enable smart battery. 
-    <bool name="config_smart_battery_available">true</bool> -->
+    <!-- Package name that will receive an explicit manifest broadcast for
+         android.os.action.POWER_SAVE_MODE_CHANGED. -->
+    <string name="config_powerSaveModeChangedListenerPackage">com.google.android.flipendo</string>
 
-    <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
-    <bool name="config_useRoundIcon">true</bool>
+    <!-- Name of a font family to use for body text. -->
+    <string name="config_bodyFontFamily">google-sans-text</string>
+    <string name="config_bodyFontFamilyMedium">google-sans-text-medium</string>
 
-    <!-- Specifies the path that is used by AdaptiveIconDrawable class to crop launcher icons. -->
-    <string name="config_icon_mask" translatable="false">"M50 0C77.6 0 100 22.4 100 50C100 77.6 77.6 100 50 100C22.4 100 0 77.6 0 50C0 22.4 22.4 0 50 0Z"</string>
+    <!-- Name of a font family to use for headlines. If empty, falls back to platform default -->
+    <string name="config_headlineFontFamily">google-sans</string>
+    <string name="config_headlineFontFamilyMedium">google-sans-medium</string>
+    <string name="config_headlineFontFeatureSettings">ss03</string>
 
-    <!-- Default SMS Application. This will be the default SMS application when
-         the phone first boots. The user can then change the default app to one
-         of their choosing.
-         This can be overridden for devices where a different default SMS
-         application is desired.
 
-         If this string is empty or the specified package does not exist, then
-         the platform will search for an SMS app and use that (if there is one)-->
-    <string name="default_sms_application" translatable="false">com.google.android.apps.messaging</string>
-
-    <!-- The duration in which a recent task is considered in session and should be visible. -->
-    <integer name="config_activeTaskDurationHours">12</integer>
-
-    <!-- Component name for default assistant on this device -->
-    <string name="config_defaultAssistantComponentName">com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService</string>
-
-   <!-- The package name for the default wellbeing app.
-         This package must be trusted, as it has the permissions to control other applications
-         on the device.
-         Example: "com.android.wellbeing"
-     -->
-    <string name="config_defaultWellbeingPackage">com.google.android.apps.wellbeing</string>
-
-    <!-- Control the default night mode to use when there is no other mode override set.
-         One of the following values (see UiModeManager.java):
-             0 - MODE_NIGHT_AUTO
-             1 - MODE_NIGHT_NO
-             2 - MODE_NIGHT_YES
-    -->
-    <integer name="config_defaultNightMode">2</integer>
-
-    <!-- Whether the device supports Smart Pixels.  -->
-    <bool name="config_enableSmartPixels">true</bool>
-
-    <!-- List of packages that can use the Conversation space for their category messages
-    notifications until they target R -->
-    <string-array name="config_notificationMsgPkgsAllowedAsConvos" translatable="false">
-        <item>com.facebook.orca</item>
-        <item>com.instagram.android</item>
-        <item>com.whatsapp</item>
-        <item>com.snapchat.android</item>
-        <item>jp.naver.line.android</item>
-        <item>com.kakao.talk</item>
-        <item>com.discord</item>
-        <item>org.thoughtcrime.securesms</item>
-        <item>com.groupme.android</item>
-        <item>org.telegram.messenger</item>
-        <item>com.twitter.android</item>
-        <item>com.viber.voip</item>
-        <item>com.linkedin.android</item>
-        <item>com.tencent.mm</item>
-        <item>nekox.messenger</item>
-        <item>org.telegram.plus</item>
-        <item>org.thunderdog.challegram</item>
-        <item>im.vector.app</item>
-        <item>cx.ring</item>
-        <item>org.briarproject.briar.android</item>
-    </string-array>
-
-    <!-- Flag indicating which package name can access DeviceConfig table
-    <string name="config_deviceConfiguratorPackageName" translatable="false">org.protonaosp.deviceconfig</string> -->
+    <!-- Allow the gesture power + volume up to change the ringer mode while the device is interactive. -->
+    <bool name="config_volumeHushGestureEnabled">true</bool>
 
     <!-- Control the behavior when the user long presses the power button.
             0 - Nothing
@@ -170,22 +125,224 @@
     -->
     <integer name="config_keyChordPowerVolumeUp">1</integer>
 
-    <!-- Whether this device is supporting the microphone toggle -->
-    <bool name="config_supportsMicToggle">true</bool>
-    <!-- Whether this device is supporting the camera toggle -->
-    <bool name="config_supportsCamToggle">true</bool>
+    <!-- Control the default night mode to use when there is no other mode override set.
+         One of the following values (see UiModeManager.java):
+             0 - MODE_NIGHT_AUTO
+             1 - MODE_NIGHT_NO
+             2 - MODE_NIGHT_YES
+    -->
+    <integer name="config_defaultNightMode">2</integer>
 
-    <!-- the number of the max cached processes in the system. -->
-    <integer name="config_customizedMaxCachedProcesses">48</integer>
-
-    <!-- Whether or not to add a "people" notifications section -->
-    <bool name="config_usePeopleFiltering">true</bool>
-
-    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
-         in hardware. -->
-    <bool name="config_setColorTransformAccelerated">true</bool>
+    <!-- Whether or not to enable the lock screen entry point for the QR code scanner. -->
+    <bool name="config_enableQrCodeScannerOnLockScreen">true</bool>
 
     <!-- Name of the font family to use in the default lockscreen clock -->
     <string name="config_clockFontFamily">google-sans-clock</string>
+    <!-- Suppress Intent Filter Verification Service crashes and System UI ANRs (both AOSP bugs) -->
+    <string translatable="false" name="config_appsNotReportingCrashes">com.android.statementservice,com.android.systemui,com.google.android.as,com.google.android.tts</string>
 
+    <!-- Define device configs on boot -->
+    <string-array name="global_device_configs_override">
+
+       <!-- Machine learning back gesture (requires TensorFlow model) -->
+        <item>systemui/use_back_gesture_ml_model=true</item>
+        <item>systemui/back_gesture_ml_model_name=backgesture</item>
+        <item>systemui/back_gesture_ml_model_threshold=0.8</item>
+
+        <!-- Don't pin camera app to save memory -->
+        <item>runtime_native_boot/pin_camera=false</item>
+
+        <!-- Keep up to 7 days of permission usage history -->
+        <item>privacy/discrete_history_cutoff_millis=604800000</item>
+        <item>privacy/privacy_dashboard_7_day_toggle=true</item>
+
+        <!-- Enable safety center -->
+        <item>privacy/safety_center_is_enabled=true</item>
+
+        <!-- Globally enable the new photo picker -->
+        <item>storage_native_boot/take_over_get_content=true</item>
+
+        <!-- Enable new location indicators -->
+        <item>privacy/location_access_check_enabled=true</item>
+        <item>privacy/location_accuracy_enabled=true</item>
+        <item>privacy/location_indicator_settings_enabled=true</item>
+        <item>privacy/location_indicators_enabled=true</item>
+        <item>privacy/location_indicators_show_system=false</item>
+        <item>privacy/location_indicators_small_enabled=true</item>
+
+        <!-- Enable smart actions in the clipboard overlay -->
+        <item>systemui/clipboard_overlay_show_actions=true</item>
+
+       <!-- Enable app cloning  -->
+       <item>app_cloning/cloned_apps_enabled=true</item>
+       <item>app_cloning/delete_all_app_clones_enabled=true</item>
+       <item>app_cloning/enable_app_cloning_building_blocks=true</item>
+
+        <!--
+            Device Personalization Services (AiAi)
+        -->
+
+        <!-- Live Caption (Pixel 2017 + OEM) -->
+        <item>device_personalization_services/Captions__enable_augmented_modality=true</item>
+        <item>device_personalization_services/Captions__enable_augmented_modality_input=true</item>
+        <item>device_personalization_services/Captions__enable_augmented_modality_language_detection=true</item>
+        <item>device_personalization_services/Captions__enable_augmented_music=false</item>
+        <item>device_personalization_services/Captions__enable_language_detection=true</item>
+        <item>device_personalization_services/Captions__enable_new_model_version_advanced_2023=true</item>
+        <item>device_personalization_services/Captions__new_model_version_advanced_2023=20230808</item>
+        <item>device_personalization_services/Captions__enable_punctuations=true</item>
+        <item>device_personalization_services/Captions__allow_use_public_speech_recognition=true</item>
+
+        <!-- Smartspace -->
+        <item>device_personalization_services/Echo__smartspace_dedupe_fast_pair_notification=true</item>
+        <item>device_personalization_services/Echo__smartspace_doorbell_aiai_loading_screen=true</item>
+        <item>device_personalization_services/Echo__smartspace_doorbell_loading_screen_state=2</item>
+        <item>device_personalization_services/Echo__smartspace_enable_async_icon=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_battery_notification_parser=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_bedtime_active_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_bedtime_reminder_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_bluetooth_metadata_parser=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_cross_device_timer=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_dark_launch_outlook_events=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_doorbell=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_doorbell_context_wrapper=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_doorbell_extras=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_dwb_bedtime_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_earthquake_alert_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_echo_settings=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_echo_unified_settings=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_eta_doordash=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_eta_lyft=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_food_delivery_eta=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_grocery=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_media_wake_lock_acquire=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_nap=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_nudge=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_outlook_events=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_package_delivery=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_paired_device_connections=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_paired_device_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_ridesharing_eta=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_safety_check_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_score_ranker=WEIGHTED</item>
+        <item>device_personalization_services/Echo__smartspace_enable_score_ranker=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_sensitive_notification_twiddler=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_step_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_subcard_logging=true</item>
+        <item>device_personalization_services/Echo__smartspace_gaia_twiddler=true</item>
+        <item>device_personalization_services/Echo__smartspace_show_cross_device_timer_label=true</item>
+        <item>device_personalization_services/Echo__smartspace_use_flashlight_action_chip=true</item>
+        <item>device_personalization_services/Echo_smartspace__enable_flight_landing_smartspace_aiai=true</item>
+        <item>device_personalization_services/Echo_smartspace__enable_hotel_smartspace_aiai=true</item>
+        <item>device_personalization_services/Echo_smartspace__smartspace_enable_daily_forecast=true</item>
+        <item>device_personalization_services/Echo_smartspace__smartspace_enable_timely_reminder=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_agsa_settings_read=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_cross_feature_rank_dedup_twiddler=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_encode_subcard_into_smartspace_target_id=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_fitbit_notifications=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_flight_landing_smartspace_aiai=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_hotel_smartspace_aiai=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_media_recs_for_driving=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_optin_bedtime_adjustment_provider=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_predictor_expiration=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_ring_channels_regex=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_weather_data_extras=true</item>
+        <item>device_personalization_services/EchoSmartspace__runtastic_check_pause_action=true</item>
+        <item>device_personalization_services/EchoSmartspace__smartspace_enable_cross_device_alarm=true</item>
+        <item>device_personalization_services/EchoSmartspace__smartspace_enable_daily_forecast=true</item>
+        <item>device_personalization_services/EchoSmartspace__smartspace_enable_timely_reminder=true</item>
+        <item>device_personalization_services/EchoSmartspace__smartspace_enable_tomorrow_forecast=true</item>
+        <item>device_personalization_services/EchoSmartspace__strava_check_stop_action=true</item>
+
+        <!-- Google Live Translate -->
+	<item>device_personalization_services/SimpleStorage__disable_live_translate_dao_provider=false</item>
+	<item>device_personalization_services/Translate__app_blocklist=com.google.android.talk</item>
+	<item>device_personalization_services/Translate__beta_audio_to_text_languages_in_live_caption=ja</item>
+	<item>device_personalization_services/Translate__blue_chip_translate_enabled=true</item>
+	<item>device_personalization_services/Translate__characterset_lang_detection_enabled=true</item>
+	<item>device_personalization_services/Translate__copy_to_translate_enabled=true</item>
+	<item>device_personalization_services/Translate__differentiate_simplified_and_traditional_chinese=true</item>
+	<item>device_personalization_services/Translate__disable_session_state=false</item>
+	<item>device_personalization_services/Translate__disable_translate_without_system_animation=true</item>
+	<item>device_personalization_services/Translate__translation_service_enabled=true</item>
+	<item>device_personalization_services/Translate__translator_expiration_enabled=true</item>
+	<item>device_personalization_services/Translate__use_translate_kit_streaming_api=false</item>
+
+        <!-- Pixel Launcher overview -->
+        <item>device_personalization_services/Overview__enable_lens_r_overview_long_press=true</item>
+        <item>device_personalization_services/Overview__enable_lens_r_overview_select_mode=true</item>
+        <item>device_personalization_services/Overview__enable_lens_r_overview_translate_action=true</item>
+
+        <!-- Pixel Launcher -->
+        <item>launcher/ENABLE_SMARTSPACE_ENHANCED=true</item>
+        <item>launcher/ENABLE_QUICK_LAUNCH_V2=true</item>
+        <item>launcher/GBOARD_UPDATE_ENTER_KEY=true</item>
+        <item>launcher/enable_one_search=true</item>
+        <item>launcher/enable_quick_launch_v2=true</item>
+	<item>launcher/long_press_home_button_to_search=true</item>
+	<item>launcher/long_press_home_button_to_search_mpr=true</item>
+	<item>launcher/press_hold_nav_handle_to_search=true</item>
+	<item>launcher/press_hold_nav_handle_to_search_mpr=true</item>
+	<item>launcher/ENABLE_LONG_PRESS_NAV_HANDLE=true</item>
+	<item>launcher/ENABLE_LONG_PRESS_NAV_HANDLE_MPR=true</item>
+        <item>launcher/ENABLE_SETTINGS_OSE_CUSTOMIZATIONS=true</item>
+	<item>launcher/INVOKE_OMNI_LPH=true</item>
+	<item>launcher/INVOKE_OMNI_LPH_MPR=true</item>
+	<item>launcher/LPNH_SLOP_PERCENTAGE=71</item>
+	<item>launcher/LPNH_TIMEOUT_MS=400</item>
+
+        <!-- System Ui -->
+        <item>systemui/quick_access_wallet_enabled=true</item>
+        <item>systemui/enable_screenshot_corner_flow=true</item>
+        <item>systemui/enable_screenshot_notification_smart_actions=true</item>
+        <item>systemui/enable_screenshot_scrolling=true</item>
+
+        <!--Gboard -->
+	<item>device_personalization_services/SmartRecPixelSearch__enable_gboard_suggestion=true</item>
+	<item>device_personalization_services/SmartRecPixelSearch__enable_spelling_correction=true</item>
+	<item>device_personalization_services/SmartRecPixelSearch__spelling_checker_frequency_score_overrides_map={"8":-7}</item>
+	<item>device_personalization_services/SmartRecCompose__enable_compose_action_filter=true</item> 
+	<item>device_personalization_services/SmartRecCompose__enable_deep_clu_model=true</item>
+	<item>device_personalization_services/SmartDictation__enable_alternatives_from_past_corrections=true</item>
+	<item>device_personalization_services/SmartDictation__enable_alternatives_from_speech_hypotheses=true</item>
+	<item>device_personalization_services/SmartDictation__enable_biasing_for_commands=true</item>
+	<item>device_personalization_services/SmartDictation__enable_biasing_for_contacts=true</item>
+	<item>device_personalization_services/SmartDictation__enable_biasing_for_contacts_learned_from_past_corrections=true</item>
+	<item>device_personalization_services/SmartDictation__enable_biasing_for_interests_model=true</item> 
+	<item>device_personalization_services/SmartDictation__enable_biasing_for_past_correction=true</item>
+	<item>device_personalization_services/SmartDictation__enable_biasing_for_screen_context=true</item>
+	<item>device_personalization_services/SmartDictation__enable_selection_filtering=true</item>
+
+        <!-- Notifications Assistant -->
+        <item>notification_assistant/generate_actions=true</item>
+        <item>notification_assistant/generate_replies=true</item>
+	<item>device_personalization_services/NotificationAssistant__enable_service=true</item>
+	<item>device_personalization_services/NotificationAssistant__enable_upgrade_importance=true</item>
+	<item>device_personalization_services/NotificationAssistant__importance_model_download_url=https://www.gstatic.com/android/notifications/importance/v1/manifest.json</item>
+	<item>device_personalization_services/NotificationAssistant__importance_model_type=channel_stats</item>
+	<item>device_personalization_services/NotificationAssistant__importance_model_version=1</item>
+	<item>device_personalization_services/NotificationAssistant__max_importance_variance=0.5</item>
+
+        <!-- Media Provider -->
+        <item>mediaprovider/cloud_media_feature_enabled=true</item>
+        <item>mediaprovider/allowed_cloud_providers=com.google.android.apps.photos.cloudpicker</item>
+
+        <!-- Wallpaper Effects -->
+	<item>device_personalization_services/WallpaperEffects__cinematic_models_mdd_manifest_config=Ct4IEtsICiF3YWxscGFwZXJlZmZlY3RzLWNpbmVtYXRpYy1tb2RlbHMSwgESdWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9tZGktc2VydmluZy9haWFpLXdhbGxwYXBlcmVmZmVjdHMtY2luZW1hdGljLW1vZGVscy83NDYvNTk2NDgzNDA1MzljOGU2OWRmZGZlYjkzNTk0OTIzYWJmZDBmMGQwNyCM4JQFKig1OTY0ODM0MDUzOWM4ZTY5ZGZkZmViOTM1OTQ5MjNhYmZkMGYwZDA3OhJkZXB0aF9tb2RlbC50ZmxpdGV4AKIBAKoBABLIARJ1aHR0cHM6Ly9kbC5nb29nbGUuY29tL21kaS1zZXJ2aW5nL2FpYWktd2FsbHBhcGVyZWZmZWN0cy1jaW5lbWF0aWMtbW9kZWxzLzc0Ni84NmE3MWYwYTIwYjFhMjhiNTY4MTMwZTliYTZjMTYzZTdhZjQzMTg5IKzsyQQqKDg2YTcxZjBhMjBiMWEyOGI1NjgxMzBlOWJhNmMxNjNlN2FmNDMxODk6GHBlcnNvbl9wb3NlX21vZGVsLnRmbGl0ZXgAogEAqgEAEs0BEnVodHRwczovL2RsLmdvb2dsZS5jb20vbWRpLXNlcnZpbmcvYWlhaS13YWxscGFwZXJlZmZlY3RzLWNpbmVtYXRpYy1tb2RlbHMvNzQ2L2I2NTQxNDFiOTUwNjY3OTVlYjBlNjNlZDRkNzFiZjQxZDQyYjFhNmMgyPPNAiooYjY1NDE0MWI5NTA2Njc5NWViMGU2M2VkNGQ3MWJmNDFkNDJiMWE2YzodcGVyc29uX3NlZ21lbnRlcl9tb2RlbC50ZmxpdGV4AKIBAKoBABLLARJ1aHR0cHM6Ly9kbC5nb29nbGUuY29tL21kaS1zZXJ2aW5nL2FpYWktd2FsbHBhcGVyZWZmZWN0cy1jaW5lbWF0aWMtbW9kZWxzLzc0Ni9lOTllZWJlMDQ2NDk4ZmU2N2MzMzdjZmZkMzkzODM4NTVkMjE0NjM5INCXrwIqKGU5OWVlYmUwNDY0OThmZTY3YzMzN2NmZmQzOTM4Mzg1NWQyMTQ2Mzk6G3JnYmRfaW5wYWludGVyX21vZGVsLnRmbGl0ZXgAogEAqgEAEsQBEnVodHRwczovL2RsLmdvb2dsZS5jb20vbWRpLXNlcnZpbmcvYWlhaS13YWxscGFwZXJlZmZlY3RzLWNpbmVtYXRpYy1tb2RlbHMvNzQ2L2ExNjQ4ZjQ2NDYyZDVmMTExOTVjNmEyYTBhN2M0MTMyZTEwNzJjMDIgsLo6KihhMTY0OGY0NjQ2MmQ1ZjExMTk1YzZhMmEwYTdjNDEzMmUxMDcyYzAyOhVzYWxpZW5jeV9tb2RlbC50ZmxpdGV4AKIBAKoBABgAUABYAGoECAEQAHAAogEAqAEAuAHqBdIBB2RlZmF1bHTaAQDiARsKBwgBEJ+xjRcKBwgCEKCxjRcKBwgDEKGxjRc</item>
+	<item>device_personalization_services/WallpaperEffects__enable_allow_fg_download_on_cellular=true</item> 
+	<item>device_personalization_services/WallpaperEffects__enable_cinematic_effect=true</item> 
+	<item>device_personalization_services/WallpaperEffects__enable_cinematic_mdd=true</item> 
+	<item>device_personalization_services/WallpaperEffects__enable_foreground_model_download=true</item> 
+	<item>device_personalization_services/WallpaperEffects__enable_person_segment_tpu=false</item> 
+	<item>device_personalization_services/WallpaperEffects__return_texturedmesh_with_error_status=true</item> 
+	<item>device_personalization_services/WallpaperEffects__use_gpu=true</item>
+	<item>device_personalization_services/WallpaperEffects__use_tpu=false</item>
+
+       <!-- Settings -->
+        <item>settings_ui/bt_slice_settings_enabled=true</item>
+        <item>settings_ui/bt_advanced_header_enabled=true</item>
+        <item>settings_ui/bt_near_by_suggestion_enabled=true</item>
+        <item>settings_ui/bt_le_audio_contact_sharing_enabled=true</item>
+
+    </string-array>
 </resources>
