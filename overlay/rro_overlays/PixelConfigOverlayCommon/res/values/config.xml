@@ -319,24 +319,11 @@
         a bugreport or incident report with EXPLICT-level sharing flags is going to be
         shared, this app will be sent the PENDING_INCIDENT_REPORTS_CHANGED broadcast.
     -->
-    <string name="config_incidentReportApproverPackage" translatable="false">com.google.android.permissioncontroller</string>
+    <string name="config_incidentReportApproverPackage" translatable="false">com.android.permissioncontroller</string>
 
     <!-- Package name that will receive an explicit manifest broadcast for
          android.os.action.POWER_SAVE_MODE_CHANGED. -->
     <string name="config_powerSaveModeChangedListenerPackage" translatable="false">com.google.android.flipendo</string>
-
-    <!-- The package name for the default retail demo app.
-         This package must be trusted, as it has the permissions to query the usage stats on the
-         device.
-         Example: "com.google.android.retaildemo"
-     -->
-    <string name="config_retailDemoPackage" translatable="false">com.google.android.retaildemo</string>
-
-    <!-- The package signature hash for the default retail demo app.
-         This package must be trusted, as it has the permissions to query the usage stats on the
-         device.
-     -->
-    <string name="config_retailDemoPackageSignature" translatable="false">6547c73dee150c103980bfdffe55cc9a011d785dd694a5f99afd8205bcaf1f80</string>
 
     <!-- Package name of the on-device intelligent processor for ambient audio.
          Ambient audio is the sound surrounding the device captured by the DSP

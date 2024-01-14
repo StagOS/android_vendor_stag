@@ -18,7 +18,7 @@ PRODUCT_PACKAGES += \
     PixelConfigOverlay2019 \
     PixelConfigOverlay2019Midyear \
     PixelConfigOverlay2021 \
-    # PixelConfigOverlayCommon \
+    PixelConfigOverlayCommon \
     SettingsProviderOverlay \
     TelecomOverlay \
     TelephonyProviderOverlay \
