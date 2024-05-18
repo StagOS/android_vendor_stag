@@ -65,6 +65,7 @@ SOONG_CONFIG_stagGlobalVars += \
     target_process_sdk_version_override \
     target_uses_prebuilt_dynamic_partitions \
     uses_camera_parameter_lib \
+    target_power_libperfmgr_mode_extension_lib \
     target_surfaceflinger_udfps_lib \
     needs_camera_boottime \
     uses_camera_parameter_lib \
@@ -138,6 +139,7 @@ TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_DEADLINE ?= false
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_TOGGLE ?= true
 TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY ?= libcamera_parameters
+TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB ?= libperfmgr-ext
 TARGET_QTI_VIBRATOR_EFFECT_LIB ?= libqtivibratoreffect
 TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
 TARGET_INPUTDISPATCHER_SKIP_EVENT_KEY ?= 0
@@ -165,7 +167,7 @@ SOONG_CONFIG_stagGlobalVars_target_health_charging_control_deadline_path := $(TA
 SOONG_CONFIG_stagGlobalVars_target_health_charging_control_supports_bypass := $(TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS)
 SOONG_CONFIG_stagGlobalVars_target_health_charging_control_supports_deadline := $(TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_DEADLINE)
 SOONG_CONFIG_stagGlobalVars_target_health_charging_control_supports_toggle := $(TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_TOGGLE)
-
+SOONG_CONFIG_stagGlobalVars_target_power_libperfmgr_mode_extension_lib := $(TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB)
 ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 SOONG_CONFIG_stagQcomVars_qcom_display_headers_namespace := vendor/qcom/opensource/commonsys-intf/display
 else
