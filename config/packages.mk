@@ -22,6 +22,7 @@ PRODUCT_PACKAGES += \
     Dialer \
     ExactCalculator \
     Gallery \
+    Glimpse \
     GameSpace \
     LatinIME \
     Launcher3QuickStep \
