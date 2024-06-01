@@ -292,6 +292,8 @@
 	<item>launcher/INVOKE_OMNI_LPH_MPR=true</item>
 	<item>launcher/LPNH_SLOP_PERCENTAGE=71</item>
 	<item>launcher/LPNH_TIMEOUT_MS=400</item>
+        <item>launcher/ANIMATE_LPNH=true</item>
+        <item>launcher/SHRINK_NAV_HANDLE_ON_PRESS=true</item>
 
         <!-- System Ui -->
         <item>systemui/quick_access_wallet_enabled=true</item>
