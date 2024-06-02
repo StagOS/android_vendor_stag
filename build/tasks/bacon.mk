@@ -40,6 +40,8 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 stag: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(STAG_TARGET_PACKAGE)
 	$(hide) $(MD5) $(STAG_TARGET_PACKAGE) > $(STAG_TARGET_PACKAGE).md5sum
+	$(hide) ./vendor/stag/tools/json.sh $(STAG_TARGET_PACKAGE)
+
 
 	echo -e ${CL_RED}"    ______________   ______      ____  _____"${CL_RST}
 	echo -e ${CL_GRN}"   / ___/_  __/   | / ____/     / __ \/ ___/"${CL_RST}

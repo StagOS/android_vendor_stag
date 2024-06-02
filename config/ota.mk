@@ -6,6 +6,13 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.stag.ota.version_code=$(STAG_OTA_VERSION_CODE) \
     stag.updater.allow_downgrading=true
 
+ifeq ($(STAG_ENABLE_TEST_OTA), true)
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.stag.ota.test_mode=true
+
+endif
+
 PRODUCT_PACKAGES += \
    OpenDelta
 
