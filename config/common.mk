@@ -128,6 +128,20 @@ PRODUCT_PACKAGES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
 
+# Root
+PRODUCT_PACKAGES += \
+    adb_root
+
+ifneq ($(TARGET_BUILD_VARIANT),user)
+ifeq ($(WITH_SU),true)
+PRODUCT_PACKAGES += \
+    su
+
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/xbin/su
+endif
+endif
+
 # SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
