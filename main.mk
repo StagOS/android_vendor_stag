@@ -17,7 +17,7 @@ $(call inherit-product-if-exists, vendor/SystemUIClocks/product.mk)
 include vendor/stag/config/ota.mk
 
 # Themes
-#$(call inherit-product, vendor/stag/config/themes.mk)
+$(call inherit-product, vendor/stag/config/themes.mk)
 
 # Plugins
 #include packages/apps/PotatoPlugins/plugins.mk

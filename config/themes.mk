@@ -1,8 +1,9 @@
 # Custom Themes
 PRODUCT_PACKAGES += \
-    AndroidBlackThemeOverlay \
-    AndroidClearThemeOverlay \
-    AndroidVividThemeOverlay
+    AndroidBlackTheme \
+    AndroidEspressoTheme \
+    AndroidSnowPaintDropTheme \
+    AndroidVividTheme \
 
 # google-sans family
 PRODUCT_PACKAGES += \
