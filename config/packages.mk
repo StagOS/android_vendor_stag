@@ -54,7 +54,9 @@ PRODUCT_PACKAGES += \
 
 # Navbar
 PRODUCT_PACKAGES += \
-    NavigationBarNoHintOverlay
+    NavigationBarNoHintOverlay \
+    NavigationBarMode2ButtonOverlay
+
 
 #ifeq ($(TARGET_INCLUDE_LAWNCHAIR),true)
 #PRODUCT_PACKAGES += \
