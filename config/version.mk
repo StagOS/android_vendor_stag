@@ -13,7 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-StagOS_VERSION = 14.0
+# ANDROID_VERSION.QPR.MINVERSION
+StagOS_VERSION = 14.3.0
 
 STAG_BASE_VERSION = $(StagOS_VERSION)
 
