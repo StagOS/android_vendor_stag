@@ -30,6 +30,8 @@ if [ "$1" ]; then
     file_dir=$(dirname "$file_path")
     file_name=$(basename "$file_path")
     md5sum=$(md5sum "$file_path" | cut -d' ' -f1)
+    device_code=$(echo $file_name | cut -d'-' -f4)
+    url="https://sourceforge.net/projects/stagos-14/files/${device_code}/${file_name}/download"
 
     if [ -f $file_path ]; then
         # only generate for official and beta builds. unless forced with 'export FORCE_JSON=1'
@@ -49,7 +51,7 @@ if [ "$1" ]; then
                 echo "    {"
                 echo "      \"datetime\": ${datetime},"
                 echo "      \"filename\": \"${file_name}\","
-                echo "      \"url\": \"<url>\","
+                echo "      \"url\": \"${url}\","
                 echo "      \"md5\": \"${md5sum}\","
                 echo "      \"payload\": ["
                 echo "        {"
@@ -61,7 +63,6 @@ if [ "$1" ]; then
                 echo "  ]"
                 echo "}"
             } > $file_path.json
-            device_code=$(echo $file_name | cut -d'-' -f4)
             mv "${file_path}.json" "${file_dir}/${device_code}.json"
             echo -e "${GREEN}Done generating ${YELLOW}${device_code}.json${NC}"
         else
