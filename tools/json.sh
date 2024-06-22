@@ -25,17 +25,21 @@ findPayloadOffset() {
 }
 
 if [ "$1" ]; then
-    echo "Generating .json"
+    echo "Generating json file"
     file_path=$1
+    output_file_name=${2:-"default.json"} # Default output file name if not provided
+    optional_expected_filename=$3
     file_dir=$(dirname "$file_path")
     file_name=$(basename "$file_path")
     md5sum=$(md5sum "$file_path" | cut -d' ' -f1)
     device_code=$(echo $file_name | cut -d'-' -f4)
     url="https://sourceforge.net/projects/stagos-14/files/${device_code}/${file_name}/download"
+    if [ ! -z "$optional_expected_filename" ]; then
+        url="https://sourceforge.net/projects/stagos-14/files/${device_code}/incremental/${filename}/download"
+    fi
 
     if [ -f $file_path ]; then
-        # only generate for official and beta builds. unless forced with 'export FORCE_JSON=1'
-        if [[ $file_name == *"BETA"* ]] || [[ $file_name == *"OFFICIAL"* ]] || [[ $FORCE_JSON == 1 ]]; then
+        if [[ $file_name == *"BETA"* ]] || [[ $file_name == *"OFFICIAL"* ]] || [[ $file_name == *"incremental"* ]] || [[ $FORCE_JSON == 1 ]]; then
             if [[ $FORCE_JSON == 1 ]]; then
                 echo -e "${GREEN}Forced generation of json${NC}"
             fi
@@ -59,14 +63,17 @@ if [ "$1" ]; then
                 echo "${keyPairs}"
                 echo "        }"
                 echo "      ]"
+                if [ ! -z "$optional_expected_filename" ]; then
+                    echo "          ,\"expected_filename\": \"${optional_expected_filename}\""
+                fi
                 echo "    }"
                 echo "  ]"
                 echo "}"
-            } > $file_path.json
-            mv "${file_path}.json" "${file_dir}/${device_code}.json"
-            echo -e "${GREEN}Done generating ${YELLOW}${device_code}.json${NC}"
+            } > "${output_file_name}"
+            mv "${output_file_name}" "${file_dir}/${output_file_name}"
+            echo -e "${GREEN}Done generating ${YELLOW}${output_file_name}.json${NC}"
         else
-            echo -e "${YELLOW}Skipped generating json for a official build${NC}"
+            echo -e "${YELLOW}Skipped generating json for a non-official build${NC}"
         fi
     fi
 fi
