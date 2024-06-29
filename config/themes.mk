@@ -1,6 +1,7 @@
 # Custom Themes
 PRODUCT_PACKAGES += \
     AndroidBlackTheme \
+    AndroidClearTheme \
     AndroidEspressoTheme \
     AndroidSnowPaintDropTheme \
     AndroidVividTheme \
