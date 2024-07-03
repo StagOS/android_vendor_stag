@@ -14,7 +14,7 @@
 # limitations under the License.
 
 # ANDROID_VERSION.QPR.MINVERSION
-StagOS_VERSION = 14.3.0
+StagOS_VERSION = 14.3.1
 
 STAG_BASE_VERSION = $(StagOS_VERSION)
 
